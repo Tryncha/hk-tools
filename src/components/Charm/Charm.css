@@ -1,0 +1,14 @@
+.Charm {
+  width: var(--Charm-width);
+  height: var(--Charm-height);
+}
+
+.Charm--isSelected {
+  opacity: var(--isSelected-opacity);
+  filter: var(--dropShadow);
+}
+
+.Charm:hover {
+  cursor: pointer;
+  filter: var(--dropShadow);
+}

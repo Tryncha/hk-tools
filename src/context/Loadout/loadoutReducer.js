@@ -2,10 +2,10 @@ import { MAX_NOTCHES } from '../../constants';
 
 export function loadoutReducer(state, action) {
   switch (action.type) {
-    case 'SET_NAIL_LEVEL':
+    case 'SET_NAIL':
       return {
         ...state,
-        nailLevel: action.payload
+        nail: action.payload
       };
 
     case 'SET_CHARMS': {
@@ -14,9 +14,9 @@ export function loadoutReducer(state, action) {
 
       let newCharms = [];
 
-      const charmsIds = state.charms.map((charm) => charm.id);
+      const charmIds = state.charms.map((charm) => charm.id);
 
-      if (!charmsIds.includes(charmObj.id) && state.notchesUsed < MAX_NOTCHES) {
+      if (!charmIds.includes(charmObj.id) && state.notchesUsed < MAX_NOTCHES) {
         newCharms = state.charms.concat(charmObj);
       } else {
         newCharms = state.charms.filter((charm) => charm.id !== charmObj.id);

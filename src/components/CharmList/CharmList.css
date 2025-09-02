@@ -1,0 +1,23 @@
+.CharmList {
+  width: calc((var(--Charm-width) + var(--CharmList-gap)) * (var(--charmsPerRow) + 0.5));
+  height: calc((var(--Charm-height) + var(--CharmList-gap)) * (var(--rows) + 0.5));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--CharmList-gap);
+  margin: 0 auto;
+}
+
+.CharmList-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--CharmList-gap);
+}
+
+.CharmList-row:nth-child(even) {
+  margin-left: calc(var(--Charm-width) * 0.5);
+}
+
+.CharmList-row:nth-child(odd) {
+  margin-right: calc(var(--Charm-width) * 0.5);
+}

@@ -1,0 +1,14 @@
+.NailsContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Nail--isSelected {
+  opacity: var(--isSelected-opacity);
+  filter: var(--dropShadow);
+}
+
+.Nail:hover {
+  cursor: pointer;
+  filter: var(--dropShadow);
+}

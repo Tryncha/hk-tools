@@ -1,0 +1,27 @@
+.Corner {
+  position: absolute;
+}
+
+.Corner--topLeft {
+  rotate: 0deg;
+  top: -30px;
+  left: -30px;
+}
+
+.Corner--topRight {
+  rotate: 90deg;
+  top: -30px;
+  right: -30px;
+}
+
+.Corner--bottomRight {
+  rotate: 180deg;
+  bottom: -30px;
+  right: -30px;
+}
+
+.Corner--bottomLeft {
+  rotate: 270deg;
+  bottom: -30px;
+  left: -30px;
+}

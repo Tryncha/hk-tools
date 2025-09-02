@@ -1,0 +1,14 @@
+.CurrentCharms {
+  display: flex;
+  flex-direction: column;
+}
+
+.CurrentCharms-equipped {
+  display: flex;
+  align-items: center;
+  gap: var(--CharmList-gap);
+}
+
+.CurrentCharms-notch {
+  margin-left: 10px;
+}

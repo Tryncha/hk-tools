@@ -1,8 +1,9 @@
 import { useLoadout } from '../../hooks/useLoadout';
 import './Charm.css';
 
-const Charm = ({ charmObj }) => {
+const Charm = ({ charmObj, isSelected }) => {
   const { setCharm } = useLoadout();
+
   const { name, description } = charmObj;
 
   function handleClick() {
@@ -11,7 +12,7 @@ const Charm = ({ charmObj }) => {
 
   return (
     <div
-      className="Charm"
+      className={isSelected ? 'Charm Charm--isSelected' : 'Charm'}
       onClick={handleClick}
     >
       <img
@@ -20,6 +21,7 @@ const Charm = ({ charmObj }) => {
         width={80}
         height={80}
         title={description}
+        draggable={false}
       />
     </div>
   );

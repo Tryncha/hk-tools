@@ -1,3 +1,21 @@
+:root {
+  --body-backgroundColor: #000;
+  --body-fontColor: #fff;
+  --body-borderColor: #fff;
+  --body-dropShadow: #fff;
+
+  --charmsPerRow: 10;
+  --rows: 4;
+
+  --isSelected-opacity: 0.5;
+  --dropShadow: drop-shadow(0px 0px 10px #fff);
+
+  --Charm-width: 80px;
+  --Charm-height: 80px;
+
+  --CharmList-gap: 5px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,36 +23,49 @@
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--body-backgroundColor);
+  color: var(--body-fontColor);
+  font-family: Forum;
 }
 
-.CharmsContainer {
-  width: calc(80px * (10 + 0.5));
-  height: calc(80px * 4);
+main {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
-.Charms-row {
+/* Utilities */
+
+.u-mainHr {
+  border: none;
+  border-block: 2px solid var(--body-borderColor);
+  margin: 20px 0;
+}
+
+.u-secondaryHr {
+  border: none;
+  border-block: 1px solid var(--body-borderColor);
+  margin: 20px 0;
+}
+
+.u-numberText {
+  font-size: 36px;
+}
+
+.u-smallText {
+  font-size: 18px;
+}
+
+.MainTab {
+  overflow-x: auto;
+}
+
+.MainTab-buttons {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.Charms-row:nth-child(even) {
-  margin-left: 40px;
-}
-
-.Charms-row:nth-child(odd) {
-  margin-right: 40px;
-}
-
-.Charm {
-  width: 80px;
-  height: 80px;
-  /* border: 1px solid #fff; */
-}
-
-.NailsContainer {
-  display: flex;
+.MainTab-buttons button {
+  width: 30%;
+  height: 25px;
 }

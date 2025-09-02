@@ -4,7 +4,13 @@ import { loadoutReducer } from './loadoutReducer';
 const LoadoutContext = createContext();
 
 const initialLoadout = {
-  nailLevel: 1,
+  nail: {
+    id: 4,
+    name: 'pure-nail',
+    description: 'The ultimate weapon of Hallownest. Crafted to perfection, this ancient nail reveals its true form.',
+    level: 5,
+    damage: 21
+  },
   notchesUsed: 0,
   isOvercharmed: false,
   charms: [
@@ -14,7 +20,8 @@ const initialLoadout = {
       notchesCost: 0,
       description: `An emptiness that was hidden within, now unconstrained. Unifies the void under the bearer's will.\nThis charm is a part of its bearer and can not be unequipped.`
     }
-  ]
+  ],
+  spells: []
 };
 
 export const LoadoutProvider = ({ children }) => {
@@ -22,8 +29,8 @@ export const LoadoutProvider = ({ children }) => {
 
   console.log(loadout);
 
-  function setNail(nailLevel) {
-    loadoutDispatch({ type: 'SET_NAIL_LEVEL', payload: nailLevel });
+  function setNail(nail) {
+    loadoutDispatch({ type: 'SET_NAIL', payload: nail });
   }
 
   function setCharm(charmObj) {
