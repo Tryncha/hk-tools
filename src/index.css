@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.CharmsContainer {
+  width: calc(80px * (10 + 0.5));
+  height: calc(80px * 4);
+  display: flex;
+  flex-direction: column;
+}
+
+.Charms-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Charms-row:nth-child(even) {
+  margin-left: 40px;
+}
+
+.Charms-row:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.Charm {
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid #fff; */
+}
+
+.NailsContainer {
+  display: flex;
+}
