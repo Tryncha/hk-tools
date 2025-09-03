@@ -1,6 +1,7 @@
 import { MAX_NOTCHES } from '../../constants';
 import { useLoadout } from '../../hooks/useLoadout';
 import Charm from '../Charm/Charm';
+import ResetButton from '../ResetButton/ResetButton';
 import './CurrentCharms.css';
 
 const CurrentCharms = () => {
@@ -29,6 +30,7 @@ const CurrentCharms = () => {
             title="Notch"
           />
         ) : null}
+        <ResetButton />
       </div>
       <h2>Notches</h2>
       <div className="CurrentCharms-notchCosts">

@@ -5,7 +5,7 @@ import KnightInfo from './components/KnightInfo/KnightInfo';
 const App = () => {
   return (
     <main>
-      <section>Enemies List</section>
+      <section>Enemies List and Hit Counter</section>
       <section>
         <CurrentCharms />
         <hr className="u-mainHr" />
@@ -13,7 +13,7 @@ const App = () => {
         <hr className="u-mainHr" />
         <KnightInfo />
       </section>
-      <section>Loadout Info - Combos, etc</section>
+      <section>Loadout Info - Item descriptions, combos, etc</section>
     </main>
   );
 };

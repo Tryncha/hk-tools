@@ -1,0 +1,9 @@
+.Spell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Spell img {
+  object-fit: contain;
+}

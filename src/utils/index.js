@@ -1,4 +1,5 @@
 import { QUICK_SWING_SPEED, SWING_SPEED } from '../constants';
+import { spellsData } from '../constants/spellsData';
 
 export function capitalizeText(text) {
   const excludedWords = ['of', 'and', 'to', 'the'];
@@ -21,4 +22,8 @@ export function calculateDPS(damage, hasQuickSlash) {
   const damagePerSecond = attackPerSecond * damage;
 
   return damagePerSecond.toFixed(2);
+}
+
+export function getSpellData(spell) {
+  return spellsData.find((spellObj) => spellObj.name === spell);
 }
