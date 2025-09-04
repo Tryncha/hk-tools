@@ -13,9 +13,11 @@ export const initialLoadout = {
   charms: [
     {
       id: 39,
-      name: 'void-heart',
+      name: 'Void Heart',
       notchesCost: 0,
-      description: `An emptiness that was hidden within, now unconstrained. Unifies the void under the bearer's will.\nThis charm is a part of its bearer and can not be unequipped.`
+      description:
+        "An emptiness that was hidden within, now unconstrained. Unifies the void under the bearer's will.\nThis charm is a part of its bearer and can not be unequipped.",
+      imgSrc: 'charms/void-heart.png'
     }
   ],
   spells: [
@@ -41,7 +43,7 @@ export function loadoutReducer(state, action) {
 
     case 'SET_CHARMS': {
       const charmObj = action.payload;
-      if (charmObj.name === 'void-heart') return state;
+      if (charmObj.name === 'Void Heart') return state;
 
       let newCharms = [];
 

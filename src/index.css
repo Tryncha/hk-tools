@@ -55,17 +55,3 @@ main {
 .u-smallText {
   font-size: 18px;
 }
-
-.MainTab {
-  overflow-x: auto;
-}
-
-.MainTab-buttons {
-  display: flex;
-  justify-content: space-around;
-}
-
-.MainTab-buttons button {
-  width: 30%;
-  height: 25px;
-}

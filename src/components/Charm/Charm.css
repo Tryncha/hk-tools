@@ -1,4 +1,5 @@
 .Charm {
+  position: relative;
   width: var(--Charm-width);
   height: var(--Charm-height);
 }
@@ -11,4 +12,15 @@
 .Charm:hover {
   cursor: pointer;
   filter: var(--dropShadow);
+}
+
+.CharmTooltip {
+  position: absolute;
+  top: 0;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body-backgroundColor);
+  padding: 30px 60px;
+  border: 1px solid var(--body-borderColor);
 }
