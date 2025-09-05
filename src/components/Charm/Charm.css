@@ -1,3 +1,7 @@
+.CharmContainer {
+  position: relative;
+}
+
 .Charm {
   position: relative;
   width: var(--Charm-width);
@@ -16,11 +20,16 @@
 
 .CharmTooltip {
   position: absolute;
-  top: 0;
-  width: 500px;
+  top: 95px;
+  left: -190px;
+  width: 460px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  text-align: center;
   background-color: var(--body-backgroundColor);
-  padding: 30px 60px;
+  padding: 20px 30px;
   border: 1px solid var(--body-borderColor);
+  border-radius: 10px;
+  z-index: 10;
 }
