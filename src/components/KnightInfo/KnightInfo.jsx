@@ -4,6 +4,7 @@ import { useLoadout } from '../../hooks/useLoadout';
 import { calculateDPS, capitalizeText } from '../../utils';
 import Spell from '../Spell/Spell';
 import './KnightInfo.css';
+import nailsData from '../../constants/nailsData.json';
 
 const KnightInfo = () => {
   const { loadout } = useLoadout();
@@ -12,20 +13,22 @@ const KnightInfo = () => {
   const charmsNames = charms.map((charm) => charm.name);
   const hasQuickSlash = charmsNames.includes('quick-slash');
 
+  const currentNail = nailsData.find((nailObj) => nailObj.id === nail.id);
+
   return (
     <section className="KnightInfo">
       <div>
         <img
-          src={`nails/${nail.name}.png`}
+          src={currentNail.imgSrc}
           height={180}
-          alt={nail.name}
+          alt={currentNail.name}
         />
       </div>
       <div className="KnightInfo-nail">
         <h3>Base </h3>
-        <span className="u-numberText">{nail.damage}</span>
+        <span className="u-numberText">{currentNail.damage}</span>
         <h3>DPS </h3>
-        <span className="u-numberText">{calculateDPS(nail.damage, hasQuickSlash)}</span>
+        <span className="u-numberText">{calculateDPS(currentNail.damage, hasQuickSlash)}</span>
         <h3>Swing Speed </h3>
         <span className="u-numberText">{SWING_SPEED}s</span>
       </div>
@@ -42,15 +45,15 @@ const KnightInfo = () => {
               {art.name === 'cyclone-slash' ? (
                 <>
                   <h3>{capitalizeText(art.name)} (3-6 HITS)</h3>
-                  <span className="u-numberText">{`${art.damagePerNailLevel[nail.level - 1] * 3} - ${
-                    art.damagePerNailLevel[nail.level - 1] * 6
+                  <span className="u-numberText">{`${art.damagePerNailLevel[currentNail.level - 1] * 3} - ${
+                    art.damagePerNailLevel[currentNail.level - 1] * 6
                   }`}</span>
                   <span className="u-smallText">DMG</span>
                 </>
               ) : (
                 <>
                   <h3>{capitalizeText(art.name)}</h3>
-                  <span className="u-numberText">{art.damagePerNailLevel[nail.level - 1]}</span>
+                  <span className="u-numberText">{art.damagePerNailLevel[currentNail.level - 1]}</span>
                   <span className="u-smallText">DMG</span>
                 </>
               )}

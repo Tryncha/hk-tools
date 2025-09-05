@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "name": "Old Nail",
+    "description": "A traditional weapon of Hallownest. Its blade is blunt with age and wear.",
+    "level": 1,
+    "damage": 5,
+    "imgSrc": "nails/old-nail.png"
+  },
+  {
+    "id": 1,
+    "name": "Sharpened Nail",
+    "description": "A traditional weapon of Hallownest, restored to lethal form.",
+    "level": 2,
+    "damage": 9,
+    "imgSrc": "nails/sharpened-nail.png"
+  },
+  {
+    "id": 2,
+    "name": "Channelled Nail",
+    "description": "A cleft weapon of Hallownest. The blade is exquisitly balanced.",
+    "level": 3,
+    "damage": 13,
+    "imgSrc": "nails/channelled-nail.png"
+  },
+  {
+    "id": 3,
+    "name": "Coiled Nail",
+    "description": "A powerful weapon of Hallownest, refined beyond all others.",
+    "level": 4,
+    "damage": 17,
+    "imgSrc": "nails/coiled-nail.png"
+  },
+  {
+    "id": 4,
+    "name": "Pure Nail",
+    "description": "The ultimate weapon of Hallownest. Crafted to perfection, this ancient nail reveals its true form.",
+    "level": 5,
+    "damage": 21,
+    "imgSrc": "nails/pure-nail.png"
+  }
+]

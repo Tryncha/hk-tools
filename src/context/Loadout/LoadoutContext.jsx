@@ -8,8 +8,8 @@ export const LoadoutProvider = ({ children }) => {
 
   console.log(loadout);
 
-  function setNail(nail) {
-    loadoutDispatch({ type: 'SET_NAIL', payload: nail });
+  function setNail(newNail) {
+    loadoutDispatch({ type: 'SET_NAIL', payload: newNail });
   }
 
   function setCharm(charmObj) {

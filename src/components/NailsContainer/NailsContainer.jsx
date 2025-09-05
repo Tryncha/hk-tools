@@ -1,4 +1,4 @@
-import { nailsData } from '../../constants/nailsData';
+import nailsData from '../../constants/nailsData.json';
 import { useLoadout } from '../../hooks/useLoadout';
 import './NailsContainer.css';
 
@@ -6,20 +6,28 @@ const NailsContainer = () => {
   const { loadout, setNail } = useLoadout();
   const { nail } = loadout;
 
+  function handleClick(nailObj) {
+    const newNail = { id: nailObj.id, name: nailObj.name };
+    return () => setNail(newNail);
+  }
+
   return (
     <section className="NailsContainer">
       {nailsData.map((nailObj) => {
-        const isSelected = nail.id === nailObj.id;
+        const { id, name, imgSrc } = nailObj;
+        const isSelected = nail.id === id;
+
         return (
           <div
+            key={id}
             className={isSelected ? 'Nail Nail--isSelected' : 'Nail'}
-            onClick={() => setNail(nailObj)}
+            onClick={handleClick(nailObj)}
           >
             <img
-              src={`nails/${nailObj.name}.png`}
+              src={imgSrc}
               height={270}
-              alt={nailObj.name}
-              title={nailObj.name}
+              alt={name}
+              title={name}
             />
           </div>
         );

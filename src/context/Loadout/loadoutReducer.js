@@ -3,10 +3,7 @@ import { MAX_NOTCHES } from '../../constants';
 export const initialLoadout = {
   nail: {
     id: 4,
-    name: 'pure-nail',
-    description: 'The ultimate weapon of Hallownest. Crafted to perfection, this ancient nail reveals its true form.',
-    level: 5,
-    damage: 21
+    name: 'Pure Nail'
   },
   notchesUsed: 0,
   isOvercharmed: false,
