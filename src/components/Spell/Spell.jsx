@@ -1,16 +1,49 @@
+import { useState } from 'react';
 import { useLoadout } from '../../hooks/useLoadout';
 import { getSpellData } from '../../utils';
 import './Spell.css';
 
-const Spell = ({ spell }) => {
+const SpellTooltip = ({ id, name, notchesCost, description, isHovering }) => {
+  if (!isHovering) return null;
+
+  return (
+    <div className="CharmTooltip">
+      <h3>{name}</h3>
+      <div className="CharmTooltip-notchesContainer">
+        {Array.from({ length: notchesCost }, (_, i) => (
+          <img
+            key={`notches-cost-${id}-${i + 1}`}
+            src="ui/notch-cost-on.png"
+            alt={`Notch #${i + 1}`}
+            width={30}
+            height={30}
+          />
+        ))}
+      </div>
+      <p>{description}</p>
+    </div>
+  );
+};
+
+const Spell = ({ spellId }) => {
   const { loadout } = useLoadout();
   const { charms } = loadout;
 
-  const { id, name, description, damage, imgSrc } = getSpellData(spell);
+  const { id, name, description, damage, imgSrc } = getSpellData(spellId);
 
   const charmsNames = charms.map((charm) => charm.name);
 
   const hasShamanStone = charmsNames.includes('shaman-stone');
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  function handleMouseEnter() {
+    setIsHovering(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovering(false);
+  }
 
   // console.log('hasShamanStone', hasShamanStone);
 

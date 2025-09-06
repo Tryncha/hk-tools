@@ -3,12 +3,6 @@
   gap: 20px;
 }
 
-.KnightInfo-nail {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .KnightInfo h2 {
   text-transform: uppercase;
 }

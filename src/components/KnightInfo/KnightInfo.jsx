@@ -1,42 +1,27 @@
-import { SWING_SPEED } from '../../constants';
-import { nailArtsData } from '../../constants/nailArtsData';
 import { useLoadout } from '../../hooks/useLoadout';
-import { calculateDPS, capitalizeText } from '../../utils';
+import { capitalizeText, getNailData } from '../../utils';
 import Spell from '../Spell/Spell';
 import './KnightInfo.css';
-import nailsData from '../../constants/nailsData.json';
+import nailArtsData from '../../data-json/nailArtsData';
+import NailInfo from '../NailInfo/NailInfo';
 
 const KnightInfo = () => {
   const { loadout } = useLoadout();
-  const { nail, charms, spells } = loadout;
+  const { nail, spells } = loadout;
 
-  const charmsNames = charms.map((charm) => charm.name);
-  const hasQuickSlash = charmsNames.includes('quick-slash');
-
-  const currentNail = nailsData.find((nailObj) => nailObj.id === nail.id);
+  const currentNail = getNailData(nail.id);
 
   return (
     <section className="KnightInfo">
-      <div>
-        <img
-          src={currentNail.imgSrc}
-          height={180}
-          alt={currentNail.name}
-        />
-      </div>
-      <div className="KnightInfo-nail">
-        <h3>Base </h3>
-        <span className="u-numberText">{currentNail.damage}</span>
-        <h3>DPS </h3>
-        <span className="u-numberText">{calculateDPS(currentNail.damage, hasQuickSlash)}</span>
-        <h3>Swing Speed </h3>
-        <span className="u-numberText">{SWING_SPEED}s</span>
-      </div>
+      <NailInfo />
       <div className="KnightInfo-nailArtsContainer">
         {nailArtsData.map((art) => (
-          <div className="KnightInfo-nailArt">
+          <div
+            key={art.id}
+            className="KnightInfo-nailArt"
+          >
             <img
-              src={`nail-arts/${art.name}.png`}
+              src={art.imgSrc}
               alt={art.name}
               width={60}
               height={60}
@@ -63,7 +48,10 @@ const KnightInfo = () => {
       </div>
       <div className="KnightInfo-spellsContainer">
         {spells.map((spell) => (
-          <Spell spell={spell} />
+          <Spell
+            key={spell.id}
+            spellId={spell.id}
+          />
         ))}
       </div>
     </section>

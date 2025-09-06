@@ -1,10 +1,10 @@
-.CharmContainer {
+.NailContainer {
   position: relative;
 }
 
-.CharmTooltip {
+.NailTooltip {
   position: absolute;
-  top: 95px;
+  top: -150px;
   left: -190px;
   width: 460px;
   display: flex;
@@ -18,18 +18,21 @@
   z-index: 10;
 }
 
-.Charm {
-  position: relative;
-  width: var(--Charm-width);
-  height: var(--Charm-height);
-}
-
-.Charm--isSelected {
+.Nail--isSelected {
+  cursor: initial;
   opacity: var(--isSelected-opacity);
   filter: var(--dropShadow);
 }
 
-.Charm:hover {
+.Nail:hover {
   cursor: pointer;
   filter: var(--dropShadow);
+}
+
+.Nail--isSelected:hover {
+  cursor: initial;
+}
+
+.Nail.Nail--isReadOnly:hover {
+  cursor: initial;
 }

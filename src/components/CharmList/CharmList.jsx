@@ -1,4 +1,4 @@
-import charmsData from '../../constants/charmsData';
+import charmsData from '../../data-json/charmsData.json';
 import { useLoadout } from '../../hooks/useLoadout';
 import Charm from '../Charm/Charm';
 import './CharmList.css';

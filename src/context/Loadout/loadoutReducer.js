@@ -1,32 +1,20 @@
 import { MAX_NOTCHES } from '../../constants';
 
 export const initialLoadout = {
-  nail: {
-    id: 4,
-    name: 'Pure Nail'
-  },
+  nail: { id: 4, name: 'Pure Nail' },
   notchesUsed: 0,
   isOvercharmed: false,
-  charms: [
-    {
-      id: 39,
-      name: 'Void Heart',
-      notchesCost: 0,
-      description:
-        "An emptiness that was hidden within, now unconstrained. Unifies the void under the bearer's will.\nThis charm is a part of its bearer and can not be unequipped.",
-      imgSrc: 'charms/void-heart.png'
-    }
-  ],
+  charms: [{ id: 39, name: 'Void Heart' }],
   spells: [
-    'Vengeful Spirit',
-    'Desolate Dive',
-    'Howling Wraiths',
-    'Shade Soul',
-    'Descending Dark',
-    'Abyss Shriek',
-    'Flukelings',
-    'Shade Flukelings',
-    'Volatile Fluke'
+    { id: 0, name: 'Vengeful Spirit' },
+    { id: 1, name: 'Desolate Dive' },
+    { id: 2, name: 'Howling Wraiths' },
+    { id: 3, name: 'Shade Soul' },
+    { id: 4, name: 'Descending Dark' },
+    { id: 5, name: 'Abyss Shriek' },
+    { id: 6, name: 'Flukelings' },
+    { id: 7, name: 'Shade Flukelings' },
+    { id: 8, name: 'Volatile Fluke' }
   ]
 };
 

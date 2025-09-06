@@ -1,5 +1,7 @@
 import { QUICK_SWING_SPEED, SWING_SPEED } from '../constants';
-import { spellsData } from '../constants/spellsData';
+import nailsData from '../data-json/nailsData.json';
+import charmsData from '../data-json/charmsData.json';
+import spellsData from '../data-json/spellsData.json';
 
 export function capitalizeText(text) {
   const excludedWords = ['of', 'and', 'to', 'the'];
@@ -24,6 +26,14 @@ export function calculateDPS(damage, hasQuickSlash) {
   return damagePerSecond.toFixed(2);
 }
 
-export function getSpellData(spell) {
-  return spellsData.find((spellObj) => spellObj.name === spell);
+export function getNailData(id) {
+  return nailsData.find((nail) => nail.id === id);
+}
+
+export function getCharmData(id) {
+  return charmsData.find((charmObj) => charmObj.id === id);
+}
+
+export function getSpellData(id) {
+  return spellsData.find((spellObj) => spellObj.id === id);
 }
