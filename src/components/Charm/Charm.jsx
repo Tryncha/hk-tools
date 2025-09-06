@@ -31,7 +31,8 @@ const Charm = ({ charmObj, isSelected }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   function handleClick() {
-    setCharm(charmObj);
+    const newCharm = { id: id, name: name, notchesCost: notchesCost };
+    setCharm(newCharm);
   }
 
   function handleMouseEnter() {

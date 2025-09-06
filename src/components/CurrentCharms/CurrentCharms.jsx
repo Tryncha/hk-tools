@@ -1,12 +1,21 @@
+import { useEffect, useState } from 'react';
 import { MAX_NOTCHES } from '../../constants';
 import { useLoadout } from '../../hooks/useLoadout';
 import Charm from '../Charm/Charm';
 import ResetButton from '../ResetButton/ResetButton';
 import './CurrentCharms.css';
+import { getCharmData } from '../../utils';
 
 const CurrentCharms = () => {
   const { loadout } = useLoadout();
   const { notchesUsed, isOvercharmed, charms } = loadout;
+
+  const [charmsData, setCharmsData] = useState([]);
+
+  useEffect(() => {
+    const newCharmsData = charms.map((charm) => getCharmData(charm.id));
+    setCharmsData(newCharmsData);
+  }, [charms]);
 
   const notchesOff = MAX_NOTCHES - notchesUsed;
   const notchesOn = notchesUsed > MAX_NOTCHES ? MAX_NOTCHES : notchesUsed;
@@ -16,7 +25,7 @@ const CurrentCharms = () => {
     <section className="CurrentCharms">
       <h2>Equipped</h2>
       <div className="CurrentCharms-equipped">
-        {charms.map((charmObj) => (
+        {charmsData.map((charmObj) => (
           <Charm
             key={charmObj.id}
             charmObj={charmObj}

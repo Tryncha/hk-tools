@@ -4,7 +4,7 @@ export const initialLoadout = {
   nail: { id: 4, name: 'Pure Nail' },
   notchesUsed: 0,
   isOvercharmed: false,
-  charms: [{ id: 39, name: 'Void Heart' }],
+  charms: [{ id: 39, name: 'Void Heart', notchesCost: 0 }],
   spells: [
     { id: 0, name: 'Vengeful Spirit' },
     { id: 1, name: 'Desolate Dive' },
@@ -26,18 +26,18 @@ export function loadoutReducer(state, action) {
         nail: action.payload
       };
 
-    case 'SET_CHARMS': {
-      const charmObj = action.payload;
-      if (charmObj.name === 'Void Heart') return state;
+    case 'SET_CHARM': {
+      const charmToAdd = action.payload;
+      if (charmToAdd.name === 'Void Heart') return state;
 
       let newCharms = [];
 
       const charmIds = state.charms.map((charm) => charm.id);
 
-      if (!charmIds.includes(charmObj.id) && state.notchesUsed < MAX_NOTCHES) {
-        newCharms = state.charms.concat(charmObj);
+      if (!charmIds.includes(charmToAdd.id) && state.notchesUsed < MAX_NOTCHES) {
+        newCharms = state.charms.concat(charmToAdd);
       } else {
-        newCharms = state.charms.filter((charm) => charm.id !== charmObj.id);
+        newCharms = state.charms.filter((charm) => charm.id !== charmToAdd.id);
       }
 
       const newNotchesUsed = newCharms.reduce((acc, charm) => acc + charm.notchesCost, 0);

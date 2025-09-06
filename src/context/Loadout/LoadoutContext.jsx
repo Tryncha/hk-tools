@@ -12,8 +12,8 @@ export const LoadoutProvider = ({ children }) => {
     loadoutDispatch({ type: 'SET_NAIL', payload: newNail });
   }
 
-  function setCharm(charmObj) {
-    loadoutDispatch({ type: 'SET_CHARMS', payload: charmObj });
+  function setCharm(newCharm) {
+    loadoutDispatch({ type: 'SET_CHARM', payload: newCharm });
   }
 
   function resetLoadout() {
