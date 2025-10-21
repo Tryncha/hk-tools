@@ -1,9 +1,14 @@
+import { Forum } from 'next/font/google';
 import './globals.css';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const forum = Forum({ subsets: ['latin'], weight: '400' });
+
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${forum.className} bg-black text-white antialiased`}>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;

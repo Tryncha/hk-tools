@@ -1,0 +1,282 @@
+[
+  {
+    "id": 0,
+    "name": "Wayward Compass",
+    "notchesCost": 1,
+    "description": "Whispers its location to the bearer whenever a map is open, allowing wanderers to pinpoint their current location.",
+    "imgSrc": "/charms/wayward-compass.png"
+  },
+  {
+    "id": 1,
+    "name": "Gathering Swarm",
+    "notchesCost": 1,
+    "description": "A swarm will follow the bearer and gather up any loose Geo.\nUseful for those who can't bear to leave anything behind, no matter how insignificant.",
+    "imgSrc": "/charms/gathering-swarm.png"
+  },
+  {
+    "id": 2,
+    "name": "Stalwart Shell",
+    "notchesCost": 2,
+    "description": "Builds resilience. When recovering from damage, the bearer will remain invulnerable for longer.\nMakes it easier to escape from dangerous situations.",
+    "imgSrc": "/charms/stalwart-shell.png"
+  },
+  {
+    "id": 3,
+    "name": "Soul Catcher",
+    "notchesCost": 2,
+    "description": "Used by shamans to draw more SOUL from the world around them.\nIncreases the amount of SOUL gained when striking an enemy with the nail.",
+    "imgSrc": "/charms/soul-catcher.png"
+  },
+  {
+    "id": 4,
+    "name": "Shaman Stone",
+    "notchesCost": 3,
+    "description": "Said to contain the knowledge of past generations of shaman.\nIncreases the power of spells, dealing more damage to foes.",
+    "imgSrc": "/charms/shaman-stone.png"
+  },
+  {
+    "id": 5,
+    "name": "Soul Eater",
+    "notchesCost": 4,
+    "description": "Forgotten shaman artifact, used to draw SOUL from still-living creatures.\nGreatly increases the amount of SOUL gained when striking an enemy with the nail.",
+    "imgSrc": "/charms/soul-eater.png"
+  },
+  {
+    "id": 6,
+    "name": "Dashmaster",
+    "notchesCost": 2,
+    "description": "Bears the likeness of an eccentric bug known only as 'The Dashmaster'.\nThe bearer will be able to dash more often as well as dash downwards. Perfect for those who want to move around as quickly as possible.",
+    "imgSrc": "/charms/dashmaster.png"
+  },
+  {
+    "id": 7,
+    "name": "Sprintmaster",
+    "notchesCost": 1,
+    "description": "Bears the likeness of a strange bug known only as 'The Sprintmaster'.\nIncreases the running speed of the bearer, allowing them to avoid danger or overtake rivals.",
+    "imgSrc": "/charms/sprintmaster.png"
+  },
+  {
+    "id": 8,
+    "name": "Grubsong",
+    "notchesCost": 1,
+    "description": "Contains the gratitude of freed grubs.\nGain SOUL when taking damage.",
+    "imgSrc": "/charms/grubsong.png"
+  },
+  {
+    "id": 9,
+    "name": "Grubberly's Elegy",
+    "notchesCost": 3,
+    "description": "Contains the gratitude of grubs who will move to the next stage of their lives. Imbues weapons with a holy strength.\nWhen the bearer is at full health, they will fire beams of white-hot energy from their nail.",
+    "imgSrc": "/charms/grubberlys-elegy.png"
+  },
+  {
+    "id": 10,
+    "name": "Unbreakable Heart",
+    "notchesCost": 2,
+    "description": "Increases the health of the bearer, allowing them to take more damage.\nThis charm is unbreakable.",
+    "imgSrc": "/charms/unbreakable-heart.png"
+  },
+  {
+    "id": 11,
+    "name": "Unbreakable Greed",
+    "notchesCost": 2,
+    "description": "Causes the bearer to find more Geo when defeating enemies.\nThis charm is unbreakable.",
+    "imgSrc": "/charms/unbreakable-greed.png"
+  },
+  {
+    "id": 12,
+    "name": "Unbreakable Strength",
+    "notchesCost": 3,
+    "description": "Strengthens the bearer, increasing the damage they deal to enemies with their nail.\nThis charm is unbreakable.",
+    "imgSrc": "/charms/unbreakable-strength.png"
+  },
+  {
+    "id": 13,
+    "name": "Spell Twister",
+    "notchesCost": 2,
+    "description": "Reflecting the desires of the Soul Sanctum for mastery over SOUL, it improves the bearer's ability to cast spells.\nReduces the SOUL cost of casting spells.",
+    "imgSrc": "/charms/spell-twister.png"
+  },
+  {
+    "id": 14,
+    "name": "Steady Body",
+    "notchesCost": 1,
+    "description": "Keeps its bearer from recoiling backwards when they strike an enemy with a nail.\nAllows one to stay steady and keep attacking.",
+    "imgSrc": "/charms/steady-body.png"
+  },
+  {
+    "id": 15,
+    "name": "Heavy Blow",
+    "notchesCost": 2,
+    "description": "Formed from the nails of fallen warriors.\nIncreases the force of the bearer's nail, causing enemies to recoil further when hit.",
+    "imgSrc": "/charms/heavy-blow.png"
+  },
+  {
+    "id": 16,
+    "name": "Quick Slash",
+    "notchesCost": 3,
+    "description": "Born from imperfect, discarded nails that have fused together. The nails still long to be wielded.\nAllows the bearer to slash much more rapidly with their nail.",
+    "imgSrc": "/charms/quick-slash.png"
+  },
+  {
+    "id": 17,
+    "name": "Longnail",
+    "notchesCost": 2,
+    "description": "Increases the range of the bearer's nail, allowing them to strike foes from further away.",
+    "imgSrc": "/charms/longnail.png"
+  },
+  {
+    "id": 18,
+    "name": "Mark of Pride",
+    "notchesCost": 3,
+    "description": "Freely given by the Mantis Tribe to those they respect.\nGreatly increases the range of the bearer's nail, allowing them to strike foes from further away.",
+    "imgSrc": "/charms/mark-of-pride.png"
+  },
+  {
+    "id": 19,
+    "name": "Fury of the Fallen",
+    "notchesCost": 2,
+    "description": "Embodies the fury and heroism that comes upon those who are about to die.\nWhen close to death, the bearer's strength will increase.",
+    "imgSrc": "/charms/fury-of-the-fallen.png"
+  },
+  {
+    "id": 20,
+    "name": "Thorns of Agony",
+    "notchesCost": 1,
+    "description": "Senses the pain of its bearer and lashes out at the world around them.\nWhen taking damage, sprout thorny vines that damage nearby foes.",
+    "imgSrc": "/charms/thorns-of-agony.png"
+  },
+  {
+    "id": 21,
+    "name": "Baldur Shell",
+    "notchesCost": 2,
+    "description": "Protects its bearer with a hard shell while focusing SOUL.\nThe shell is not indestructible and will shatter if it absorbs too much damage.",
+    "imgSrc": "/charms/baldur-shell.png"
+  },
+  {
+    "id": 22,
+    "name": "Flukenest",
+    "notchesCost": 3,
+    "description": "Living charm born in the gut of a Flukemarm.\nTransforms the Vengeful Spirit spell into a horde of volatile baby flukes.",
+    "imgSrc": "/charms/flukenest.png"
+  },
+  {
+    "id": 23,
+    "name": "Defender's Crest",
+    "notchesCost": 1,
+    "description": "Unique charm bestowed by the King of Hallownest to his most loyal knight. Scratched and dirty, but still cared for.\nCauses the bearer to emit a heroic odour.",
+    "imgSrc": "/charms/defenders-crest.png"
+  },
+  {
+    "id": 24,
+    "name": "Glowing Womb",
+    "notchesCost": 2,
+    "description": "Drains the SOUL of its bearer and uses it to birth hatchlings.\nThe hatchlings have no desire to eat or live, and will sacrifice themselves to protect their parent.",
+    "imgSrc": "/charms/glowing-womb.png"
+  },
+  {
+    "id": 25,
+    "name": "Quick Focus",
+    "notchesCost": 3,
+    "description": "A charm containing a crystal lens.\nIncreases the speed of focusing SOUL, allowing the bearer to heal damage faster.",
+    "imgSrc": "/charms/quick-focus.png"
+  },
+  {
+    "id": 26,
+    "name": "Deep Focus",
+    "notchesCost": 4,
+    "description": "Naturally formed within a crystal over a long period. Draws in SOUL from the surrounding air.\nThe bearer will focus SOUL at a slower rate, but the healing effect will double.",
+    "imgSrc": "/charms/deep-focus.png"
+  },
+  {
+    "id": 27,
+    "name": "Lifeblood Heart",
+    "notchesCost": 2,
+    "description": "Contains a living core that seeps precious lifeblood.\nWhen resting, the bearer will gain a coating of lifeblood that protects from a modest amount of damage.",
+    "imgSrc": "/charms/lifeblood-heart.png"
+  },
+  {
+    "id": 28,
+    "name": "Lifeblood Core",
+    "notchesCost": 3,
+    "description": "Contains a living core that bleeds precious lifeblood.\nWhen resting, the bearer will gain a coating of lifeblood that protects from a large amount of damage.",
+    "imgSrc": "/charms/lifeblood-core.png"
+  },
+  {
+    "id": 29,
+    "name": "Joni's Blessing",
+    "notchesCost": 4,
+    "description": "Blessed by Joni, the kindly heretic. Transfigures vital fluids into blue lifeblood.\nThe bearer will have a healthier shell and can take more damage, but they will not be able to heal themselves by focusing SOUL.",
+    "imgSrc": "/charms/jonis-blessing.png"
+  },
+  {
+    "id": 30,
+    "name": "Hiveblood",
+    "notchesCost": 4,
+    "description": "Golden nugget of the Hive's precious hardened nectar.\nHeals the bearer's wounds over time, allowing them to regain health without focusing SOUL.",
+    "imgSrc": "/charms/hiveblood.png"
+  },
+  {
+    "id": 31,
+    "name": "Spore Shroom",
+    "notchesCost": 1,
+    "description": "Composed of living fungal matter. Scatters spores when exposed to SOUL.\nWhen focusing SOUL, emit a spore cloud that slowly damages enemies",
+    "imgSrc": "/charms/spore-shroom.png"
+  },
+  {
+    "id": 32,
+    "name": "Sharp Shadow",
+    "notchesCost": 2,
+    "description": "Contains a forbidden spell that transforms shadows into deadly weapons.\nWhen using Shadow Dash, the bearer's body will sharpen and damage enemies.",
+    "imgSrc": "/charms/sharp-shadow.png"
+  },
+  {
+    "id": 33,
+    "name": "Shape of Unn",
+    "notchesCost": 2,
+    "description": "Reveals the form of Unn within the bearer.\nWhile focusing SOUL, the bearer will take on a new shape and can move freely to avoid enemies.",
+    "imgSrc": "/charms/shape-of-unn.png"
+  },
+  {
+    "id": 34,
+    "name": "Nailmaster's Glory",
+    "notchesCost": 1,
+    "description": "Contains the passion, skill and regrets of a Nailmaster.\nIncreases the bearer's mastery of Nail Arts, allowing them to focus their power faster and unleash arts sooner.",
+    "imgSrc": "/charms/nailmasters-glory.png"
+  },
+  {
+    "id": 35,
+    "name": "Weaversong",
+    "notchesCost": 2,
+    "description": "Silken charm containing a song of farewell, left by the Weavers who departed Hallownest for their old home.\nSummons weaverlings to give the lonely bearer some companionship and protection.",
+    "imgSrc": "/charms/weaversong.png"
+  },
+  {
+    "id": 36,
+    "name": "Dream Wielder",
+    "notchesCost": 1,
+    "description": "Transient charm created for those who wield the Dream Nail and collect Essence.\nAllows the bearer to charge the Dream Nail faster and collect more SOUL when striking foes.",
+    "imgSrc": "/charms/dream-wielder.png"
+  },
+  {
+    "id": 37,
+    "name": "Dreamshield",
+    "notchesCost": 3,
+    "description": "Defensive charm once wielded by a tribe that could shape dreams.\nConjures a shield that follows the bearer and attempts to protect them.",
+    "imgSrc": "/charms/dreamshield.png"
+  },
+  {
+    "id": 38,
+    "name": "Grimmchild",
+    "notchesCost": 2,
+    "description": "Worn by those who take part in the Grimm Troupe's Ritual.\nThe bearer must seek the Grimmkin and collect their flames. Uncollected flames will appear on the bearer's map.",
+    "imgSrc": "/charms/grimmchild.png"
+  },
+  {
+    "id": 39,
+    "name": "Void Heart",
+    "notchesCost": 0,
+    "description": "An emptiness that was hidden within, now unconstrained. Unifies the void under the bearer's will.\nThis charm is a part of its bearer and can not be unequipped.",
+    "imgSrc": "/charms/void-heart.png"
+  }
+]
