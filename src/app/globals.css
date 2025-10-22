@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+@theme {
+  --drop-shadow-charm: 0 0 10px #fff;
+}
