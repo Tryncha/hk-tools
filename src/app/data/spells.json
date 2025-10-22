@@ -7,7 +7,7 @@
       "projectile": 15,
       "total": 15
     },
-    "imgSrc": "spells/vengeful-spirit.png"
+    "imgSrc": "/spells/vengeful-spirit.png"
   },
   {
     "id": 1,
@@ -18,7 +18,7 @@
       "shockwave": 20,
       "total": 35
     },
-    "imgSrc": "spells/desolate-dive.png"
+    "imgSrc": "/spells/desolate-dive.png"
   },
   {
     "id": 2,
@@ -29,7 +29,7 @@
       "perHit": 13,
       "total": 39
     },
-    "imgSrc": "spells/howling-wraiths.png"
+    "imgSrc": "/spells/howling-wraiths.png"
   },
   {
     "id": 3,
@@ -39,7 +39,7 @@
       "projectile": 30,
       "total": 30
     },
-    "imgSrc": "spells/shade-soul.png"
+    "imgSrc": "/spells/shade-soul.png"
   },
   {
     "id": 4,
@@ -51,7 +51,7 @@
       "secondShockwave": 15,
       "total": 60
     },
-    "imgSrc": "spells/descending-dark.png"
+    "imgSrc": "/spells/descending-dark.png"
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
       "perHit": 20,
       "total": 80
     },
-    "imgSrc": "spells/abyss-shriek.png"
+    "imgSrc": "/spells/abyss-shriek.png"
   },
   {
     "id": 6,
@@ -72,7 +72,7 @@
       "flukes": 9,
       "perHit": 4
     },
-    "imgSrc": "spells/flukelings.png"
+    "imgSrc": "/spells/flukelings.png"
   },
   {
     "id": 7,
@@ -82,7 +82,7 @@
       "flukes": 16,
       "perHit": 4
     },
-    "imgSrc": "spells/shade-flukelings.png"
+    "imgSrc": "/spells/shade-flukelings.png"
   },
   {
     "id": 8,
@@ -93,6 +93,6 @@
       "cloud": 1,
       "time": 2.2
     },
-    "imgSrc": "spells/volatile-fluke.png"
+    "imgSrc": "/spells/volatile-fluke.png"
   }
 ]

@@ -1,17 +1,16 @@
 import CharmList from './components/CharmList';
-import NotchesContainer from './components/NotchesContainer';
-import CurrentCharms from './components/CurrentCharms';
+import CharmsInfo from './components/CharmsInfo';
+import KnightInfo from './components/KnightInfo';
 
 const HomePage = () => {
   return (
-    <main className="flex h-screen items-center justify-center">
+    <main className="flex justify-center">
       <section>
-        <section className="flex flex-col">
-          <CurrentCharms />
-          <NotchesContainer />
-        </section>
-        <hr className="my-4" />
+        <CharmsInfo />
+        <hr className="my-8" />
         <CharmList />
+        <hr className="my-8" />
+        <KnightInfo />
       </section>
     </main>
   );

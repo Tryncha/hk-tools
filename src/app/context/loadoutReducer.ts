@@ -26,7 +26,7 @@ export const initialLoadout: Loadout = {
     description: 'The ultimate weapon of Hallownest. Crafted to perfection, this ancient nail reveals its true form.',
     level: 5,
     damage: 21,
-    imgSrc: 'nails/pure-nail.png'
+    imgSrc: '/nails/pure-nail.png'
   },
   notchesUsed: 0,
   isOvercharmed: false,
@@ -50,7 +50,7 @@ export const initialLoadout: Loadout = {
         projectile: 30,
         total: 30
       },
-      imgSrc: 'spells/shade-soul.png'
+      imgSrc: '/spells/shade-soul.png'
     },
     {
       id: 4,
@@ -63,7 +63,7 @@ export const initialLoadout: Loadout = {
         secondShockwave: 15,
         total: 60
       },
-      imgSrc: 'spells/descending-dark.png'
+      imgSrc: '/spells/descending-dark.png'
     },
     {
       id: 5,
@@ -75,7 +75,7 @@ export const initialLoadout: Loadout = {
         perHit: 20,
         total: 80
       },
-      imgSrc: 'spells/abyss-shriek.png'
+      imgSrc: '/spells/abyss-shriek.png'
     }
   ]
 };

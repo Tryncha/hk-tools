@@ -21,9 +21,9 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
         src={imgSrc}
         alt={name}
         title={name}
-        width={80}
-        height={80}
-        className="size-20"
+        width={72}
+        height={72}
+        className="size-18"
         priority
       />
     </div>
