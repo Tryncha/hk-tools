@@ -3,7 +3,7 @@
 import useLoadout from '../hooks';
 import type { Charm } from '../types';
 import CharmContainer from './CharmContainer';
-import charmsData from '../data/charms.json';
+import { CHARMS } from '../data/charms';
 
 interface CharmListRowProps {
   charmsToShow: Charm[];
@@ -29,10 +29,10 @@ const CharmListRow = ({ charmsToShow }: CharmListRowProps) => {
 const CharmList = () => {
   return (
     <section className="flex flex-col items-center gap-1 py-2">
-      <CharmListRow charmsToShow={charmsData.slice(0, 10)} />
-      <CharmListRow charmsToShow={charmsData.slice(10, 20)} />
-      <CharmListRow charmsToShow={charmsData.slice(20, 30)} />
-      <CharmListRow charmsToShow={charmsData.slice(30, 40)} />
+      <CharmListRow charmsToShow={CHARMS.slice(0, 10)} />
+      <CharmListRow charmsToShow={CHARMS.slice(10, 20)} />
+      <CharmListRow charmsToShow={CHARMS.slice(20, 30)} />
+      <CharmListRow charmsToShow={CHARMS.slice(30, 40)} />
     </section>
   );
 };

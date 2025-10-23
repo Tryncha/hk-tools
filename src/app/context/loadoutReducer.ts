@@ -1,5 +1,7 @@
 import { Charm, Loadout, Nail } from '@/app/types';
 import { MAX_NOTCHES } from '../constants';
+import { NAILS } from '../data/nails';
+import { CHARMS } from '../data/charms';
 
 export const debugLoadout = {
   nail: { id: 4, name: 'Pure Nail' },
@@ -20,26 +22,10 @@ export const debugLoadout = {
 };
 
 export const initialLoadout: Loadout = {
-  nail: {
-    id: 4,
-    name: 'Pure Nail',
-    description: 'The ultimate weapon of Hallownest. Crafted to perfection, this ancient nail reveals its true form.',
-    level: 5,
-    damage: 21,
-    imgSrc: '/nails/pure-nail.png'
-  },
+  nail: NAILS[4],
   notchesUsed: 0,
   isOvercharmed: false,
-  charms: [
-    {
-      id: 39,
-      name: 'Void Heart',
-      notchesCost: 0,
-      description:
-        "An emptiness that was hidden within, now unconstrained. Unifies the void under the bearer's will.\nThis charm is a part of its bearer and can not be unequipped.",
-      imgSrc: '/charms/39-void-heart.png'
-    }
-  ],
+  charms: [CHARMS[39]],
   spells: [
     {
       id: 3,
@@ -83,6 +69,7 @@ export const initialLoadout: Loadout = {
 type LoadoutAction =
   | { type: 'SET_NAIL'; payload: Nail }
   | { type: 'SET_CHARM'; payload: Charm }
+  | { type: 'SET_EFFECT'; payload: string }
   | { type: 'RESET_CHARMS' }
   | { type: 'RESET_LOADOUT' };
 
@@ -100,7 +87,7 @@ export default function loadoutReducer(state: Loadout, action: LoadoutAction) {
         newCharms = state.charms.filter((c) => c.id !== charmToAdd.id);
       }
 
-      const newNotchesUsed = newCharms.reduce((acc, charm) => acc + charm.notchesCost, 0);
+      const newNotchesUsed = newCharms.reduce((acc, charm) => acc + charm.notchCost, 0);
       const newIsOvercharmed = newNotchesUsed > MAX_NOTCHES;
 
       return {

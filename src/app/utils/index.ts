@@ -1,8 +1,8 @@
 import { QUICK_SWING_SPEED, SWING_SPEED } from '../constants';
-import nails from '../data/nails.json';
-import charms from '../data/charms.json';
+// import nails from '../data/nails';
+import { CHARMS } from '../data/charms';
 import spells from '../data/spells.json';
-import { NailArt, Spell } from '../types';
+import { Charm, NailArt, Spell } from '../types';
 
 export function capitalizeText(text: string) {
   const excludedWords = ['of', 'and', 'to', 'the'];
@@ -27,12 +27,15 @@ export function calculateDPS(damage: number, hasQuickSlash: boolean) {
   return damagePerSecond.toFixed(2);
 }
 
-export function getNailData(id: number) {
-  return nails.find((n) => n.id === id);
-}
+// export function getNailData(id: number) {
+//   return nails.find((n) => n.id === id);
+// }
 
-export function getCharmData(id: number) {
-  return charms.find((c) => c.id === id);
+export function getCharmData(id: number): Charm {
+  const charmData = CHARMS.find((c) => c.id === id);
+
+  if (!charmData) throw new Error('Not charm data found...');
+  return charmData;
 }
 
 export function getSpellData(id: number) {

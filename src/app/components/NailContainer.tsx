@@ -19,17 +19,17 @@ const OutputLabel = ({ label, output }: OutputLabelProps) => {
   );
 };
 
-const NailInfo = () => {
+const NailContainer = () => {
   const { loadout } = useLoadout();
   const { nail } = loadout;
 
   return (
     <div className="flex items-center gap-4">
       <Image
-        src={nail.imgSrc}
+        src={nail.image.data}
         alt={nail.name}
-        width={48}
-        height={216}
+        width={nail.image.width}
+        height={nail.image.height}
       />
       <div className="flex flex-col gap-2">
         <OutputLabel
@@ -49,4 +49,4 @@ const NailInfo = () => {
   );
 };
 
-export default NailInfo;
+export default NailContainer;

@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export interface Loadout {
   nail: Nail;
   notchesUsed: number;
@@ -6,21 +8,41 @@ export interface Loadout {
   spells: Spell[];
 }
 
+export interface Image {
+  data: StaticImageData;
+  width: number;
+  height: number;
+}
+
 export interface Nail {
-  id: number;
+  id: string;
   name: string;
-  imgSrc: string;
   description: string;
   level: number;
   damage: number;
+  image: Image;
+}
+
+export interface CharmComboTips {
+  charmId: string;
+  effect: string;
+}
+
+export interface CharmSynergy {
+  charmId: string;
+  effect: string;
 }
 
 export interface Charm {
-  id: number;
+  id: string;
   name: string;
-  imgSrc: string;
+  image: string;
   description: string;
-  notchesCost: number;
+  location: string;
+  notchCost: number;
+  effects: string[];
+  comboTips?: CharmComboTips[];
+  synergies?: CharmSynergy[];
 }
 
 export interface SpellBase {
@@ -116,15 +138,6 @@ export type Spell =
   | Flukelings
   | ShadeFlukelings
   | VolatileFluke;
-
-export interface Nail {
-  id: number;
-  name: string;
-  description: string;
-  level: number;
-  damage: number;
-  imgSrc: string;
-}
 
 export interface NailArt {
   id: number;

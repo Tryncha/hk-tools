@@ -1,11 +1,11 @@
-import NailInfo from './NailInfo';
+import NailContainer from './NailContainer';
 import NailArtsContainer from './NailsArtsContainer';
 import SpellsContainer from './SpellsContainer';
 
 const KnightInfo = () => {
   return (
     <section className="relative flex gap-4">
-      <NailInfo />
+      <NailContainer />
       <NailArtsContainer />
       <SpellsContainer />
     </section>
