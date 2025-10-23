@@ -2,7 +2,7 @@
 
 import type { Charm, Loadout } from '@/app/types';
 import { createContext, useReducer } from 'react';
-import loadoutReducer, { initialLoadout } from './loadoutReducer';
+import loadoutReducer, { getDefaultLoadout } from './loadoutReducer';
 
 interface LoadoutContextType {
   loadout: Loadout;
@@ -14,7 +14,7 @@ interface LoadoutContextType {
 const LoadoutContext = createContext<LoadoutContextType | null>(null);
 
 export const LoadoutProvider = ({ children }: { children: React.ReactNode }) => {
-  const [loadout, loadoutDispatch] = useReducer(loadoutReducer, initialLoadout);
+  const [loadout, loadoutDispatch] = useReducer(loadoutReducer, getDefaultLoadout());
 
   function setCharm(newCharm: Charm) {
     loadoutDispatch({ type: 'SET_CHARM', payload: newCharm });

@@ -21,50 +21,60 @@ export const debugLoadout = {
   ]
 };
 
-export const initialLoadout: Loadout = {
-  nail: NAILS[4],
-  notchesUsed: 0,
-  isOvercharmed: false,
-  charms: [CHARMS[39]],
-  spells: [
-    {
-      id: 3,
-      name: 'Shade Soul',
-      description:
-        'Conjure a shadow that will fly forward and burn foes in its path.\nThe shadow requires SOUL to be conjured. Strike enemies to gather SOUL.',
-      damage: {
-        projectile: 30,
-        total: 30
+export function getDefaultLoadout() {
+  const DEFAULT_NAIL = NAILS.find((n) => n.id === 'pure-nail');
+  const DEFAULT_CHARM = CHARMS.find((n) => n.id === 'void-heart');
+
+  if (!DEFAULT_NAIL) throw new Error('DEFAULT_NAIL not found');
+  if (!DEFAULT_CHARM) throw new Error('DEFAULT_CHARM not found');
+
+  const DEFAULT_LOADOUT: Loadout = {
+    nail: DEFAULT_NAIL,
+    notchesUsed: 0,
+    isOvercharmed: false,
+    charms: [DEFAULT_CHARM],
+    spells: [
+      {
+        id: 3,
+        name: 'Shade Soul',
+        description:
+          'Conjure a shadow that will fly forward and burn foes in its path.\nThe shadow requires SOUL to be conjured. Strike enemies to gather SOUL.',
+        damage: {
+          projectile: 30,
+          total: 30
+        },
+        imgSrc: '/spells/shade-soul.png'
       },
-      imgSrc: '/spells/shade-soul.png'
-    },
-    {
-      id: 4,
-      name: 'Descending Dark',
-      description:
-        'Strike the ground with a concentrated force of SOUL and Shadow. This force can destroy foes or break through fragile structures.\nThe force requires SOUL to be conjured. Strike enemies to gather SOUL.',
-      damage: {
-        dive: 15,
-        firstShockwave: 30,
-        secondShockwave: 15,
-        total: 60
+      {
+        id: 4,
+        name: 'Descending Dark',
+        description:
+          'Strike the ground with a concentrated force of SOUL and Shadow. This force can destroy foes or break through fragile structures.\nThe force requires SOUL to be conjured. Strike enemies to gather SOUL.',
+        damage: {
+          dive: 15,
+          firstShockwave: 30,
+          secondShockwave: 15,
+          total: 60
+        },
+        imgSrc: '/spells/descending-dark.png'
       },
-      imgSrc: '/spells/descending-dark.png'
-    },
-    {
-      id: 5,
-      name: 'Abyss Shriek',
-      description:
-        'Blast foes with screaming SOUL and Shadow.\nThe Wraiths requires SOUL to be conjured. Strike enemies to gather SOUL.',
-      damage: {
-        hits: 4,
-        perHit: 20,
-        total: 80
-      },
-      imgSrc: '/spells/abyss-shriek.png'
-    }
-  ]
-};
+      {
+        id: 5,
+        name: 'Abyss Shriek',
+        description:
+          'Blast foes with screaming SOUL and Shadow.\nThe Wraiths requires SOUL to be conjured. Strike enemies to gather SOUL.',
+        damage: {
+          hits: 4,
+          perHit: 20,
+          total: 80
+        },
+        imgSrc: '/spells/abyss-shriek.png'
+      }
+    ]
+  };
+
+  return DEFAULT_LOADOUT;
+}
 
 type LoadoutAction =
   | { type: 'SET_NAIL'; payload: Nail }
@@ -101,13 +111,13 @@ export default function loadoutReducer(state: Loadout, action: LoadoutAction) {
     case 'RESET_CHARMS': {
       return {
         ...state,
-        charms: initialLoadout.charms,
+        charms: getDefaultLoadout().charms,
         notchesUsed: 0
       };
     }
 
     case 'RESET_LOADOUT':
-      return initialLoadout;
+      return getDefaultLoadout();
 
     default:
       return state;

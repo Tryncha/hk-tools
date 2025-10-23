@@ -23,11 +23,6 @@ export interface Nail {
   image: Image;
 }
 
-export interface CharmComboTips {
-  charmId: string;
-  effect: string;
-}
-
 export interface CharmSynergy {
   charmId: string;
   effect: string;
@@ -41,7 +36,6 @@ export interface Charm {
   location: string;
   notchCost: number;
   effects: string[];
-  comboTips?: CharmComboTips[];
   synergies?: CharmSynergy[];
 }
 
