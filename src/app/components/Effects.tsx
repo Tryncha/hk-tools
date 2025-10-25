@@ -1,73 +1,126 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import useLoadout from '../hooks';
-import { CHARMS } from '../data/charms';
+import Image from 'next/image';
+import { NotchesOn } from './Notches';
+import { SYNERGIES } from '../data/synergies';
+import { getCharmData } from '../utils';
 
 const Effects = () => {
   const { loadout } = useLoadout();
   const { charms } = loadout;
 
-  // Use of Set instead of Array for performance reasons.
+  const [isOpen, setIsOpen] = useState(true);
 
-  // Lookup:
-  // Set.has() -> O(1)
-  // Array.includes() -> O(n)
-
-  // Addition:
-  // Set.add() -> O(1)
-  // Array.push() -> O(1), but becomes O(n) when using includes() first.
-
-  // Uniqueness:
-  // Set does not allow duplicates by definition
-
-  // In this case, the performance difference is negligible, so using an Array works just as well,
-  // but I prefer using Set since it feels like better practice when working with unique checks.
-
-  const displayedSynergiesKeys = new Set<string>();
+  const activeSynergies = SYNERGIES.filter((s) => s.charmIds.every((id) => charms.map((c) => c.id).includes(id)));
 
   return (
-    <div className="flex h-fit w-160 flex-col gap-2 bg-gray-800 p-4">
-      {charms.map((c) => (
-        <div key={c.id}>
-          <h3 className="font-bold">{c.name}</h3>
-          <ul className="ml-4 list-disc">
-            {c.effects.map((e) => (
-              <li key={`${c.id}-${e}`}>{e}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-      <hr className="my-2" />
-      {charms.map((c) =>
-        // Array of all synergies for each charm
-        c.synergies
-          // Filter synergies that match loaded charms
-          ?.filter((s) => charms.map((c) => c.id).includes(s.charmId))
-          .map((s) => {
-            const synergyCharm = CHARMS.find((sc) => sc.id === s.charmId);
-            if (!synergyCharm) throw new Error('Charm not found');
-
-            // Creation of a unique key that remains the same regardless of order
-            const synergyKey = [c.id, s.charmId].sort().join('-');
-
-            // Do not render anything if the key already exists
-            if (displayedSynergiesKeys.has(synergyKey)) return null;
-
-            // Otherwise, add it to the Set and render the synergy
-            displayedSynergiesKeys.add(synergyKey);
-
-            return (
-              <div key={synergyKey}>
-                <h3 className="font-bold">
-                  {c.name} + {synergyCharm.name}
-                </h3>
-                <span>{s.effect}</span>
+    <>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`${isOpen ? '-translate-x-160' : '-translate-x-2'} fixed top-1/2 right-0 h-12 w-8 -translate-y-1/2 border-y border-l border-gray-700 transition-transform duration-1000 ease-in-out hover:cursor-pointer`}
+      >
+        {isOpen ? '->' : '<-'}
+      </button>
+      <section
+        className={`${isOpen ? 'translate-x-0' : 'translate-x-158'} fixed right-0 h-full w-160 overflow-y-auto border-l border-gray-700 pl-2 transition-transform duration-1000 ease-in-out`}
+      >
+        <div className="flex min-h-screen flex-col justify-center gap-2">
+          <section className="flex flex-col gap-2 border border-gray-700 bg-gray-900 p-4">
+            {charms.map((c) => (
+              <div
+                key={c.id}
+                className="flex flex-col gap-2"
+              >
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={c.image}
+                    alt={c.name}
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex items-center">
+                    <h3 className="mx-2 font-bold">{c.name}</h3>
+                    <NotchesOn
+                      quantity={c.notchCost}
+                      size={30}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <ul className="ml-10 list-disc">
+                    {c.effects.map((e) => (
+                      <li key={`${c.id}-${e}`}>{e}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            );
-          })
-      )}
-    </div>
+            ))}
+          </section>
+          {activeSynergies.length > 0 && (
+            <section className="flex flex-col gap-4 border border-gray-700 bg-gray-900 p-4">
+              {activeSynergies.map((s) => {
+                const firstCharm = getCharmData(s.charmIds[0]);
+                const secondCharm = getCharmData(s.charmIds[1]);
+
+                return (
+                  <div
+                    key={s.id}
+                    className="flex flex-col gap-2"
+                  >
+                    <div className="flex items-center justify-evenly gap-2">
+                      <Image
+                        src={firstCharm.image}
+                        alt={firstCharm.name}
+                        width={50}
+                        height={50}
+                      />
+
+                      <div className="grid grid-cols-[1fr_30px_1fr] grid-rows-1">
+                        <div className="flex flex-col items-end">
+                          <h3 className="mr-1 font-bold">{firstCharm.name}</h3>
+                          <div className="flex">
+                            <NotchesOn
+                              quantity={firstCharm.notchCost}
+                              size={30}
+                            />
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <span className="mx-1 mb-0.5 flex font-bold">+</span>
+                          <span className="mx-1 mb-0.5 flex font-bold">+</span>
+                        </div>
+                        <div className="flex flex-col">
+                          <h3 className="ml-1 font-bold">{secondCharm.name}</h3>
+                          <div className="flex">
+                            <NotchesOn
+                              quantity={secondCharm.notchCost}
+                              size={30}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <Image
+                        src={secondCharm.image}
+                        alt={secondCharm.name}
+                        width={50}
+                        height={50}
+                      />
+                    </div>
+                    <div className="ml-2 flex flex-col gap-1">
+                      <ul className="ml-6 list-disc">
+                        <li>{s.effect}</li>
+                      </ul>
+                    </div>
+                  </div>
+                );
+              })}
+            </section>
+          )}
+        </div>
+      </section>
+    </>
   );
 };
 

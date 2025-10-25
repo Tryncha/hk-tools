@@ -140,3 +140,9 @@ export interface NailArt {
   damagePerNailLevel: number[];
   imgSrc: string;
 }
+
+export interface Synergy {
+  id: string;
+  charmIds: string[];
+  effect: string;
+}

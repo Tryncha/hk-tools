@@ -4,6 +4,7 @@ import useLoadout from '../hooks';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import { CHARMS } from '../data/charms';
+import { NotchesOn } from './Notches';
 
 interface MarkdownImageInlineProps {
   children: string;
@@ -33,23 +34,6 @@ const MarkdownImageInline = ({ children, imageSize }: MarkdownImageInlineProps) 
       {children}
     </Markdown>
   );
-};
-
-interface NotchesOnProps {
-  quantity: number;
-  size: number;
-}
-
-const NotchesOn = ({ quantity, size }: NotchesOnProps) => {
-  return Array.from({ length: quantity }, (_, i) => (
-    <Image
-      key={i}
-      src="/ui/notch-cost-on.png"
-      alt="Notch Cost On"
-      width={size}
-      height={size}
-    />
-  ));
 };
 
 interface CharmContainerProps {

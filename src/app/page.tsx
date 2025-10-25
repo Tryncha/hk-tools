@@ -5,7 +5,7 @@ import KnightInfo from './components/KnightInfo';
 
 const HomePage = () => {
   return (
-    <main className="flex justify-center gap-8">
+    <main className="flex min-h-screen justify-between gap-8">
       <section>
         <CharmsInfo />
         <hr className="my-8" />

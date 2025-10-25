@@ -31,7 +31,7 @@ export function calculateDPS(damage: number, hasQuickSlash: boolean) {
 //   return nails.find((n) => n.id === id);
 // }
 
-export function getCharmData(id: number): Charm {
+export function getCharmData(id: string): Charm {
   const charmData = CHARMS.find((c) => c.id === id);
 
   if (!charmData) throw new Error('Not charm data found...');
