@@ -7,7 +7,7 @@ import { NotchesOn } from './Notches';
 import { SYNERGIES } from '../data/synergies';
 import { getCharmData } from '../utils';
 
-const Effects = () => {
+const EnemiesInfo = () => {
   const { loadout } = useLoadout();
   const { charms } = loadout;
 
@@ -110,4 +110,4 @@ const Effects = () => {
   );
 };
 
-export default Effects;
+export default EnemiesInfo;
