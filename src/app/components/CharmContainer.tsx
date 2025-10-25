@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { Charm } from '../types.d';
 import useLoadout from '../hooks';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Markdown from 'react-markdown';
 import { CHARMS } from '../data/charms';
 import { NotchesOn } from './Notches';
@@ -47,94 +47,69 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
   const { setCharm } = useLoadout();
   const [isHovering, setIsHovering] = useState(false);
 
-  const tooltipRef = useRef<HTMLDivElement | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  const [tooltipPosition, setTooltipPosition] = useState<'top' | 'bottom' | null>(null);
-
-  useEffect(() => {
-    if (isHovering && tooltipRef.current && containerRef.current) {
-      const tooltipRect = tooltipRef.current.getBoundingClientRect();
-      const containerRect = containerRef.current.getBoundingClientRect();
-
-      const spaceBelow = window.innerHeight - containerRect.bottom;
-      const tooltipHeight = tooltipRect.height;
-
-      setTooltipPosition(spaceBelow >= tooltipHeight ? 'bottom' : 'top');
-    } else if (!isHovering) {
-      setTooltipPosition(null);
-    }
-  }, [isHovering]);
-
   return (
-    <div
-      ref={containerRef}
-      className="relative"
-    >
+    <>
       {isHovering && (
         <>
-          <div
-            ref={tooltipRef}
-            className={`${
-              tooltipPosition === null ? 'invisible top-22' : tooltipPosition === 'bottom' ? 'top-22' : 'bottom-22'
-            } absolute -left-80 z-50 flex w-180 flex-col justify-center gap-2 border border-gray-700 bg-gray-900 p-4`}
-          >
-            <div className="flex items-center justify-center">
-              <h3 className="mr-2 text-lg font-bold">{name}</h3>
-              <NotchesOn
-                quantity={notchCost}
-                size={30}
-              />
-            </div>
-            <span className="text-center text-sm whitespace-pre-line text-gray-400 italic">
-              <Markdown>{description}</Markdown>
-            </span>
-            <div>
-              <h3 className="font-bold">Effects</h3>
-              <ul className="ml-4 list-disc">
-                {effects.map((e) => (
-                  <li key={e}>
-                    <Markdown>{e}</Markdown>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <hr className="my-2 border-gray-500" />
-            <span className="text-sm">
-              <MarkdownImageInline imageSize={16}>{`**Location:** ${location}`}</MarkdownImageInline>
-            </span>
-            {synergies && (
-              <>
-                <hr className="my-2 border-gray-500" />
-                <h4 className="mb-2 font-bold">Synergies</h4>
-                <div className="flex flex-col gap-2">
-                  {synergies.map((s) => {
-                    const synergyCharm = CHARMS.find((c) => c.id === s.charmId);
+          <div className="fixed top-0 left-0 z-10 flex h-screen w-130 flex-col justify-center gap-2 overflow-y-auto border-l border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
+            <div className="border-y border-gray-700 bg-gray-900 p-4">
+              <div className="flex items-center justify-center">
+                <h3 className="mr-2 text-lg font-bold">{name}</h3>
+                <NotchesOn
+                  quantity={notchCost}
+                  size={30}
+                />
+              </div>
+              <span className="text-center text-sm whitespace-pre-line text-gray-400 italic">
+                <Markdown>{description}</Markdown>
+              </span>
+              <div>
+                <h3 className="font-bold">Effects</h3>
+                <ul className="ml-4 list-disc">
+                  {effects.map((e) => (
+                    <li key={e}>
+                      <Markdown>{e}</Markdown>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <hr className="my-2 border-gray-500" />
+              <span className="text-sm">
+                <MarkdownImageInline imageSize={16}>{`**Location:** ${location}`}</MarkdownImageInline>
+              </span>
+              {synergies && (
+                <>
+                  <hr className="my-2 border-gray-500" />
+                  <h4 className="mb-2 font-bold">Synergies</h4>
+                  <div className="flex flex-col gap-2">
+                    {synergies.map((s) => {
+                      const synergyCharm = CHARMS.find((c) => c.id === s.charmId);
 
-                    if (!synergyCharm) throw new Error('Charm not found');
+                      if (!synergyCharm) throw new Error('Charm not found');
 
-                    return (
-                      <div
-                        key={synergyCharm.id}
-                        className="flex items-center border-l-3 border-gray-500"
-                      >
-                        <Image
-                          src={synergyCharm.image}
-                          alt={synergyCharm.name}
-                          width={50}
-                          height={50}
-                          className="mx-4"
-                        />
-                        <div className="flex flex-col">
-                          <h5 className="font-semibold">{synergyCharm.name}</h5>
-                          <span className="text-sm">{s.effect}</span>
+                      return (
+                        <div
+                          key={synergyCharm.id}
+                          className="flex items-center border-l-3 border-gray-500"
+                        >
+                          <Image
+                            src={synergyCharm.image}
+                            alt={synergyCharm.name}
+                            width={50}
+                            height={50}
+                            className="mx-4"
+                          />
+                          <div className="flex flex-col">
+                            <h5 className="font-semibold">{synergyCharm.name}</h5>
+                            <span className="text-sm">{s.effect}</span>
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </>
-            )}
+                      );
+                    })}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </>
       )}
@@ -153,7 +128,7 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
           priority
         />
       </div>
-    </div>
+    </>
   );
 };
 
