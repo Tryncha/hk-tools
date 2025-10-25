@@ -48,9 +48,9 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div className="relative">
+    <>
       {isHovering && (
-        <div className="absolute -top-8 left-20 z-10 flex w-180 flex-col justify-center gap-2 rounded-sm border bg-gray-900 p-4">
+        <div className="fixed top-0 right-0 z-10 flex h-screen w-130 flex-col justify-center gap-2 overflow-y-auto border-l border-gray-700 bg-gray-900 p-4">
           <div className="flex items-center justify-center">
             <h3 className="mr-2 text-lg font-bold">{name}</h3>
             <NotchesOn
@@ -113,7 +113,7 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
         onClick={() => setCharm(charm)}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        className={`${isSelected ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} hover:cursor-pointer`}
+        className={`${isSelected ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} p-0.5 hover:cursor-pointer`}
       >
         <Image
           src={image}
@@ -124,7 +124,7 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
           priority
         />
       </div>
-    </div>
+    </>
   );
 };
 

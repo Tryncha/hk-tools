@@ -1,7 +1,6 @@
 import CharmList from './components/CharmList';
 import CharmsInfo from './components/CharmsInfo';
 import Effects from './components/Effects';
-import EnemiesInfo from './components/EnemiesInfo';
 import KnightInfo from './components/KnightInfo';
 import ScreenSlider from './components/ScreenSlider';
 
@@ -9,7 +8,7 @@ const HomePage = () => {
   return (
     <main className="flex min-h-screen justify-between gap-8">
       <ScreenSlider position="left">
-        <EnemiesInfo />
+        <Effects />
       </ScreenSlider>
       <section>
         <CharmsInfo />

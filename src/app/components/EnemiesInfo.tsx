@@ -14,7 +14,7 @@ const EnemiesInfo = () => {
   const activeSynergies = SYNERGIES.filter((s) => s.charmIds.every((id) => charms.map((c) => c.id).includes(id)));
 
   return (
-    <div className="flex min-h-screen flex-col justify-center gap-2">
+    <div className="flex min-h-screen flex-col gap-2">
       <section className="flex flex-col gap-2 border border-gray-700 bg-gray-900 p-4">
         {charms.map((c) => (
           <div

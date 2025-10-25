@@ -31,8 +31,8 @@ interface ScreenSliderProps {
 const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
   const [isSliderOpen, setIsSliderOpen] = useState(true);
 
-  const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-128'} left-0 border-r pr-2`;
-  const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-128'} right-0 border-l pl-2`;
+  const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-128'} left-0 scale-x-[-1]`;
+  const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-128'} right-0 `;
 
   return (
     <section>
@@ -44,9 +44,9 @@ const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
         {position === 'left' ? (isSliderOpen ? '<-' : '->') : isSliderOpen ? '->' : '<-'}
       </ButtonSlider>
       <div
-        className={`${position === 'left' ? leftStyles : rightStyles} fixed h-full w-130 overflow-y-auto border-gray-700 transition-transform duration-1000 ease-in-out`}
+        className={`${position === 'left' ? leftStyles : rightStyles} fixed h-full w-130 overflow-y-auto border-l border-gray-700 pl-2 transition-transform duration-1000 ease-in-out`}
       >
-        {children}
+        <div className={`${position === 'left' && 'scale-x-[-1]'}`}>{children}</div>
       </div>
     </section>
   );
