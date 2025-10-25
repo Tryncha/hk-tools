@@ -16,7 +16,7 @@ const ButtonSlider = ({ children, position, isSliderOpen, onClick }: ButtonSlide
   return (
     <button
       onClick={onClick}
-      className={`${position === 'left' ? leftStyles : rightStyles} fixed top-1/2 h-12 w-8 -translate-y-1/2 border-y border-gray-700 transition-transform duration-1000 ease-in-out hover:cursor-pointer`}
+      className={`${position === 'left' ? leftStyles : rightStyles} fixed top-1/2 z-20 h-12 w-8 -translate-y-1/2 border-y border-gray-700 transition-transform duration-1000 ease-in-out hover:cursor-pointer`}
     >
       {children}
     </button>

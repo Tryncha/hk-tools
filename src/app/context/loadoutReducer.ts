@@ -29,6 +29,7 @@ export function getDefaultLoadout() {
   if (!DEFAULT_CHARM) throw new Error('DEFAULT_CHARM not found');
 
   const DEFAULT_LOADOUT: Loadout = {
+    health: 10,
     nail: DEFAULT_NAIL,
     notchesUsed: 0,
     isOvercharmed: false,

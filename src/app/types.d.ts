@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 
 export interface Loadout {
+  health: number;
   nail: Nail;
   notchesUsed: number;
   isOvercharmed: boolean;

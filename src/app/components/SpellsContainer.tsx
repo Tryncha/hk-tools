@@ -17,10 +17,10 @@ const SpellInfo = ({ spell, isSimplified }: SpellInfoProps) => {
   const { label, rawValue, extendedValue } = getSpellInfo(spell);
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex h-20 items-center gap-4">
       <Image
-        width={70}
-        height={70}
+        width={60}
+        height={60}
         src={imgSrc}
         alt={name}
       />
@@ -49,7 +49,7 @@ const SpellsContainer = () => {
   }
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="relative flex flex-col gap-2">
       {spells.map((s) => (
         <SpellInfo
           key={s.id}
