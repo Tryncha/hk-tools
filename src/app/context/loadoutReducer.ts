@@ -30,6 +30,11 @@ export function getDefaultLoadout() {
 
   const DEFAULT_LOADOUT: Loadout = {
     health: 10,
+    soul: {
+      max: 99,
+      cost: 33,
+      regen: 11
+    },
     nail: DEFAULT_NAIL,
     notchesUsed: 0,
     isOvercharmed: false,

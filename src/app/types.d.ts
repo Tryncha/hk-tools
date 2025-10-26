@@ -1,7 +1,14 @@
 import { StaticImageData } from 'next/image';
 
+export interface Soul {
+  max: number;
+  cost: number;
+  regen: number;
+}
+
 export interface Loadout {
   health: number;
+  soul: Soul;
   nail: Nail;
   notchesUsed: number;
   isOvercharmed: boolean;
