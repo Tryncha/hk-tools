@@ -2,6 +2,7 @@ import { Charm, Loadout, Nail } from '@/app/types';
 import { MAX_NOTCHES } from '../constants';
 import { NAILS } from '../data/nails';
 import { CHARMS } from '../data/charms';
+import { calculateStats } from '../utils';
 
 export const debugLoadout = {
   nail: { id: 4, name: 'Pure Nail' },
@@ -29,11 +30,17 @@ export function getDefaultLoadout() {
   if (!DEFAULT_CHARM) throw new Error('DEFAULT_CHARM not found');
 
   const DEFAULT_LOADOUT: Loadout = {
-    health: 10,
+    health: 9,
     soul: {
-      max: 99,
+      max: {
+        base: 99,
+        perVessel: 33
+      },
       cost: 33,
-      regen: 11
+      gain: {
+        perAttack: 11,
+        perHit: 0
+      }
     },
     nail: DEFAULT_NAIL,
     notchesUsed: 0,
@@ -106,12 +113,14 @@ export default function loadoutReducer(state: Loadout, action: LoadoutAction) {
       const newNotchesUsed = newCharms.reduce((acc, charm) => acc + charm.notchCost, 0);
       const newIsOvercharmed = newNotchesUsed > MAX_NOTCHES;
 
-      return {
+      const newLoadout: Loadout = {
         ...state,
         notchesUsed: newNotchesUsed,
         isOvercharmed: newIsOvercharmed,
         charms: newCharms
       };
+
+      return calculateStats(newLoadout);
     }
 
     case 'RESET_CHARMS': {

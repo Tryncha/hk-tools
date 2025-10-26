@@ -9,7 +9,9 @@ export const CHARMS: Charm[] = [
     description:
       'Whispers its location to the bearer whenever a map is open, allowing wanderers to pinpoint their current location',
     location: 'Sold by Iselda in Dirthmouth for ![Geo](/ui/geo.png) 200, after encountering Cornifer',
-    effects: ["Shows Knight's location on map"]
+    effects: {
+      description: ["Shows Knight's location on map"]
+    }
   },
   {
     id: 'gathering-swarm',
@@ -19,7 +21,9 @@ export const CHARMS: Charm[] = [
     description:
       "A swarm will follow the bearer and gather up any loose Geo.\nUseful for those who can't bear to leave anything behind, no matter how insignificant",
     location: 'Sold by Sly in Dirtmouth for ![Geo](/ui/geo.png) 300',
-    effects: ['Collects dropped Geo']
+    effects: {
+      description: ['Collects dropped Geo']
+    }
   },
   {
     id: 'stalwart-shell',
@@ -29,10 +33,12 @@ export const CHARMS: Charm[] = [
     description:
       'Builds resilience. When recovering from damage, the bearer will remain invulnerable for longer.\nMakes it easier to escape from dangerous situations',
     location: 'Sold by Sly in Dirtmouth for ![Geo](/ui/geo.png) 200',
-    effects: [
-      'Increases invincibility duration after being hit by ~35%',
-      'Reduces hit recoil (no input time) after being hit by 60%'
-    ]
+    effects: {
+      description: [
+        'Increases invincibility duration after being hit by ~35%',
+        'Reduces hit recoil (no input time) after being hit by 60%'
+      ]
+    }
   },
   {
     id: 'soul-catcher',
@@ -42,10 +48,22 @@ export const CHARMS: Charm[] = [
     description:
       'Used by shamans to draw more SOUL from the world around them.\nIncreases the amount of SOUL gained when striking an enemy with the nail',
     location: 'Ancestral Mound, west of Elder Baldur',
-    effects: [
-      'Gain +3 additional SOUL with each hit for main Soul Vessel (base: 11)',
-      'Gain +2 for reserve Soul Vessels (base: 6)'
-    ]
+    effects: {
+      description: [
+        'Gain +3 additional SOUL with each hit for main Soul Vessel (base: 11)',
+        'Gain +2 for reserve Soul Vessels (base: 6)'
+      ],
+      bonus: {
+        soul: {
+          max: {
+            perVessel: 2
+          },
+          gain: {
+            perAttack: 3
+          }
+        }
+      }
+    }
   },
   {
     id: 'shaman-stone',

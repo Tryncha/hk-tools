@@ -2,7 +2,7 @@ import { QUICK_SWING_SPEED, SWING_SPEED } from '../constants';
 // import nails from '../data/nails';
 import { CHARMS } from '../data/charms';
 import spells from '../data/spells.json';
-import { Charm, NailArt, Spell } from '../types';
+import { Charm, Loadout, NailArt, Spell } from '../types';
 
 export function capitalizeText(text: string) {
   const excludedWords = ['of', 'and', 'to', 'the'];
@@ -206,4 +206,58 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
         extendedValue: 'N/A'
       };
   }
+}
+
+const BASE_STATS = {
+  health: 9,
+  soul: {
+    max: {
+      base: 99,
+      perVessel: 33
+    },
+    cost: 33,
+    gain: {
+      perAttack: 11,
+      perHit: 0
+    }
+  },
+  nailDamageMultiplier: 1,
+  focusSpeed: 1,
+  dashCooldown: 1,
+  moveSpeed: 1
+};
+
+export function calculateStats(loadout: Loadout) {
+  const { charms } = loadout;
+
+  // let totalHealth = BASE_STATS.health;
+  const totalSoul = { ...BASE_STATS.soul };
+  // let totalNailDamageMultiplier = BASE_STATS.nailDamageMultiplier;
+  // let totalFocusSpeed = BASE_STATS.focusSpeed;
+  // let totalDashCooldown = BASE_STATS.dashCooldown;
+  // let totalMoveSpeed = BASE_STATS.moveSpeed;
+
+  charms.forEach((c) => {
+    const bonusEffect = c.effects.bonus;
+
+    if (!bonusEffect) return;
+
+    if (bonusEffect.soul) {
+      if (bonusEffect.soul.gain) {
+        if (bonusEffect.soul.gain.perAttack) totalSoul.gain.perAttack += bonusEffect.soul.gain.perAttack;
+      }
+    }
+  });
+
+  const calculatedLoadout: Loadout = {
+    ...loadout,
+    // health: totalHealth,
+    soul: totalSoul
+    // nail: {
+    // ...loadout.nail,
+    // damage: totalNailDamageMultiplier
+    // }
+  };
+
+  return calculatedLoadout;
 }

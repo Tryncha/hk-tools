@@ -66,7 +66,7 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
               <div>
                 <h3 className="font-bold">Effects</h3>
                 <ul className="ml-4 list-disc">
-                  {effects.map((e) => (
+                  {effects.description.map((e) => (
                     <li key={e}>
                       <Markdown>{e}</Markdown>
                     </li>

@@ -1,9 +1,15 @@
 import { StaticImageData } from 'next/image';
 
 export interface Soul {
-  max: number;
+  max: {
+    base: number;
+    perVessel: number;
+  };
   cost: number;
-  regen: number;
+  gain: {
+    perAttack: number;
+    perHit: number;
+  };
 }
 
 export interface Loadout {
@@ -43,7 +49,22 @@ export interface Charm {
   description: string;
   location: string;
   notchCost: number;
-  effects: string[];
+  effects: {
+    description: string[];
+    bonus?: {
+      soul?: {
+        max?: {
+          base?: number;
+          perVessel?: number;
+        };
+        cost?: number;
+        gain?: {
+          perAttack?: number;
+          perHit?: number;
+        };
+      };
+    };
+  };
   synergies?: CharmSynergy[];
 }
 

@@ -49,7 +49,7 @@ const Effects = () => {
                 </div>
                 <div className="flex flex-col gap-1">
                   <ul className="ml-10 list-disc">
-                    {c.effects.map((e) => (
+                    {c.effects.description.map((e) => (
                       <li key={`${c.id}-${e}`}>{e}</li>
                     ))}
                   </ul>
