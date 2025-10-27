@@ -25,6 +25,7 @@ export const NAILS: Nail[] = [
     description: 'A traditional weapon of Hallownest, restored to lethal form.',
     level: 2,
     damage: 9,
+    cost: '![Geo](/ui/geo.png) 250',
     image: {
       data: SharpenedNail,
       width: 48,
@@ -37,6 +38,7 @@ export const NAILS: Nail[] = [
     description: 'A cleft weapon of Hallownest. The blade is exquisitly balanced.',
     level: 3,
     damage: 13,
+    cost: '![Geo](/ui/geo.png) 800 + 1 Pale Ore',
     image: {
       data: ChannelledNail,
       width: 48,
@@ -49,6 +51,7 @@ export const NAILS: Nail[] = [
     description: 'A powerful weapon of Hallownest, refined beyond all others.',
     level: 4,
     damage: 17,
+    cost: '![Geo](/ui/geo.png) 2000 + 2 Pale Ore',
     image: {
       data: CoiledNail,
       width: 48,
@@ -61,6 +64,7 @@ export const NAILS: Nail[] = [
     description: 'The ultimate weapon of Hallownest. Crafted to perfection, this ancient nail reveals its true form.',
     level: 5,
     damage: 21,
+    cost: '![Geo](/ui/geo.png) 4000 + 3 Pale Ore',
     image: {
       data: PureNail,
       width: 48,

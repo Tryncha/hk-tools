@@ -2,8 +2,7 @@
 
 import Image from 'next/image';
 import nailArts from '../data/nailArts.json';
-import { useLoadout } from '../hooks';
-import { getNailArtInfo } from '../utils';
+import { useLoadout, useNailArt } from '../hooks';
 import { NailArt } from '../types.d';
 
 interface NailArtsInfoProps {
@@ -15,7 +14,7 @@ const NailArtInfo = ({ nailArt }: NailArtsInfoProps) => {
   const { nail } = loadout;
 
   const { name, imgSrc } = nailArt;
-  const { label, value } = getNailArtInfo(nailArt, nail.level);
+  const { label, value } = useNailArt(nailArt, nail.level);
 
   return (
     <div className="flex gap-2">
@@ -24,6 +23,7 @@ const NailArtInfo = ({ nailArt }: NailArtsInfoProps) => {
         alt={name}
         width={60}
         height={60}
+        className="size-15"
       />
       <div className="flex flex-col justify-center">
         <h3 className="text-base font-semibold">{label}</h3>

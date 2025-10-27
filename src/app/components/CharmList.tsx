@@ -1,6 +1,3 @@
-'use client';
-
-import { useLoadout } from '../hooks';
 import type { Charm } from '../types';
 import CharmContainer from './CharmContainer';
 import { CHARMS } from '../data/charms';
@@ -10,16 +7,12 @@ interface CharmListRowProps {
 }
 
 const CharmListRow = ({ charmsToShow }: CharmListRowProps) => {
-  const { loadout } = useLoadout();
-  const { charms } = loadout;
-
   return (
     <div className="flex odd:mr-10 even:ml-10">
       {charmsToShow.map((c) => (
         <CharmContainer
           key={c.id}
           charm={c}
-          isSelected={charms.includes(c)}
         />
       ))}
     </div>

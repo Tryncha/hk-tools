@@ -18,6 +18,7 @@ const CurrentCharms = () => {
           <CharmContainer
             key={c.id}
             charm={c}
+            isReadOnly
           />
         ))}
         {notchesUsed < MAX_NOTCHES && (

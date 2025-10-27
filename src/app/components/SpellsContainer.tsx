@@ -3,8 +3,7 @@
 import Image from 'next/image';
 import { Spell } from '../types.d';
 import { ChangeEvent, useId, useState } from 'react';
-import { getSpellInfo } from '../utils';
-import { useLoadout } from '../hooks';
+import { useLoadout, useSpell } from '../hooks';
 
 interface SpellInfoProps {
   spell: Spell;
@@ -12,23 +11,18 @@ interface SpellInfoProps {
 }
 
 const SpellInfo = ({ spell, isSimplified }: SpellInfoProps) => {
-  const { loadout } = useLoadout();
-  const { charms } = loadout;
+  const { name, image } = spell;
 
-  const { name, imgSrc } = spell;
-
-  const charmsIds = charms.map((c) => c.id);
-  const hasShamanStone = charmsIds.includes('shaman-stone');
-
-  const { label, rawValue, extendedValue } = getSpellInfo(spell, hasShamanStone);
+  const { label, rawValue, extendedValue } = useSpell(spell);
 
   return (
     <div className="flex h-20 items-center gap-4">
       <Image
-        width={60}
-        height={60}
-        src={imgSrc}
+        src={image.data}
         alt={name}
+        width={image.width}
+        height={image.height}
+        className="h-16 w-18 object-contain"
       />
       <div className="flex flex-col">
         <span className="text-base font-semibold">{name}</span>

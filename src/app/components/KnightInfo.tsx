@@ -1,4 +1,4 @@
-import NailContainer from './NailContainer';
+import NailStats from './NailStats';
 import NailArtsContainer from './NailsArtsContainer';
 import SpellsContainer from './SpellsContainer';
 import MainStatsContainer from './MainStatsContainer';
@@ -9,7 +9,7 @@ const KnightInfo = () => {
       <div className="flex justify-between">
         <MainStatsContainer />
         <div className="flex gap-2">
-          <NailContainer />
+          <NailStats />
           <NailArtsContainer />
         </div>
       </div>

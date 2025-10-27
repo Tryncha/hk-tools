@@ -2,7 +2,7 @@ import { QUICK_SWING_SPEED, SWING_SPEED } from '../constants';
 // import nails from '../data/nails';
 import { CHARMS } from '../data/charms';
 import { SPELLS } from '../data/spells';
-import { Charm, NailArt, Spell } from '../types';
+import { Charm } from '../types';
 
 export function capitalizeText(text: string) {
   const excludedWords = ['of', 'and', 'to', 'the'];
@@ -42,34 +42,6 @@ export function getSpellData(id: number) {
   return SPELLS.find((s) => s.id === id);
 }
 
-export function getNailArtInfo(nailArt: NailArt, nailLevel: number) {
-  const { name, damagePerNailLevel } = nailArt;
-
-  switch (name) {
-    case 'Great Slash':
-      return { label: name, value: `${damagePerNailLevel[nailLevel - 1]}` };
-
-    case 'Dash Slash':
-      return { label: name, value: `${damagePerNailLevel[nailLevel - 1]}` };
-
-    case 'Cyclone Slash': {
-      const minDamage = damagePerNailLevel[nailLevel - 1] * 3;
-      const maxDamage = damagePerNailLevel[nailLevel - 1] * 6;
-
-      return {
-        label: `${name} (3-6 Hits)`,
-        value: `${minDamage} - ${maxDamage}`
-      };
-    }
-
-    default:
-      return {
-        label: 'Unknown Nail Art',
-        value: 'N/A'
-      };
-  }
-}
-
 export function calculateSpellDamage(name: string, spellComponent: number, hasShamanStone?: boolean) {
   const SHAMAN_STONE_BONUS: Record<string, number> = {
     'Vengeful Spirit': 0.33,
@@ -84,126 +56,4 @@ export function calculateSpellDamage(name: string, spellComponent: number, hasSh
 
   const totalDamage = spellComponent + spellComponent * (hasShamanStone ? 1 : 0) * SHAMAN_STONE_BONUS[name];
   return Math.round(totalDamage);
-}
-
-export function getSpellInfo(spell: Spell, hasShamanStone: boolean) {
-  const { name, damage } = spell;
-
-  switch (name) {
-    case 'Vengeful Spirit': {
-      const { projectile } = damage;
-      const total = calculateSpellDamage(name, projectile, hasShamanStone);
-
-      return {
-        label: 'Projectile',
-        rawValue: `${total}`,
-        extendedValue: `${total}`
-      };
-    }
-
-    case 'Desolate Dive': {
-      const { dive, shockwave } = damage;
-      const totalDive = calculateSpellDamage(name, dive, hasShamanStone);
-      const totalShockwave = calculateSpellDamage(name, shockwave, hasShamanStone);
-      const total = totalDive + totalShockwave;
-
-      return {
-        label: 'Dive + Shockwave',
-        rawValue: `${total}`,
-        extendedValue: `${totalDive} + ${totalShockwave} = ${total}`
-      };
-    }
-
-    case 'Howling Wraiths': {
-      const { hits, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
-      const total = totalPerHit * hits;
-
-      return {
-        label: `${hits} Hits`,
-        rawValue: `${total}`,
-        extendedValue: `${totalPerHit} × ${hits} = ${total}`
-      };
-    }
-
-    case 'Shade Soul': {
-      const { projectile } = damage;
-      const total = calculateSpellDamage(name, projectile, hasShamanStone);
-
-      return {
-        label: 'Projectile',
-        rawValue: `${total}`,
-        extendedValue: `${total}`
-      };
-    }
-
-    case 'Descending Dark': {
-      const { dive, firstShockwave, secondShockwave } = damage;
-      const totalDive = calculateSpellDamage(name, dive, hasShamanStone);
-      const totalFirstShockwave = calculateSpellDamage(name, firstShockwave, hasShamanStone);
-      const totalSecondShockwave = calculateSpellDamage(name, secondShockwave, hasShamanStone);
-      const total = totalDive + totalFirstShockwave + totalSecondShockwave;
-
-      return {
-        label: 'Dive + First Shockwave + Second Shockwave',
-        rawValue: `${total}`,
-        extendedValue: `${totalDive} + ${totalFirstShockwave} + ${totalSecondShockwave} = ${total}`
-      };
-    }
-
-    case 'Abyss Shriek': {
-      const { hits, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
-      const total = totalPerHit * hits;
-
-      return {
-        label: `${hits} Hits`,
-        rawValue: `${total}`,
-        extendedValue: `${totalPerHit} × ${hits} = ${total}`
-      };
-    }
-
-    case 'Flukelings': {
-      const { flukes, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
-      const total = totalPerHit * flukes;
-
-      return {
-        label: `${flukes} Flukes`,
-        rawValue: `${total}`,
-        extendedValue: `${totalPerHit} × ${flukes} = ${total}`
-      };
-    }
-
-    case 'Shade Flukelings': {
-      const { flukes, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
-      const total = totalPerHit * flukes;
-
-      return {
-        label: `${damage.flukes} Flukes`,
-        rawValue: `${total}`,
-        extendedValue: `${totalPerHit} × ${flukes} = ${total}`
-      };
-    }
-
-    case 'Volatile Fluke': {
-      const { impact, cloud, time } = damage;
-      const totalTime = time + (hasShamanStone ? 1 : 0);
-      const total = impact + cloud * totalTime * 10;
-
-      return {
-        label: 'Impact + Cloud × Time',
-        rawValue: `${total}`,
-        extendedValue: `${impact} + ${cloud} × ${totalTime} = ${total}`
-      };
-    }
-
-    default:
-      return {
-        label: 'Unknown Spell',
-        rawValue: 'N/A',
-        extendedValue: 'N/A'
-      };
-  }
 }

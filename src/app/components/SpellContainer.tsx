@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useLoadout } from '../hooks';
-import { Nail } from '../types';
+import { Nail, Spell } from '../types';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import MarkdownImageInline from './MarkdownImageInline';
@@ -45,16 +45,16 @@ const NailTooltip = ({ nail }: NailTooltipProps) => {
 };
 
 interface NailContainerProps {
-  nail: Nail;
+  spell: Spell;
   isReadOnly?: boolean;
 }
 
-const NailContainer = ({ nail, isReadOnly }: NailContainerProps) => {
-  const { loadout, setNail } = useLoadout();
+const SpellContainer = ({ spell, isReadOnly }: NailContainerProps) => {
+  const { loadout, setSpell } = useLoadout();
 
   const [isHovering, setIsHovering] = useState(false);
 
-  const { name, image } = nail;
+  const { name, image } = spell;
 
   const isEquipped = loadout.nail.id === nail.id;
 
@@ -82,4 +82,4 @@ const NailContainer = ({ nail, isReadOnly }: NailContainerProps) => {
   );
 };
 
-export default NailContainer;
+export default SpellContainer;

@@ -1,8 +1,18 @@
-import { Spell } from '../types';
+import { Spell } from '../types.d';
+
+import vengefulSpirit from '../assets/spells/vengeful-spirit.png';
+import desolateDive from '../assets/spells/desolate-dive.png';
+import howlingWraiths from '../assets/spells/howling-wraiths.png';
+import shadeSoul from '../assets/spells/shade-soul.png';
+import descendingDark from '../assets/spells/descending-dark.png';
+import abyssShriek from '../assets/spells/abyss-shriek.png';
+import flukelings from '../assets/spells/flukelings.png';
+import shadeFlukelings from '../assets/spells/shade-flukelings.png';
+import volatileFluke from '../assets/spells/volatile-fluke.png';
 
 export const SPELLS: Spell[] = [
   {
-    id: 0,
+    id: 'vengeful-spirit',
     name: 'Vengeful Spirit',
     description:
       'Conjure a spirit that will fly forward and burn foes in its path.\nThe spirit requires SOUL to be conjured. Strike enemies to gather SOUL.',
@@ -10,10 +20,14 @@ export const SPELLS: Spell[] = [
       projectile: 15,
       total: 15
     },
-    imgSrc: '/spells/vengeful-spirit.png'
+    image: {
+      data: vengefulSpirit,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 1,
+    id: 'desolate-dive',
     name: 'Desolate Dive',
     description:
       'Strike the ground with a concentrated force of SOUL. This force can destroy foes or break through fragile structures.\nThe force requires SOUL to be conjured. Strike enemies to gather SOUL.',
@@ -22,10 +36,14 @@ export const SPELLS: Spell[] = [
       shockwave: 20,
       total: 35
     },
-    imgSrc: '/spells/desolate-dive.png'
+    image: {
+      data: desolateDive,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 2,
+    id: 'howling-wraiths',
     name: 'Howling Wraiths',
     description:
       'Blast foes with screaming SOUL.\nThe Wraiths requires SOUL to be conjured. Strike enemies to gather SOUL.',
@@ -34,10 +52,14 @@ export const SPELLS: Spell[] = [
       perHit: 13,
       total: 39
     },
-    imgSrc: '/spells/howling-wraiths.png'
+    image: {
+      data: howlingWraiths,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 3,
+    id: 'shade-soul',
     name: 'Shade Soul',
     description:
       'Conjure a shadow that will fly forward and burn foes in its path.\nThe shadow requires SOUL to be conjured. Strike enemies to gather SOUL.',
@@ -45,10 +67,14 @@ export const SPELLS: Spell[] = [
       projectile: 30,
       total: 30
     },
-    imgSrc: '/spells/shade-soul.png'
+    image: {
+      data: shadeSoul,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 4,
+    id: 'descending-dark',
     name: 'Descending Dark',
     description:
       'Strike the ground with a concentrated force of SOUL and Shadow. This force can destroy foes or break through fragile structures.\nThe force requires SOUL to be conjured. Strike enemies to gather SOUL.',
@@ -58,10 +84,14 @@ export const SPELLS: Spell[] = [
       secondShockwave: 15,
       total: 60
     },
-    imgSrc: '/spells/descending-dark.png'
+    image: {
+      data: descendingDark,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 5,
+    id: 'abyss-shriek',
     name: 'Abyss Shriek',
     description:
       'Blast foes with screaming SOUL and Shadow.\nThe Wraiths requires SOUL to be conjured. Strike enemies to gather SOUL.',
@@ -70,30 +100,42 @@ export const SPELLS: Spell[] = [
       perHit: 20,
       total: 80
     },
-    imgSrc: '/spells/abyss-shriek.png'
+    image: {
+      data: abyssShriek,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 6,
+    id: 'flukelings',
     name: 'Flukelings',
     description: '',
     damage: {
       flukes: 9,
       perHit: 4
     },
-    imgSrc: '/spells/flukelings.png'
+    image: {
+      data: flukelings,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 7,
+    id: 'shade-flukelings',
     name: 'Shade Flukelings',
     description: '',
     damage: {
       flukes: 16,
       perHit: 4
     },
-    imgSrc: '/spells/shade-flukelings.png'
+    image: {
+      data: shadeFlukelings,
+      width: 72,
+      height: 64
+    }
   },
   {
-    id: 8,
+    id: 'volatile-fluke',
     name: 'Volatile Fluke',
     description: '',
     damage: {
@@ -101,6 +143,10 @@ export const SPELLS: Spell[] = [
       cloud: 1,
       time: 2.2
     },
-    imgSrc: '/spells/volatile-fluke.png'
+    image: {
+      data: volatileFluke,
+      width: 72,
+      height: 64
+    }
   }
 ];

@@ -4,7 +4,7 @@ export interface Loadout {
   nail: Nail;
   notchesUsed: number;
   isOvercharmed: boolean;
-  hasShamanStone: boolean;
+  isLowHealth: boolean;
   charms: Charm[];
   spells: Spell[];
 }
@@ -21,6 +21,7 @@ export interface Nail {
   description: string;
   level: number;
   damage: number;
+  cost?: string;
   image: Image;
 }
 
@@ -41,9 +42,9 @@ export interface Charm {
 }
 
 export interface SpellBase {
-  id: number;
+  id: string;
   description: string;
-  imgSrc: string;
+  image: Image;
 }
 
 export interface VengefulSpirit extends SpellBase {

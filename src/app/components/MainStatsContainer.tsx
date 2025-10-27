@@ -1,29 +1,58 @@
 'use client';
 
 import Image from 'next/image';
-import { useHealth, useSoul } from '../hooks';
+import { useCharmCheck, useHealth, useLoadout, useSoul } from '../hooks';
+import { useId } from 'react';
 
 const MainStatsContainer = () => {
+  const checkboxId = useId();
+
+  const { loadout, toggleLowHealth } = useLoadout();
+  const { isLowHealth } = loadout;
+
   const { maxHealth } = useHealth();
   const { maxSoul, soulCost, soulGain } = useSoul();
 
+  const hasFuryOfTheFallen = useCharmCheck('fury-of-the-fallen');
+
   return (
-    <div className="flex flex-col items-center gap-4">
-      <div className="flex flex-col items-center">
+    <div className="flex flex-col gap-4">
+      <div className="relative flex flex-col">
+        <div className="absolute top-0 right-0 flex items-center gap-2">
+          <label htmlFor={checkboxId}>Low Health?</label>
+          <input
+            id={checkboxId}
+            type="checkbox"
+            checked={isLowHealth}
+            onChange={toggleLowHealth}
+          />
+        </div>
         <div>
-          <output className="text-2xl">{maxHealth}</output>
+          <output className="ml-1 text-2xl">{isLowHealth ? `1/${maxHealth}` : maxHealth}</output>
           <span className="ml-1 text-sm text-gray-400">MASKS</span>
         </div>
         <div className="flex">
-          {Array.from({ length: maxHealth }).map((_, i) => (
+          {Array.from({ length: isLowHealth ? 1 : maxHealth }).map((_, i) => (
             <Image
               key={i}
               src="/ui/mask.png"
               alt="Mask Shard"
               width={25}
-              height={25}
+              height={36}
+              className={`${hasFuryOfTheFallen && isLowHealth && 'drop-shadow-charm drop-shadow-red-600'} h-9 w-[25px]`}
             />
           ))}
+          {isLowHealth &&
+            Array.from({ length: maxHealth - 1 }).map((_, i) => (
+              <Image
+                key={i}
+                src="/ui/mask.png"
+                alt="Mask Shard"
+                width={25}
+                height={36}
+                className="h-9 w-[25px] opacity-30"
+              />
+            ))}
         </div>
       </div>
       <div>
