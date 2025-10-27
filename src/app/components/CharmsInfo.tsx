@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import useLoadout from '../hooks';
+import { useLoadout } from '../hooks';
 import CharmContainer from './CharmContainer';
 import { MAX_NOTCHES } from '../constants';
 import Button from './Button';

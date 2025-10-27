@@ -1,40 +1,11 @@
 import Image from 'next/image';
 import type { Charm } from '../types.d';
-import useLoadout from '../hooks';
+import { useLoadout } from '../hooks';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import { CHARMS } from '../data/charms';
 import { NotchesOn } from './Notches';
-
-interface MarkdownImageInlineProps {
-  children: string;
-  imageSize: number;
-}
-
-const MarkdownImageInline = ({ children, imageSize }: MarkdownImageInlineProps) => {
-  return (
-    <Markdown
-      components={{
-        img: ({ ...props }) => {
-          const src = typeof props.src === 'string' ? props.src : '';
-          const alt = typeof props.alt === 'string' ? props.alt : '';
-
-          return (
-            <Image
-              src={src}
-              alt={alt}
-              width={imageSize}
-              height={imageSize}
-              className="inline-block align-text-bottom"
-            />
-          );
-        }
-      }}
-    >
-      {children}
-    </Markdown>
-  );
-};
+import MarkdownImageInline from './MarkdownImageInline';
 
 interface CharmContainerProps {
   charm: Charm;
@@ -66,9 +37,9 @@ const CharmContainer = ({ charm, isSelected }: CharmContainerProps) => {
               <div>
                 <h3 className="font-bold">Effects</h3>
                 <ul className="ml-4 list-disc">
-                  {effects.description.map((e) => (
+                  {effects.map((e) => (
                     <li key={e}>
-                      <Markdown>{e}</Markdown>
+                      <MarkdownImageInline imageSize={16}>{e}</MarkdownImageInline>
                     </li>
                   ))}
                 </ul>

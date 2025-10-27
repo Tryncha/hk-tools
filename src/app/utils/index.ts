@@ -1,8 +1,8 @@
 import { QUICK_SWING_SPEED, SWING_SPEED } from '../constants';
 // import nails from '../data/nails';
 import { CHARMS } from '../data/charms';
-import spells from '../data/spells.json';
-import { Charm, Loadout, NailArt, Spell } from '../types';
+import { SPELLS } from '../data/spells';
+import { Charm, NailArt, Spell } from '../types';
 
 export function capitalizeText(text: string) {
   const excludedWords = ['of', 'and', 'to', 'the'];
@@ -39,7 +39,7 @@ export function getCharmData(id: string): Charm {
 }
 
 export function getSpellData(id: number) {
-  return spells.find((s) => s.id === id);
+  return SPELLS.find((s) => s.id === id);
 }
 
 export function getNailArtInfo(nailArt: NailArt, nailLevel: number) {
@@ -86,13 +86,13 @@ export function calculateSpellDamage(name: string, spellComponent: number, hasSh
   return Math.round(totalDamage);
 }
 
-export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
+export function getSpellInfo(spell: Spell, hasShamanStone: boolean) {
   const { name, damage } = spell;
 
   switch (name) {
     case 'Vengeful Spirit': {
       const { projectile } = damage;
-      const total = calculateSpellDamage(name, projectile);
+      const total = calculateSpellDamage(name, projectile, hasShamanStone);
 
       return {
         label: 'Projectile',
@@ -103,8 +103,8 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
 
     case 'Desolate Dive': {
       const { dive, shockwave } = damage;
-      const totalDive = calculateSpellDamage(name, dive);
-      const totalShockwave = calculateSpellDamage(name, shockwave);
+      const totalDive = calculateSpellDamage(name, dive, hasShamanStone);
+      const totalShockwave = calculateSpellDamage(name, shockwave, hasShamanStone);
       const total = totalDive + totalShockwave;
 
       return {
@@ -116,7 +116,7 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
 
     case 'Howling Wraiths': {
       const { hits, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit);
+      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
       const total = totalPerHit * hits;
 
       return {
@@ -128,7 +128,7 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
 
     case 'Shade Soul': {
       const { projectile } = damage;
-      const total = calculateSpellDamage(name, projectile);
+      const total = calculateSpellDamage(name, projectile, hasShamanStone);
 
       return {
         label: 'Projectile',
@@ -139,9 +139,9 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
 
     case 'Descending Dark': {
       const { dive, firstShockwave, secondShockwave } = damage;
-      const totalDive = calculateSpellDamage(name, dive);
-      const totalFirstShockwave = calculateSpellDamage(name, firstShockwave);
-      const totalSecondShockwave = calculateSpellDamage(name, secondShockwave);
+      const totalDive = calculateSpellDamage(name, dive, hasShamanStone);
+      const totalFirstShockwave = calculateSpellDamage(name, firstShockwave, hasShamanStone);
+      const totalSecondShockwave = calculateSpellDamage(name, secondShockwave, hasShamanStone);
       const total = totalDive + totalFirstShockwave + totalSecondShockwave;
 
       return {
@@ -153,7 +153,7 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
 
     case 'Abyss Shriek': {
       const { hits, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit);
+      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
       const total = totalPerHit * hits;
 
       return {
@@ -165,7 +165,7 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
 
     case 'Flukelings': {
       const { flukes, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit);
+      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
       const total = totalPerHit * flukes;
 
       return {
@@ -177,7 +177,7 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
 
     case 'Shade Flukelings': {
       const { flukes, perHit } = damage;
-      const totalPerHit = calculateSpellDamage(name, perHit);
+      const totalPerHit = calculateSpellDamage(name, perHit, hasShamanStone);
       const total = totalPerHit * flukes;
 
       return {
@@ -206,58 +206,4 @@ export function getSpellInfo(spell: Spell, hasShamanStone?: boolean) {
         extendedValue: 'N/A'
       };
   }
-}
-
-const BASE_STATS = {
-  health: 9,
-  soul: {
-    max: {
-      base: 99,
-      perVessel: 33
-    },
-    cost: 33,
-    gain: {
-      perAttack: 11,
-      perHit: 0
-    }
-  },
-  nailDamageMultiplier: 1,
-  focusSpeed: 1,
-  dashCooldown: 1,
-  moveSpeed: 1
-};
-
-export function calculateStats(loadout: Loadout) {
-  const { charms } = loadout;
-
-  // let totalHealth = BASE_STATS.health;
-  const totalSoul = { ...BASE_STATS.soul };
-  // let totalNailDamageMultiplier = BASE_STATS.nailDamageMultiplier;
-  // let totalFocusSpeed = BASE_STATS.focusSpeed;
-  // let totalDashCooldown = BASE_STATS.dashCooldown;
-  // let totalMoveSpeed = BASE_STATS.moveSpeed;
-
-  charms.forEach((c) => {
-    const bonusEffect = c.effects.bonus;
-
-    if (!bonusEffect) return;
-
-    if (bonusEffect.soul) {
-      if (bonusEffect.soul.gain) {
-        if (bonusEffect.soul.gain.perAttack) totalSoul.gain.perAttack += bonusEffect.soul.gain.perAttack;
-      }
-    }
-  });
-
-  const calculatedLoadout: Loadout = {
-    ...loadout,
-    // health: totalHealth,
-    soul: totalSoul
-    // nail: {
-    // ...loadout.nail,
-    // damage: totalNailDamageMultiplier
-    // }
-  };
-
-  return calculatedLoadout;
 }

@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
-import useLoadout from '../hooks';
+import { useLoadout } from '../hooks';
 import Image from 'next/image';
 import { NotchesOn } from './Notches';
 import { SYNERGIES } from '../data/synergies';
 import { getCharmData } from '../utils';
+import MarkdownImageInline from './MarkdownImageInline';
 
 const Effects = () => {
   const { loadout } = useLoadout();
@@ -49,8 +50,10 @@ const Effects = () => {
                 </div>
                 <div className="flex flex-col gap-1">
                   <ul className="ml-10 list-disc">
-                    {c.effects.description.map((e) => (
-                      <li key={`${c.id}-${e}`}>{e}</li>
+                    {c.effects.map((e) => (
+                      <li key={`${c.id}-${e}`}>
+                        <MarkdownImageInline imageSize={16}>{e}</MarkdownImageInline>
+                      </li>
                     ))}
                   </ul>
                 </div>

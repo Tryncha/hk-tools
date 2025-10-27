@@ -1,6 +1,6 @@
 'use client';
 
-import useLoadout from '../hooks';
+import { useLoadout } from '../hooks';
 import type { Charm } from '../types';
 import CharmContainer from './CharmContainer';
 import { CHARMS } from '../data/charms';

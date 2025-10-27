@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Spell } from '../types.d';
 import { ChangeEvent, useId, useState } from 'react';
 import { getSpellInfo } from '../utils';
-import useLoadout from '../hooks';
+import { useLoadout } from '../hooks';
 
 interface SpellInfoProps {
   spell: Spell;
@@ -12,9 +12,15 @@ interface SpellInfoProps {
 }
 
 const SpellInfo = ({ spell, isSimplified }: SpellInfoProps) => {
+  const { loadout } = useLoadout();
+  const { charms } = loadout;
+
   const { name, imgSrc } = spell;
 
-  const { label, rawValue, extendedValue } = getSpellInfo(spell);
+  const charmsIds = charms.map((c) => c.id);
+  const hasShamanStone = charmsIds.includes('shaman-stone');
+
+  const { label, rawValue, extendedValue } = getSpellInfo(spell, hasShamanStone);
 
   return (
     <div className="flex h-20 items-center gap-4">

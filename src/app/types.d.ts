@@ -1,23 +1,10 @@
 import { StaticImageData } from 'next/image';
 
-export interface Soul {
-  max: {
-    base: number;
-    perVessel: number;
-  };
-  cost: number;
-  gain: {
-    perAttack: number;
-    perHit: number;
-  };
-}
-
 export interface Loadout {
-  health: number;
-  soul: Soul;
   nail: Nail;
   notchesUsed: number;
   isOvercharmed: boolean;
+  hasShamanStone: boolean;
   charms: Charm[];
   spells: Spell[];
 }
@@ -49,22 +36,7 @@ export interface Charm {
   description: string;
   location: string;
   notchCost: number;
-  effects: {
-    description: string[];
-    bonus?: {
-      soul?: {
-        max?: {
-          base?: number;
-          perVessel?: number;
-        };
-        cost?: number;
-        gain?: {
-          perAttack?: number;
-          perHit?: number;
-        };
-      };
-    };
-  };
+  effects: string[];
   synergies?: CharmSynergy[];
 }
 

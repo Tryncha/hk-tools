@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import nailArts from '../data/nailArts.json';
-import useLoadout from '../hooks';
+import { useLoadout } from '../hooks';
 import { getNailArtInfo } from '../utils';
 import { NailArt } from '../types.d';
 

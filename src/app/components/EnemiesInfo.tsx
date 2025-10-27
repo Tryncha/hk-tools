@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import useLoadout from '../hooks';
+import { useLoadout } from '../hooks';
 import Image from 'next/image';
 import { NotchesOn } from './Notches';
 import { SYNERGIES } from '../data/synergies';
