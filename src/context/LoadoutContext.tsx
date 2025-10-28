@@ -43,8 +43,6 @@ export const LoadoutProvider = ({ children }: { children: React.ReactNode }) => 
     loadoutDispatch({ type: 'RESET_LOADOUT' });
   }
 
-  console.log(loadout);
-
   const loadoutValue = {
     loadout,
     setNail,

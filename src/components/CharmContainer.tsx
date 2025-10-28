@@ -29,7 +29,7 @@ const CharmContainer = ({ charm, isReadOnly }: CharmContainerProps) => {
   return (
     <>
       {isHovering && (
-        <div className="fixed top-0 left-0 z-10 flex h-screen w-130 flex-col justify-center gap-2 overflow-y-auto border-l border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
+        <div className="fixed top-0 left-0 z-10 mt-16 flex h-screen w-[25vw] flex-col justify-center gap-2 overflow-y-auto border-r border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
           <div className="border-y border-gray-700 bg-gray-900 p-4">
             <div className="flex items-center justify-center">
               <h3 className="mr-2 text-lg font-bold">{name}</h3>
@@ -94,6 +94,7 @@ const CharmContainer = ({ charm, isReadOnly }: CharmContainerProps) => {
         onClick={handleClick}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
+        className={`${!isReadOnly && isEquipped ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} flex size-18 items-center justify-center p-0.5 hover:cursor-pointer`}
       >
         <Image
           src={image}
@@ -101,7 +102,6 @@ const CharmContainer = ({ charm, isReadOnly }: CharmContainerProps) => {
           width={72}
           height={72}
           priority
-          className={`${!isReadOnly && isEquipped ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} size-18 p-0.5 hover:cursor-pointer`}
         />
       </div>
     </>

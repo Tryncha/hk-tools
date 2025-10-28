@@ -15,9 +15,9 @@ const Effects = () => {
   const activeSynergies = SYNERGIES.filter((s) => s.charmIds.every((id) => charms.map((c) => c.id).includes(id)));
 
   return (
-    <div className="flex min-h-screen flex-col gap-2">
+    <div className="flex min-h-screen flex-col">
       {charms.filter((c) => c.id !== 'void-heart').length > 0 && (
-        <section className="flex flex-col gap-2 border border-gray-700 bg-gray-900 p-4">
+        <section className="flex flex-col gap-2 border-gray-700 bg-gray-900 p-4">
           <h2 className="text-center text-xl font-bold">Charms Effects</h2>
           <hr className="mb-2 border-gray-700" />
           {charms
@@ -62,7 +62,7 @@ const Effects = () => {
         </section>
       )}
       {activeSynergies.length > 0 && (
-        <section className="flex flex-col gap-4 border border-gray-700 bg-gray-900 p-4">
+        <section className="flex flex-col gap-4 border-t-4 border-gray-700 bg-gray-900 p-4">
           <h2 className="text-center text-xl font-bold">Synergies</h2>
           <hr className="mb-2 border-gray-700" />
           {activeSynergies.map((s) => {

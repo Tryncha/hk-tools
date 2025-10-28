@@ -10,13 +10,13 @@ interface ButtonSliderProps {
 }
 
 const ButtonSlider = ({ children, position, isSliderOpen, onClick }: ButtonSliderProps) => {
-  const leftStyles = `${isSliderOpen ? 'translate-x-130' : 'translate-x-2'} left-0 border-r`;
-  const rightStyles = `${isSliderOpen ? '-translate-x-130' : '-translate-x-2'} right-0 border-l`;
+  const leftStyles = `${isSliderOpen ? 'translate-x-[25vw]' : 'translate-x-0'} left-0 border-r`;
+  const rightStyles = `${isSliderOpen ? '-translate-x-[25vw]' : '-translate-x-0'} right-0 border-l`;
 
   return (
     <button
       onClick={onClick}
-      className={`${position === 'left' ? leftStyles : rightStyles} fixed top-1/2 z-20 h-12 w-8 -translate-y-1/2 border-y border-gray-700 transition-transform duration-1000 ease-in-out hover:cursor-pointer`}
+      className={`${position === 'left' ? leftStyles : rightStyles} fixed top-1/2 z-10 h-12 w-8 -translate-y-1/2 border-y border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out hover:cursor-pointer`}
     >
       {children}
     </button>
@@ -31,8 +31,8 @@ interface ScreenSliderProps {
 const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
   const [isSliderOpen, setIsSliderOpen] = useState(true);
 
-  const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-128'} left-0 scale-x-[-1]`;
-  const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-128'} right-0 `;
+  const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-[25vw]'} left-0 scale-x-[-1]`;
+  const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-[25vw]'} right-0 `;
 
   return (
     <section>
@@ -44,7 +44,7 @@ const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
         {position === 'left' ? (isSliderOpen ? '<-' : '->') : isSliderOpen ? '->' : '<-'}
       </ButtonSlider>
       <div
-        className={`${position === 'left' ? leftStyles : rightStyles} fixed h-full w-130 overflow-y-auto border-l border-gray-700 pl-2 transition-transform duration-1000 ease-in-out`}
+        className={`${position === 'left' ? leftStyles : rightStyles} fixed h-full w-[25vw] overflow-y-auto border-l border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out`}
       >
         <div className={`${position === 'left' && 'scale-x-[-1]'}`}>{children}</div>
       </div>

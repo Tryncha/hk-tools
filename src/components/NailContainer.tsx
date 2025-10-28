@@ -13,7 +13,7 @@ const NailTooltip = ({ nail }: NailTooltipProps) => {
   const { name, description, cost, image, damage } = nail;
 
   return (
-    <div className="fixed top-0 left-0 z-10 flex h-screen w-130 flex-col justify-center gap-2 overflow-y-auto border-l border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
+    <div className="fixed top-0 left-0 z-10 mt-16 flex h-screen w-[25vw] flex-col justify-center gap-2 overflow-y-auto border-r border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
       <div className="flex items-center justify-center gap-8 border-y border-gray-700 bg-gray-900 p-8">
         <Image
           src={image.data}
