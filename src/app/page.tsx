@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import CharmList from './components/CharmSelector';
-import CurrentCharms from './components/CurrentCharms';
-import Effects from './components/Effects';
-import KnightStats from './components/KnightStats';
-import ScreenSlider from './components/ScreenSlider';
-import NailSelector from './components/NailSelector';
-import SpellSelector from './components/SpellSelector';
+import CharmList from '../components/CharmSelector';
+import CurrentCharms from '../components/CurrentCharms';
+import Effects from '../components/Effects';
+import KnightStats from '../components/KnightStats';
+import ScreenSlider from '../components/ScreenSlider';
+import NailSelector from '../components/NailSelector';
+import SpellSelector from '../components/SpellSelector';
 
 enum AVAILABLE_TABS {
   CHARMS = 'charms',

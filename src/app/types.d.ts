@@ -1,5 +1,3 @@
-import { StaticImageData } from 'next/image';
-
 export interface Loadout {
   nail: Nail;
   notchesUsed: number;
@@ -10,7 +8,7 @@ export interface Loadout {
 }
 
 export interface Image {
-  data: StaticImageData;
+  data: string;
   width: number;
   height: number;
 }
