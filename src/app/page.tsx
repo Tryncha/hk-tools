@@ -1,18 +1,22 @@
 'use client';
 
 import { useState } from 'react';
-import CharmList from './components/CharmList';
-import CharmsInfo from './components/CharmsInfo';
+import CharmList from './components/CharmSelector';
+import CurrentCharms from './components/CurrentCharms';
 import Effects from './components/Effects';
 import KnightInfo from './components/KnightInfo';
 import ScreenSlider from './components/ScreenSlider';
-import { NAILS } from './data/nails';
-import NailContainer from './components/NailContainer';
-import { SPELLS } from './data/spells';
-import SpellContainer from './components/SpellContainer';
+import NailSelector from './components/NailSelector';
+import SpellSelector from './components/SpellSelector';
+
+enum AVAILABLE_TABS {
+  CHARMS = 'charms',
+  NAILS = 'nails',
+  SPELLS = 'spells'
+}
 
 const HomePage = () => {
-  const [activeTab, setActiveTab] = useState<'charms' | 'nails' | 'spells'>('nails');
+  const [activeTab, setActiveTab] = useState<AVAILABLE_TABS>(AVAILABLE_TABS.CHARMS);
 
   return (
     <main className="mt-16 flex min-h-screen justify-between gap-8">
@@ -20,36 +24,16 @@ const HomePage = () => {
         <Effects />
       </ScreenSlider>
       <section className="relative border-x border-gray-700 px-10 pt-4">
-        <CharmsInfo />
+        <CurrentCharms />
         <hr className="my-2 border-gray-700" />
         {activeTab === 'charms' && <CharmList />}
-        {activeTab === 'nails' && (
-          <section className="flex justify-center py-4">
-            {NAILS.map((n) => (
-              <NailContainer
-                key={n.id}
-                nail={n}
-              />
-            ))}
-          </section>
-        )}
-        {activeTab === 'spells' && (
-          <section className="flex justify-center py-4">
-            <div className="grid grid-cols-3 grid-rows-2">
-              {SPELLS.slice(0, 6).map((s) => (
-                <SpellContainer
-                  key={s.id}
-                  spell={s}
-                />
-              ))}
-            </div>
-          </section>
-        )}
+        {activeTab === 'nails' && <NailSelector />}
+        {activeTab === 'spells' && <SpellSelector />}
         <hr className="my-2 border-gray-700" />
         <div className="flex justify-center gap-12">
-          <button onClick={() => setActiveTab('charms')}>CHARMS</button>
-          <button onClick={() => setActiveTab('nails')}>NAILS</button>
-          <button onClick={() => setActiveTab('spells')}>SPELLS</button>
+          <button onClick={() => setActiveTab(AVAILABLE_TABS.CHARMS)}>CHARMS</button>
+          <button onClick={() => setActiveTab(AVAILABLE_TABS.NAILS)}>NAILS</button>
+          <button onClick={() => setActiveTab(AVAILABLE_TABS.SPELLS)}>SPELLS</button>
         </div>
         <hr className="my-2 border-gray-700" />
         <KnightInfo />
