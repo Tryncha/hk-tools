@@ -1,43 +1,31 @@
 import Image from 'next/image';
 import { useLoadout } from '../hooks';
-import { Nail, Spell } from '../types';
+import { Spell } from '../types';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
-import MarkdownImageInline from './MarkdownImageInline';
 
-interface NailTooltipProps {
-  nail: Nail;
+interface SpellTooltipProps {
+  spell: Spell;
 }
 
-const NailTooltip = ({ nail }: NailTooltipProps) => {
-  const { name, description, cost, image, damage } = nail;
+const SpellTooltip = ({ spell }: SpellTooltipProps) => {
+  const { name, description, location } = spell;
 
   return (
     <div className="fixed top-0 left-0 z-10 flex h-screen w-130 flex-col justify-center gap-2 overflow-y-auto border-l border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
       <div className="flex items-center justify-center gap-8 border-y border-gray-700 bg-gray-900 p-8">
-        <Image
-          src={image.data}
-          alt={name}
-          width={image.width * 0.8}
-          height={image.height * 0.8}
-        />
         <div className="flex flex-col">
           <h3 className="mr-2 text-center text-lg font-bold">{name}</h3>
           <hr className="my-2 border-gray-700" />
-          <span className="flex h-16 items-center justify-center px-4 text-center text-sm whitespace-pre-line text-gray-400 italic">
+          <span className="flex h-26 items-center justify-center px-4 text-center text-sm whitespace-pre-line text-gray-400 italic">
             <Markdown>{description}</Markdown>
           </span>
           <hr className="my-2 border-gray-700" />
-          <div className="mt-2 flex items-center justify-between">
+          {location && (
             <span className="text-sm">
-              <Markdown>{`**Base Damage:** ${damage}`}</Markdown>
+              <Markdown>{`**Location:** ${location}`}</Markdown>
             </span>
-            {cost && (
-              <span className="text-sm">
-                <MarkdownImageInline imageSize={16}>{`**Cost:** ${cost}`}</MarkdownImageInline>
-              </span>
-            )}
-          </div>
+          )}
         </div>
       </div>
     </div>
@@ -51,25 +39,27 @@ interface NailContainerProps {
 
 const SpellContainer = ({ spell, isReadOnly }: NailContainerProps) => {
   const { loadout, setSpell } = useLoadout();
+  const { spells } = loadout;
 
   const [isHovering, setIsHovering] = useState(false);
 
   const { name, image } = spell;
 
-  const isEquipped = loadout.nail.id === nail.id;
+  const spellIds = spells.map((s) => s.id);
+  const isEquipped = spellIds.includes(spell.id);
 
   function handleClick() {
-    if (!isReadOnly) setNail(nail);
+    if (!isReadOnly) setSpell(spell);
   }
 
   return (
     <>
-      {isHovering && <NailTooltip nail={nail} />}
+      {isHovering && <SpellTooltip spell={spell} />}
       <div
         onClick={handleClick}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        className={`${!isReadOnly && isEquipped ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} ${!isReadOnly && 'hover:cursor-pointer'} px-6`}
+        className={`${!isReadOnly && isEquipped ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} ${!isReadOnly && 'hover:cursor-pointer'} flex h-28 w-30 items-center justify-center`}
       >
         <Image
           src={image.data}

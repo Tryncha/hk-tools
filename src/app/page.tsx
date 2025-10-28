@@ -8,6 +8,8 @@ import KnightInfo from './components/KnightInfo';
 import ScreenSlider from './components/ScreenSlider';
 import { NAILS } from './data/nails';
 import NailContainer from './components/NailContainer';
+import { SPELLS } from './data/spells';
+import SpellContainer from './components/SpellContainer';
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState<'charms' | 'nails' | 'spells'>('nails');
@@ -29,6 +31,18 @@ const HomePage = () => {
                 nail={n}
               />
             ))}
+          </section>
+        )}
+        {activeTab === 'spells' && (
+          <section className="flex justify-center py-4">
+            <div className="grid grid-cols-3 grid-rows-2">
+              {SPELLS.slice(0, 6).map((s) => (
+                <SpellContainer
+                  key={s.id}
+                  spell={s}
+                />
+              ))}
+            </div>
           </section>
         )}
         <hr className="my-2 border-gray-700" />

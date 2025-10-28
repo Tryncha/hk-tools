@@ -1,7 +1,7 @@
 import NailStats from './NailStats';
 import NailArtsContainer from './NailsArtsContainer';
-import SpellsContainer from './SpellsContainer';
-import MainStatsContainer from './MainStatsContainer';
+import SpellsContainer from './SpellStats';
+import MainStatsContainer from './MainStats';
 
 const KnightInfo = () => {
   return (

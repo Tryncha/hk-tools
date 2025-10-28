@@ -44,6 +44,7 @@ export interface Charm {
 export interface SpellBase {
   id: string;
   description: string;
+  location?: string;
   image: Image;
 }
 

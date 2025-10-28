@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
-import { Spell } from '../types.d';
+import { Spell } from '../types';
 import { ChangeEvent, useId, useState } from 'react';
 import { useLoadout, useSpell } from '../hooks';
+import SpellContainer from './SpellContainer';
 
 interface SpellInfoProps {
   spell: Spell;
@@ -11,18 +11,15 @@ interface SpellInfoProps {
 }
 
 const SpellInfo = ({ spell, isSimplified }: SpellInfoProps) => {
-  const { name, image } = spell;
+  const { name } = spell;
 
   const { label, rawValue, extendedValue } = useSpell(spell);
 
   return (
     <div className="flex h-20 items-center gap-4">
-      <Image
-        src={image.data}
-        alt={name}
-        width={image.width}
-        height={image.height}
-        className="h-16 w-18 object-contain"
+      <SpellContainer
+        spell={spell}
+        isReadOnly
       />
       <div className="flex flex-col">
         <span className="text-base font-semibold">{name}</span>

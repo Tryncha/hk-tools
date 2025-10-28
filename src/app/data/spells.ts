@@ -16,6 +16,7 @@ export const SPELLS: Spell[] = [
     name: 'Vengeful Spirit',
     description:
       'Conjure a spirit that will fly forward and burn foes in its path.\nThe spirit requires SOUL to be conjured. Strike enemies to gather SOUL.',
+    location: 'Ancestral Mound',
     damage: {
       projectile: 15,
       total: 15
@@ -31,6 +32,7 @@ export const SPELLS: Spell[] = [
     name: 'Desolate Dive',
     description:
       'Strike the ground with a concentrated force of SOUL. This force can destroy foes or break through fragile structures.\nThe force requires SOUL to be conjured. Strike enemies to gather SOUL.',
+    location: 'Soul Sanctum',
     damage: {
       dive: 15,
       shockwave: 20,
@@ -47,6 +49,7 @@ export const SPELLS: Spell[] = [
     name: 'Howling Wraiths',
     description:
       'Blast foes with screaming SOUL.\nThe Wraiths requires SOUL to be conjured. Strike enemies to gather SOUL.',
+    location: 'Overgrown Mound',
     damage: {
       hits: 3,
       perHit: 13,
@@ -63,6 +66,7 @@ export const SPELLS: Spell[] = [
     name: 'Shade Soul',
     description:
       'Conjure a shadow that will fly forward and burn foes in its path.\nThe shadow requires SOUL to be conjured. Strike enemies to gather SOUL.',
+    location: 'Soul Sanctum',
     damage: {
       projectile: 30,
       total: 30
@@ -78,6 +82,7 @@ export const SPELLS: Spell[] = [
     name: 'Descending Dark',
     description:
       'Strike the ground with a concentrated force of SOUL and Shadow. This force can destroy foes or break through fragile structures.\nThe force requires SOUL to be conjured. Strike enemies to gather SOUL.',
+    location: 'Crystallised Mound',
     damage: {
       dive: 15,
       firstShockwave: 30,
@@ -95,6 +100,7 @@ export const SPELLS: Spell[] = [
     name: 'Abyss Shriek',
     description:
       'Blast foes with screaming SOUL and Shadow.\nThe Wraiths requires SOUL to be conjured. Strike enemies to gather SOUL.',
+    location: 'The Abyss',
     damage: {
       hits: 4,
       perHit: 20,
