@@ -1,7 +1,5 @@
 import { QUICK_SWING_SPEED, SWING_SPEED } from '../constants';
-// import nails from '../data/nails';
 import { CHARMS } from '../data/charms';
-import { SPELLS } from '../data/spells';
 import { Charm } from '../types';
 
 export function capitalizeText(text: string) {
@@ -27,19 +25,11 @@ export function calculateDPS(damage: number, hasQuickSlash: boolean) {
   return damagePerSecond.toFixed(2);
 }
 
-// export function getNailData(id: number) {
-//   return nails.find((n) => n.id === id);
-// }
-
 export function getCharmData(id: string): Charm {
   const charmData = CHARMS.find((c) => c.id === id);
 
   if (!charmData) throw new Error('Not charm data found...');
   return charmData;
-}
-
-export function getSpellData(id: number) {
-  return SPELLS.find((s) => s.id === id);
 }
 
 export function calculateSpellDamage(name: string, spellComponent: number, hasShamanStone?: boolean) {
