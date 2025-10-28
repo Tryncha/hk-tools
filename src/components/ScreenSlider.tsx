@@ -46,7 +46,7 @@ const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
       <div
         className={`${position === 'left' ? leftStyles : rightStyles} fixed h-full w-[25vw] overflow-y-auto border-l border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out`}
       >
-        <div className={`${position === 'left' && 'scale-x-[-1]'}`}>{children}</div>
+        <div className={`${position === 'left' && 'scale-x-[-1]'} `}>{children}</div>
       </div>
     </section>
   );

@@ -6,6 +6,9 @@ import Image from 'next/image';
 const inter = Inter({ subsets: ['latin'] });
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const CURRENT_YEAR = '2025';
+  const CURRENT_VERSION = '0.0.1';
+
   return (
     <LoadoutProvider>
       <html lang="en">
@@ -24,6 +27,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <button>Synergies</button>
           </header>
           {children}
+          <footer className="z-80 flex justify-between border-t border-gray-700 bg-gray-900 px-2">
+            <span className="text-nowrap text-gray-500 italic">&copy; Design and code by Tryncha, {CURRENT_YEAR}</span>
+            <span className="hidden text-gray-500 italic lg:inline">ver {CURRENT_VERSION}</span>
+          </footer>
         </body>
       </html>
     </LoadoutProvider>
