@@ -4,7 +4,7 @@ import { useState } from 'react';
 import CharmList from './components/CharmSelector';
 import CurrentCharms from './components/CurrentCharms';
 import Effects from './components/Effects';
-import KnightInfo from './components/KnightInfo';
+import KnightStats from './components/KnightStats';
 import ScreenSlider from './components/ScreenSlider';
 import NailSelector from './components/NailSelector';
 import SpellSelector from './components/SpellSelector';
@@ -36,7 +36,7 @@ const HomePage = () => {
           <button onClick={() => setActiveTab(AVAILABLE_TABS.SPELLS)}>SPELLS</button>
         </div>
         <hr className="my-2 border-gray-700" />
-        <KnightInfo />
+        <KnightStats />
       </section>
       <ScreenSlider position="right">
         <Effects />

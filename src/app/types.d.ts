@@ -149,3 +149,11 @@ export interface Synergy {
   charmIds: string[];
   effect: string;
 }
+
+export interface Minion {
+  id: string;
+  name: string;
+  damage: number;
+  quantity: number;
+  image: Image;
+}

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useCharmCheck, useHealth, useLoadout, useSoul } from '../hooks';
 import { useId } from 'react';
 
-const MainStatsContainer = () => {
+const MainStats = () => {
   const checkboxId = useId();
 
   const { loadout, toggleLowHealth } = useLoadout();
@@ -99,4 +99,4 @@ const MainStatsContainer = () => {
   );
 };
 
-export default MainStatsContainer;
+export default MainStats;

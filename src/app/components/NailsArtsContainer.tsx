@@ -36,7 +36,7 @@ const NailArtInfo = ({ nailArt }: NailArtsInfoProps) => {
   );
 };
 
-const NailArtsContainer = () => {
+const NailArtsStats = () => {
   return (
     <div className="flex flex-col justify-center gap-2">
       {nailArts.map((a) => (
@@ -49,4 +49,4 @@ const NailArtsContainer = () => {
   );
 };
 
-export default NailArtsContainer;
+export default NailArtsStats;

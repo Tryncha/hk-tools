@@ -33,7 +33,7 @@ const SpellInfo = ({ spell, isSimplified }: SpellInfoProps) => {
   );
 };
 
-const SpellsContainer = () => {
+const SpellStats = () => {
   const { loadout } = useLoadout();
   const { spells } = loadout;
 
@@ -46,7 +46,7 @@ const SpellsContainer = () => {
   }
 
   return (
-    <div className="relative flex flex-col gap-2">
+    <div className="relative flex flex-2 flex-col gap-2">
       {spells.map((s) => (
         <SpellInfo
           key={s.id}
@@ -67,4 +67,4 @@ const SpellsContainer = () => {
   );
 };
 
-export default SpellsContainer;
+export default SpellStats;
