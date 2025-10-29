@@ -47,7 +47,7 @@ const MainStats = () => {
             ? Array.from({ length: isLowHealth ? 1 : maxHealth }).map((_, i) => (
                 <Image
                   key={i}
-                  src="/ui/lifeblood-mask.png"
+                  src="/hollow-knight/ui/lifeblood-mask.png"
                   alt="Lifeblood Mask"
                   width={25}
                   height={36}
@@ -57,7 +57,7 @@ const MainStats = () => {
             : Array.from({ length: isLowHealth ? 1 : maxHealth }).map((_, i) => (
                 <Image
                   key={i}
-                  src="/ui/mask.png"
+                  src="/hollow-knight/ui/mask.png"
                   alt="Mask Shard"
                   width={25}
                   height={36}
@@ -68,7 +68,7 @@ const MainStats = () => {
             Array.from({ length: maxHealth - 1 }).map((_, i) => (
               <Image
                 key={i}
-                src="/ui/mask.png"
+                src="/hollow-knight/ui/mask.png"
                 alt="Mask Shard"
                 width={25}
                 height={36}
@@ -79,7 +79,7 @@ const MainStats = () => {
             Array.from({ length: lifebloodMasks - 1 }).map((_, i) => (
               <Image
                 key={i}
-                src="/ui/lifeblood-mask.png"
+                src="/hollow-knight/ui/lifeblood-mask.png"
                 alt="Lifeblood Mask"
                 width={25}
                 height={36}
@@ -90,7 +90,7 @@ const MainStats = () => {
             Array.from({ length: lifebloodMasks }).map((_, i) => (
               <Image
                 key={i}
-                src="/ui/lifeblood-mask.png"
+                src="/hollow-knight/ui/lifeblood-mask.png"
                 alt="Lifeblood Mask"
                 width={25}
                 height={36}

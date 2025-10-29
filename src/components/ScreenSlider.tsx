@@ -16,7 +16,7 @@ const ButtonSlider = ({ children, position, isSliderOpen, onClick }: ButtonSlide
   return (
     <button
       onClick={onClick}
-      className={`${position === 'left' ? leftStyles : rightStyles} fixed top-1/2 z-10 h-12 w-8 -translate-y-1/2 border-y border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out hover:cursor-pointer`}
+      className={`${position === 'left' ? leftStyles : rightStyles} fixed top-1/2 h-12 w-8 -translate-y-1/2 border-y border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out hover:cursor-pointer`}
     >
       {children}
     </button>
@@ -35,7 +35,7 @@ const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
   const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-[25vw]'} right-0 `;
 
   return (
-    <section>
+    <section className="z-10">
       <ButtonSlider
         onClick={() => setIsSliderOpen(!isSliderOpen)}
         isSliderOpen={isSliderOpen}
@@ -44,9 +44,9 @@ const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
         {position === 'left' ? (isSliderOpen ? '<-' : '->') : isSliderOpen ? '->' : '<-'}
       </ButtonSlider>
       <div
-        className={`${position === 'left' ? leftStyles : rightStyles} fixed h-full w-[25vw] overflow-y-auto border-l border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out`}
+        className={`${position === 'left' ? leftStyles : rightStyles} fixed h-screen w-[25vw] overflow-y-auto border-l border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out`}
       >
-        <div className={`${position === 'left' && 'scale-x-[-1]'} `}>{children}</div>
+        <div className={`${position === 'left' && 'scale-x-[-1]'}`}>{children}</div>
       </div>
     </section>
   );

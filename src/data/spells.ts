@@ -12,7 +12,7 @@ export const SPELLS: Spell[] = [
       total: 15
     },
     image: {
-      data: '/spells/vengeful-spirit.png',
+      data: '/hollow-knight/spells/vengeful-spirit.png',
       width: 72,
       height: 64
     }
@@ -29,7 +29,7 @@ export const SPELLS: Spell[] = [
       total: 35
     },
     image: {
-      data: '/spells/desolate-dive.png',
+      data: '/hollow-knight/spells/desolate-dive.png',
       width: 72,
       height: 64
     }
@@ -46,7 +46,7 @@ export const SPELLS: Spell[] = [
       total: 39
     },
     image: {
-      data: '/spells/howling-wraiths.png',
+      data: '/hollow-knight/spells/howling-wraiths.png',
       width: 72,
       height: 64
     }
@@ -62,7 +62,7 @@ export const SPELLS: Spell[] = [
       total: 30
     },
     image: {
-      data: '/spells/shade-soul.png',
+      data: '/hollow-knight/spells/shade-soul.png',
       width: 72,
       height: 64
     }
@@ -80,7 +80,7 @@ export const SPELLS: Spell[] = [
       total: 60
     },
     image: {
-      data: '/spells/descending-dark.png',
+      data: '/hollow-knight/spells/descending-dark.png',
       width: 72,
       height: 64
     }
@@ -97,7 +97,7 @@ export const SPELLS: Spell[] = [
       total: 80
     },
     image: {
-      data: '/spells/abyss-shriek.png',
+      data: '/hollow-knight/spells/abyss-shriek.png',
       width: 72,
       height: 64
     }
@@ -111,7 +111,7 @@ export const SPELLS: Spell[] = [
       perHit: 4
     },
     image: {
-      data: '/spells/flukelings.png',
+      data: '/hollow-knight/spells/flukelings.png',
       width: 72,
       height: 64
     }
@@ -125,7 +125,7 @@ export const SPELLS: Spell[] = [
       perHit: 4
     },
     image: {
-      data: '/spells/shade-flukelings.png',
+      data: '/hollow-knight/spells/shade-flukelings.png',
       width: 72,
       height: 64
     }
@@ -140,7 +140,7 @@ export const SPELLS: Spell[] = [
       time: 2.2
     },
     image: {
-      data: '/spells/volatile-fluke.png',
+      data: '/hollow-knight/spells/volatile-fluke.png',
       width: 72,
       height: 64
     }

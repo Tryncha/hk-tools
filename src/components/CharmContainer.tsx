@@ -6,6 +6,7 @@ import Markdown from 'react-markdown';
 import { CHARMS } from '@/data/charms';
 import { NotchesOn } from './Notches';
 import MarkdownImageInline from './MarkdownImageInline';
+import SideTooltip from './SideTooltip';
 
 interface CharmContainerProps {
   charm: Charm;
@@ -29,7 +30,7 @@ const CharmContainer = ({ charm, isReadOnly }: CharmContainerProps) => {
   return (
     <>
       {isHovering && (
-        <div className="fixed top-0 left-0 z-10 mt-16 flex h-screen w-[25vw] flex-col justify-center gap-2 overflow-y-auto border-r border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
+        <SideTooltip>
           <div className="border-y border-gray-700 bg-gray-900 p-4">
             <div className="flex items-center justify-center">
               <h3 className="mr-2 text-lg font-bold">{name}</h3>
@@ -88,7 +89,7 @@ const CharmContainer = ({ charm, isReadOnly }: CharmContainerProps) => {
               </>
             )}
           </div>
-        </div>
+        </SideTooltip>
       )}
       <div
         onClick={handleClick}

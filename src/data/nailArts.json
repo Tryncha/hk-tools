@@ -4,20 +4,20 @@
     "name": "Great Slash",
     "description": "The signature Nail Art of Nailmaster Sheo. Unleashes a huge slash directly in front of you which deals extra damage to foes.",
     "damagePerNailLevel": [12, 22, 32, 42, 52],
-    "imgSrc": "/nail-arts/great-slash.png"
+    "imgSrc": "/hollow-knight/nail-arts/great-slash.png"
   },
   {
     "id": 1,
     "name": "Dash Slash",
     "description": "The signature Nail Art of Nailmaster Oro. Strike ahead quickly after dashing forward.",
     "damagePerNailLevel": [12, 22, 32, 42, 52],
-    "imgSrc": "/nail-arts/dash-slash.png"
+    "imgSrc": "/hollow-knight/nail-arts/dash-slash.png"
   },
   {
     "id": 2,
     "name": "Cyclone Slash",
     "description": "The signature Nail Art of Nailmaster Mato. A spinning attack that rapidly strikes foes on all sides.",
     "damagePerNailLevel": [6, 11, 16, 21, 26],
-    "imgSrc": "/nail-arts/cyclone-slash.png"
+    "imgSrc": "/hollow-knight/nail-arts/cyclone-slash.png"
   }
 ]

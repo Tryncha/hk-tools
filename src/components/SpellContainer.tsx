@@ -3,6 +3,7 @@ import { useLoadout } from '@/hooks';
 import { Spell } from '@/app/types';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
+import SideTooltip from './SideTooltip';
 
 interface SpellTooltipProps {
   spell: Spell;
@@ -12,7 +13,7 @@ const SpellTooltip = ({ spell }: SpellTooltipProps) => {
   const { name, description, location } = spell;
 
   return (
-    <div className="fixed top-0 left-0 z-10 mt-16 flex h-screen w-[25vw] flex-col justify-center gap-2 overflow-y-auto border-r border-gray-700 bg-gray-900/80 backdrop-blur-md transition-all">
+    <SideTooltip>
       <div className="flex items-center justify-center gap-8 border-y border-gray-700 bg-gray-900 p-8">
         <div className="flex flex-col">
           <h3 className="mr-2 text-center text-lg font-bold">{name}</h3>
@@ -28,7 +29,7 @@ const SpellTooltip = ({ spell }: SpellTooltipProps) => {
           )}
         </div>
       </div>
-    </div>
+    </SideTooltip>
   );
 };
 

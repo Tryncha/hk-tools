@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useLoadout } from '@/hooks';
 import CharmContainer from './CharmContainer';
 import { MAX_NOTCHES } from '@/constants';
-import Button from './Button';
+import ResetButton from './ResetButton';
 
 const CurrentCharms = () => {
   const { loadout, resetCharms, resetLoadout } = useLoadout();
@@ -30,7 +30,7 @@ const CurrentCharms = () => {
             {notchesUsed < MAX_NOTCHES && (
               <div className="flex size-18 items-center justify-center">
                 <Image
-                  src="/ui/notch.png"
+                  src="/hollow-knight/ui/notch.png"
                   alt="Notch"
                   width={36}
                   height={36}
@@ -45,7 +45,7 @@ const CurrentCharms = () => {
             {Array.from({ length: notchesOn }, (_, i) => (
               <Image
                 key={i}
-                src="/ui/notch-cost-on.png"
+                src="/hollow-knight/ui/notch-cost-on.png"
                 alt="Notch Cost On"
                 width={50}
                 height={50}
@@ -54,7 +54,7 @@ const CurrentCharms = () => {
             {Array.from({ length: notchesOff }, (_, i) => (
               <Image
                 key={i}
-                src="/ui/notch-cost-off.png"
+                src="/hollow-knight/ui/notch-cost-off.png"
                 alt="Notch Cost Off"
                 width={50}
                 height={50}
@@ -64,7 +64,7 @@ const CurrentCharms = () => {
               Array.from({ length: notchesOvercharmed }, (_, i) => (
                 <Image
                   key={i}
-                  src="/ui/notch-cost-overcharmed.png"
+                  src="/hollow-knight/ui/notch-cost-overcharmed.png"
                   alt="Notch Cost Overcharmed"
                   width={50}
                   height={50}
@@ -74,8 +74,8 @@ const CurrentCharms = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center gap-2">
-        <Button onClick={resetCharms}>Reset Charms</Button>
-        <Button onClick={resetLoadout}>Reset All</Button>
+        <ResetButton onClick={resetCharms}>Reset Charms</ResetButton>
+        <ResetButton onClick={resetLoadout}>Reset All</ResetButton>
       </div>
     </section>
   );

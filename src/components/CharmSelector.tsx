@@ -19,7 +19,7 @@ const CharmListRow = ({ charmsToShow }: CharmListRowProps) => {
   );
 };
 
-const CharmList = () => {
+const CharmSelector = () => {
   return (
     <section className="flex flex-col items-center py-2">
       <CharmListRow charmsToShow={CHARMS.slice(0, 10)} />
@@ -30,4 +30,4 @@ const CharmList = () => {
   );
 };
 
-export default CharmList;
+export default CharmSelector;

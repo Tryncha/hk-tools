@@ -3,32 +3,32 @@ import { Charm } from '../app/types';
 export const CHARMS: Charm[] = [
   {
     id: 'wayward-compass',
-    image: '/charms/wayward-compass.png',
+    image: '/hollow-knight/charms/wayward-compass.png',
     name: 'Wayward Compass',
     notchCost: 1,
     description:
       'Whispers its location to the bearer whenever a map is open, allowing wanderers to pinpoint their current location',
-    location: 'Sold by Iselda in Dirthmouth for ![Geo](/ui/geo.png) 200, after encountering Cornifer',
+    location: 'Sold by Iselda in Dirthmouth for ![Geo](/hollow-knight/ui/geo.png) 200, after encountering Cornifer',
     effects: ["Shows Knight's location on map"]
   },
   {
     id: 'gathering-swarm',
-    image: '/charms/gathering-swarm.png',
+    image: '/hollow-knight/charms/gathering-swarm.png',
     name: 'Gathering Swarm',
     notchCost: 1,
     description:
       "A swarm will follow the bearer and gather up any loose Geo.\nUseful for those who can't bear to leave anything behind, no matter how insignificant",
-    location: 'Sold by Sly in Dirtmouth for ![Geo](/ui/geo.png) 300',
-    effects: ['Collects dropped ![Geo](/ui/geo.png) Geo']
+    location: 'Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 300',
+    effects: ['Collects dropped ![Geo](/hollow-knight/ui/geo.png) Geo']
   },
   {
     id: 'stalwart-shell',
-    image: '/charms/stalwart-shell.png',
+    image: '/hollow-knight/charms/stalwart-shell.png',
     name: 'Stalwart Shell',
     notchCost: 2,
     description:
       'Builds resilience. When recovering from damage, the bearer will remain invulnerable for longer.\nMakes it easier to escape from dangerous situations',
-    location: 'Sold by Sly in Dirtmouth for ![Geo](/ui/geo.png) 200',
+    location: 'Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 200',
     effects: [
       'Increases invincibility duration after being hit by ~35%',
       'Reduces hit recoil (no input time) after being hit by 60%'
@@ -36,7 +36,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'soul-catcher',
-    image: '/charms/soul-catcher.png',
+    image: '/hollow-knight/charms/soul-catcher.png',
     name: 'Soul Catcher',
     notchCost: 2,
     description:
@@ -46,12 +46,12 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'shaman-stone',
-    image: '/charms/shaman-stone.png',
+    image: '/hollow-knight/charms/shaman-stone.png',
     name: 'Shaman Stone',
     notchCost: 3,
     description:
       'Said to contain the knowledge of past generations of shaman.\nIncreases the power of spells, dealing more damage to foes',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/ui/geo.png) 220',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 220',
     effects: [
       'Increases **Vengeful Spirit** and **Shade Soul** damage by 33%',
       'Increases **Desolate Dive** damage by 51% and **Descending Dark** damage by 47%',
@@ -61,7 +61,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'soul-eater',
-    image: '/charms/soul-eater.png',
+    image: '/hollow-knight/charms/soul-eater.png',
     name: 'Soul Eater',
     notchCost: 4,
     description:
@@ -71,7 +71,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'dashmaster',
-    image: '/charms/dashmaster.png',
+    image: '/hollow-knight/charms/dashmaster.png',
     name: 'Dashmaster',
     notchCost: 2,
     description:
@@ -92,12 +92,12 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'sprintmaster',
-    image: '/charms/sprintmaster.png',
+    image: '/hollow-knight/charms/sprintmaster.png',
     name: 'Sprintmaster',
     notchCost: 1,
     description:
       "Bears the likeness of a strange bug known only as 'The Sprintmaster'.\nIncreases the running speed of the bearer, allowing them to avoid danger or overtake rivals",
-    location: "Sold by Sly in Dirtmouth for ![Geo](/ui/geo.png) 400. Requires Shopkeeper's Key",
+    location: "Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 400. Requires Shopkeeper's Key",
     effects: ['Increases run speed by ~20%'],
     synergies: [
       {
@@ -112,7 +112,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'grubsong',
-    image: '/charms/grubsong.png',
+    image: '/hollow-knight/charms/grubsong.png',
     name: 'Grubsong',
     notchCost: 1,
     description: 'Contains the gratitude of freed grubs.\nGain SOUL when taking damage',
@@ -132,7 +132,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'grubberflys-elegy',
-    image: '/charms/grubberflys-elegy.png',
+    image: '/hollow-knight/charms/grubberflys-elegy.png',
     name: "Grubberly's Elegy",
     notchCost: 3,
     description:
@@ -157,38 +157,38 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'unbreakable-heart',
-    image: '/charms/unbreakable-heart.png',
+    image: '/hollow-knight/charms/unbreakable-heart.png',
     name: 'Unbreakable Heart',
     notchCost: 2,
     description: 'Increases the health of the bearer, allowing them to take more damage.\nThis charm is unbreakable',
     location:
-      "Sold by Leg Eater in Fungal Wastes for ![Geo](/ui/geo.png) 350 (![Geo](/ui/geo.png) 280 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/ui/geo.png) 12000",
+      "Sold by Leg Eater in Fungal Wastes for ![Geo](/hollow-knight/ui/geo.png) 350 (![Geo](/hollow-knight/ui/geo.png) 280 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 12000",
     effects: ['Adds two Masks of health']
   },
   {
     id: 'unbreakable-greed',
-    image: '/charms/unbreakable-greed.png',
+    image: '/hollow-knight/charms/unbreakable-greed.png',
     name: 'Unbreakable Greed',
     notchCost: 2,
     description: 'Causes the bearer to find more Geo when defeating enemies.\nThis charm is unbreakable',
     location:
-      "Sold by Leg Eater in Fungal Wastes for ![Geo](/ui/geo.png) 250 (![Geo](/ui/geo.png) 200 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/ui/geo.png) 9000",
+      "Sold by Leg Eater in Fungal Wastes for ![Geo](/hollow-knight/ui/geo.png) 250 (![Geo](/hollow-knight/ui/geo.png) 200 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 9000",
     effects: ['Enemies drop 20-100% more Geo']
   },
   {
     id: 'unbreakable-strength',
-    image: '/charms/unbreakable-strength.png',
+    image: '/hollow-knight/charms/unbreakable-strength.png',
     name: 'Unbreakable Strength',
     notchCost: 3,
     description:
       'Strengthens the bearer, increasing the damage they deal to enemies with their nail.\nThis charm is unbreakable',
     location:
-      "Sold by Leg Eater in Fungal Wastes for ![Geo](/ui/geo.png) 600 (![Geo](/ui/geo.png) 480 if Defender\'s Cerst is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/ui/geo.png) 15000",
+      "Sold by Leg Eater in Fungal Wastes for ![Geo](/hollow-knight/ui/geo.png) 600 (![Geo](/hollow-knight/ui/geo.png) 480 if Defender\'s Cerst is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 15000",
     effects: ['Increases Nail damage by 50%']
   },
   {
     id: 'spell-twister',
-    image: '/charms/spell-twister.png',
+    image: '/hollow-knight/charms/spell-twister.png',
     name: 'Spell Twister',
     notchCost: 2,
     description:
@@ -198,22 +198,22 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'steady-body',
-    image: '/charms/steady-body.png',
+    image: '/hollow-knight/charms/steady-body.png',
     name: 'Steady Body',
     notchCost: 1,
     description:
       'Keeps its bearer from recoiling backwards when they strike an enemy with a nail.\nAllows one to stay steady and keep attacking',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/ui/geo.png) 120',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 120',
     effects: ['Removes all knockback/recoil from hitting enemies']
   },
   {
     id: 'heavy-blow',
-    image: '/charms/heavy-blow.png',
+    image: '/hollow-knight/charms/heavy-blow.png',
     name: 'Heavy Blow',
     notchCost: 2,
     description:
       "Formed from the nails of fallen warriors.\nIncreases the force of the bearer's nail, causing enemies to recoil further when hit",
-    location: "Sold by Sly in Dirtmouth for ![Geo](/ui/geo.png) 350. Requires Shopkeeper's Key",
+    location: "Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 350. Requires Shopkeeper's Key",
     effects: [
       'Increases Nail attack knockback by 75%',
       'Increases Great Slash knockback by 33%',
@@ -222,7 +222,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'quick-slash',
-    image: '/charms/quick-slash.png',
+    image: '/hollow-knight/charms/quick-slash.png',
     name: 'Quick Slash',
     notchCost: 3,
     description:
@@ -232,16 +232,16 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'longnail',
-    image: '/charms/longnail.png',
+    image: '/hollow-knight/charms/longnail.png',
     name: 'Longnail',
     notchCost: 2,
     description: "Increases the range of the bearer's nail, allowing them to strike foes from further away",
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/ui/geo.png) 300',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 300',
     effects: ['Increases Nail range by 15%']
   },
   {
     id: 'mark-of-pride',
-    image: '/charms/mark-of-pride.png',
+    image: '/hollow-knight/charms/mark-of-pride.png',
     name: 'Mark of Pride',
     notchCost: 3,
     description:
@@ -257,7 +257,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'fury-of-the-fallen',
-    image: '/charms/fury-of-the-fallen.png',
+    image: '/hollow-knight/charms/fury-of-the-fallen.png',
     name: 'Fury of the Fallen',
     notchCost: 2,
     description:
@@ -279,7 +279,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'thorns-of-agony',
-    image: '/charms/thorns-of-agony.png',
+    image: '/hollow-knight/charms/thorns-of-agony.png',
     name: 'Thorns of Agony',
     notchCost: 1,
     description:
@@ -289,7 +289,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'baldur-shell',
-    image: '/charms/baldur-shell.png',
+    image: '/hollow-knight/charms/baldur-shell.png',
     name: 'Baldur Shell',
     notchCost: 2,
     description:
@@ -299,7 +299,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'flukenest',
-    image: '/charms/flukenest.png',
+    image: '/hollow-knight/charms/flukenest.png',
     name: 'Flukenest',
     notchCost: 3,
     description:
@@ -320,7 +320,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'defenders-crest',
-    image: '/charms/defenders-crest.png',
+    image: '/hollow-knight/charms/defenders-crest.png',
     name: "Defender's Crest",
     notchCost: 1,
     description:
@@ -350,7 +350,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'glowing-womb',
-    image: '/charms/glowing-womb.png',
+    image: '/hollow-knight/charms/glowing-womb.png',
     name: 'Glowing Womb',
     notchCost: 2,
     description:
@@ -374,12 +374,12 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'quick-focus',
-    image: '/charms/quick-focus.png',
+    image: '/hollow-knight/charms/quick-focus.png',
     name: 'Quick Focus',
     notchCost: 3,
     description:
       'A charm containing a crystal lens.\nIncreases the speed of focusing SOUL, allowing the bearer to heal damage faster',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/ui/geo.png) 800',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 800',
     effects: ['Focus ~33% faster'],
     synergies: [
       {
@@ -390,7 +390,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'deep-focus',
-    image: '/charms/deep-focus.png',
+    image: '/hollow-knight/charms/deep-focus.png',
     name: 'Deep Focus',
     notchCost: 4,
     description:
@@ -406,17 +406,17 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'lifeblood-heart',
-    image: '/charms/lifeblood-heart.png',
+    image: '/hollow-knight/charms/lifeblood-heart.png',
     name: 'Lifeblood Heart',
     notchCost: 2,
     description:
       'Contains a living core that seeps precious lifeblood.\nWhen resting, the bearer will gain a coating of lifeblood that protects from a modest amount of damage',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/ui/geo.png) 250',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 250',
     effects: ['Adds 2 Lifeblood Masks when resting.']
   },
   {
     id: 'lifeblood-core',
-    image: '/charms/lifeblood-core.png',
+    image: '/hollow-knight/charms/lifeblood-core.png',
     name: 'Lifeblood Core',
     notchCost: 3,
     description:
@@ -426,7 +426,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'jonis-blessing',
-    image: '/charms/jonis-blessing.png',
+    image: '/hollow-knight/charms/jonis-blessing.png',
     name: "Joni's Blessing",
     notchCost: 4,
     description:
@@ -446,7 +446,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'hiveblood',
-    image: '/charms/hiveblood.png',
+    image: '/hollow-knight/charms/hiveblood.png',
     name: 'Hiveblood',
     notchCost: 4,
     description:
@@ -466,7 +466,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'spore-shroom',
-    image: '/charms/spore-shroom.png',
+    image: '/hollow-knight/charms/spore-shroom.png',
     name: 'Spore Shroom',
     notchCost: 1,
     description:
@@ -491,7 +491,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'sharp-shadow',
-    image: '/charms/sharp-shadow.png',
+    image: '/hollow-knight/charms/sharp-shadow.png',
     name: 'Sharp Shadow',
     notchCost: 2,
     description:
@@ -511,7 +511,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'shape-of-unn',
-    image: '/charms/shape-of-unn.png',
+    image: '/hollow-knight/charms/shape-of-unn.png',
     name: 'Shape of Unn',
     notchCost: 2,
     description:
@@ -527,7 +527,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'nailmasters-glory',
-    image: '/charms/nailmasters-glory.png',
+    image: '/hollow-knight/charms/nailmasters-glory.png',
     name: "Nailmaster's Glory",
     notchCost: 1,
     description:
@@ -537,7 +537,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'weaversong',
-    image: '/charms/weaversong.png',
+    image: '/hollow-knight/charms/weaversong.png',
     name: 'Weaversong',
     notchCost: 2,
     description:
@@ -561,7 +561,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'dream-wielder',
-    image: '/charms/dream-wielder.png',
+    image: '/hollow-knight/charms/dream-wielder.png',
     name: 'Dream Wielder',
     notchCost: 1,
     description:
@@ -581,7 +581,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'dreamshield',
-    image: '/charms/dreamshield.png',
+    image: '/hollow-knight/charms/dreamshield.png',
     name: 'Dreamshield',
     notchCost: 3,
     description:
@@ -599,7 +599,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'grimmchild',
-    image: '/charms/grimmchild.png',
+    image: '/hollow-knight/charms/grimmchild.png',
     name: 'Grimmchild',
     notchCost: 2,
     description:
@@ -613,7 +613,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'void-heart',
-    image: '/charms/void-heart.png',
+    image: '/hollow-knight/charms/void-heart.png',
     name: 'Void Heart',
     notchCost: 0,
     description:

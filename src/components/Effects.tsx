@@ -62,11 +62,11 @@ const Effects = () => {
         </section>
       ) : (
         <section className="flex justify-center pt-12">
-          <span className="text-sm text-gray-300">Add some charms to see its effects!</span>
+          <span className="text-sm text-gray-300">Add some charms to see their effects!</span>
         </section>
       )}
       {activeSynergies.length > 0 && (
-        <section className="mb-16 flex flex-col gap-4 border-t-4 border-gray-700 bg-gray-900 p-4">
+        <section className="mb-24 flex flex-col gap-4 border-t-4 border-gray-700 bg-gray-900 p-4">
           <h2 className="text-center text-xl font-bold">Synergies</h2>
           <hr className="mb-2 border-gray-700" />
           {activeSynergies.map((s) => {

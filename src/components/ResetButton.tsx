@@ -3,7 +3,7 @@ interface ButtonProps {
   onClick: () => void;
 }
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const ResetButton = ({ children, onClick }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -14,4 +14,4 @@ const Button = ({ children, onClick }: ButtonProps) => {
   );
 };
 
-export default Button;
+export default ResetButton;
