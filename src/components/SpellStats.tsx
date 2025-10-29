@@ -16,7 +16,7 @@ const SpellInfo = ({ spell, isSimplified }: SpellInfoProps) => {
   const { label, rawValue, extendedValue } = useSpell(spell);
 
   return (
-    <div className="flex h-20 items-center gap-4">
+    <div className="flex items-center gap-2">
       <SpellContainer
         spell={spell}
         isReadOnly
@@ -46,7 +46,7 @@ const SpellStats = () => {
   }
 
   return (
-    <div className="relative flex flex-2 flex-col gap-2">
+    <section className="relative flex flex-2 flex-col justify-center">
       {spells.map((s) => (
         <SpellInfo
           key={s.id}
@@ -63,7 +63,7 @@ const SpellStats = () => {
           onChange={handleChange}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

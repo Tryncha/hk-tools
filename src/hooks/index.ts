@@ -27,10 +27,19 @@ export function useCharmCheck(charmId: string) {
 
 export function useHealth() {
   const hasUnbreakableHeart = useCharmCheck('unbreakable-heart');
+  const hasLifebloodHeart = useCharmCheck('lifeblood-heart');
+  const hasLifebloodCore = useCharmCheck('lifeblood-core');
+  const hasJonisBlessing = useCharmCheck('jonis-blessing');
 
-  const maxHealth = HEALTH_DATA.MAX + 2 * (hasUnbreakableHeart ? 1 : 0);
+  let maxHealth = HEALTH_DATA.MAX + 2 * (hasUnbreakableHeart ? 1 : 0);
+  let lifebloodMasks = 0 + 2 * (hasLifebloodHeart ? 1 : 0) + 4 * (hasLifebloodCore ? 1 : 0);
 
-  return { maxHealth };
+  if (hasJonisBlessing) {
+    lifebloodMasks = Math.ceil(maxHealth * 1.4) + lifebloodMasks;
+    maxHealth = 0;
+  }
+
+  return { maxHealth, lifebloodMasks };
 }
 
 export function useSoul() {

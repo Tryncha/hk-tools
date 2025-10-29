@@ -29,7 +29,7 @@ interface ScreenSliderProps {
 }
 
 const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
-  const [isSliderOpen, setIsSliderOpen] = useState(true);
+  const [isSliderOpen, setIsSliderOpen] = useState(position === 'right');
 
   const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-[25vw]'} left-0 scale-x-[-1]`;
   const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-[25vw]'} right-0 `;

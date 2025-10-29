@@ -59,7 +59,7 @@ const SpellContainer = ({ spell, isReadOnly }: NailContainerProps) => {
         onClick={handleClick}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        className={`${!isReadOnly && isEquipped ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} ${!isReadOnly && 'hover:cursor-pointer'} flex h-28 w-30 items-center justify-center`}
+        className={`${!isReadOnly && isEquipped ? 'drop-shadow-charm opacity-50' : 'hover:drop-shadow-charm'} ${!isReadOnly && 'hover:cursor-pointer'} flex h-25 w-30 items-center justify-center`}
       >
         <Image
           src={image.data}

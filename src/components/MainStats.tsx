@@ -10,15 +10,16 @@ const MainStats = () => {
   const { loadout, toggleLowHealth } = useLoadout();
   const { isLowHealth } = loadout;
 
-  const { maxHealth } = useHealth();
+  const { maxHealth, lifebloodMasks } = useHealth();
   const { maxSoul, soulCost, soulGain } = useSoul();
 
   const hasFuryOfTheFallen = useCharmCheck('fury-of-the-fallen');
+  const hasJonisBlessing = useCharmCheck('jonis-blessing');
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="relative flex flex-col">
-        <div className="absolute top-0 right-0 flex items-center gap-2">
+      <div className="item flex flex-col">
+        <div className="flex items-center justify-end gap-2">
           <label htmlFor={checkboxId}>Low Health?</label>
           <input
             id={checkboxId}
@@ -28,20 +29,44 @@ const MainStats = () => {
           />
         </div>
         <div>
-          <output className="ml-1 text-2xl">{isLowHealth ? `1/${maxHealth}` : maxHealth}</output>
-          <span className="ml-1 text-sm text-gray-400">MASKS</span>
+          {!hasJonisBlessing && (
+            <span>
+              <output className="ml-1 text-2xl">{isLowHealth ? 1 : maxHealth}</output>
+              <span className="ml-1 text-sm text-gray-400">{isLowHealth ? 'MASK' : 'MASKS'}</span>
+            </span>
+          )}
+          {lifebloodMasks > 0 && (
+            <span className="text-cyan-600">
+              <output className="ml-1 text-2xl">
+                {!hasJonisBlessing ? ' + ' : ''}
+                {lifebloodMasks}
+              </output>
+              <span className="ml-1 text-sm">LIFEBLOOD</span>
+            </span>
+          )}
         </div>
-        <div className="flex">
-          {Array.from({ length: isLowHealth ? 1 : maxHealth }).map((_, i) => (
-            <Image
-              key={i}
-              src="/ui/mask.png"
-              alt="Mask Shard"
-              width={25}
-              height={36}
-              className={`${hasFuryOfTheFallen && isLowHealth && 'drop-shadow-charm drop-shadow-red-600'} h-9 w-[25px]`}
-            />
-          ))}
+        <div className="flex w-75 flex-wrap">
+          {hasJonisBlessing
+            ? Array.from({ length: isLowHealth ? 1 : maxHealth }).map((_, i) => (
+                <Image
+                  key={i}
+                  src="/ui/lifeblood-mask.png"
+                  alt="Lifeblood Mask"
+                  width={25}
+                  height={36}
+                  className={`${hasFuryOfTheFallen && isLowHealth && 'drop-shadow-charm drop-shadow-red-600'} -mt-1 h-10 w-[25px] object-cover`}
+                />
+              ))
+            : Array.from({ length: isLowHealth ? 1 : maxHealth }).map((_, i) => (
+                <Image
+                  key={i}
+                  src="/ui/mask.png"
+                  alt="Mask Shard"
+                  width={25}
+                  height={36}
+                  className={`${hasFuryOfTheFallen && isLowHealth && 'drop-shadow-charm drop-shadow-red-600'} h-9 w-[25px]`}
+                />
+              ))}
           {isLowHealth &&
             Array.from({ length: maxHealth - 1 }).map((_, i) => (
               <Image
@@ -51,6 +76,28 @@ const MainStats = () => {
                 width={25}
                 height={36}
                 className="h-9 w-[25px] opacity-30"
+              />
+            ))}
+          {isLowHealth &&
+            Array.from({ length: lifebloodMasks - 1 }).map((_, i) => (
+              <Image
+                key={i}
+                src="/ui/lifeblood-mask.png"
+                alt="Lifeblood Mask"
+                width={25}
+                height={36}
+                className="-mt-1 h-10 w-[25px] object-cover opacity-30"
+              />
+            ))}
+          {!isLowHealth &&
+            Array.from({ length: lifebloodMasks }).map((_, i) => (
+              <Image
+                key={i}
+                src="/ui/lifeblood-mask.png"
+                alt="Lifeblood Mask"
+                width={25}
+                height={36}
+                className="-mt-1 h-10 w-[25px] object-cover"
               />
             ))}
         </div>
