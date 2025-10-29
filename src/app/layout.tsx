@@ -40,7 +40,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               className="absolute opacity-10"
             />
             <h1 className="ml-8 text-3xl font-bold">
-              HollowBench<span className="text-blue-400">.build</span>
+              HollowBench
+              {/* <span className="text-blue-400">.build</span> */}
             </h1>
           </header>
           {children}
