@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import { LoadoutProvider } from '../context/LoadoutContext';
 import Image from 'next/image';
 import './globals.css';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     title: 'Hollow Bench - Build calculation and customization for Hollow Knight',
     description: 'Create your own builds and see calculations in real time for Hollow Knight'
   }
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -37,7 +42,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <h1 className="ml-8 text-3xl font-bold">
               HollowBench<span className="text-blue-400">.build</span>
             </h1>
-            <button>Synergies</button>
           </header>
           {children}
           <footer className="z-80 flex justify-between border-t border-gray-700 bg-gray-900 px-2">
