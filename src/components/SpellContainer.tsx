@@ -1,15 +1,11 @@
 import Image from 'next/image';
 import { useLoadout } from '@/hooks';
-import { Spell } from '@/app/types';
+import { Spell } from '@/types';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import SideTooltip from './SideTooltip';
 
-interface SpellTooltipProps {
-  spell: Spell;
-}
-
-const SpellTooltip = ({ spell }: SpellTooltipProps) => {
+const SpellTooltip = ({ spell }: { spell: Spell }) => {
   const { name, description, location } = spell;
 
   return (
@@ -33,12 +29,7 @@ const SpellTooltip = ({ spell }: SpellTooltipProps) => {
   );
 };
 
-interface NailContainerProps {
-  spell: Spell;
-  isReadOnly?: boolean;
-}
-
-const SpellContainer = ({ spell, isReadOnly }: NailContainerProps) => {
+const SpellContainer = ({ spell, isReadOnly }: { spell: Spell; isReadOnly?: boolean }) => {
   const { loadout, setSpell } = useLoadout();
   const { spells } = loadout;
 

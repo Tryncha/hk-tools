@@ -1,4 +1,4 @@
-import { Nail } from '../app/types';
+import { Nail } from '../types';
 
 export const NAILS: Nail[] = [
   {

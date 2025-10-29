@@ -1,6 +1,6 @@
 import { QUICK_SWING_SPEED, SWING_SPEED } from '@/constants';
 import { CHARMS } from '@/data/charms';
-import { Charm } from '@/app/types';
+import { Charm } from '@/types';
 
 export function capitalizeText(text: string) {
   const excludedWords = ['of', 'and', 'to', 'the'];

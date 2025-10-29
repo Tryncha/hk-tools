@@ -1,4 +1,4 @@
-import { Minion } from '../app/types';
+import { Minion } from '../types';
 
 export const MINIONS: Minion[] = [
   {

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { MINIONS } from '@/data/minions';
 import { useCharmCheck } from '@/hooks';
-import { Minion } from '@/app/types';
+import { Minion } from '@/types';
 
 function getMinionData(minionId: string) {
   const minion = MINIONS.find((m) => m.id === minionId);
@@ -11,11 +11,7 @@ function getMinionData(minionId: string) {
   return minion;
 }
 
-interface MinionInfoProps {
-  minion: Minion;
-}
-
-const MinionInfo = ({ minion }: MinionInfoProps) => {
+const MinionInfo = ({ minion }: { minion: Minion }) => {
   const areMultiple = minion.quantity > 1;
 
   return (

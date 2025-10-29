@@ -1,6 +1,6 @@
 import ScreenSlider from '../components/ScreenSlider';
 import Effects from '../components/Effects';
-import MainTab from '@/components/MainTab';
+import MainTab from '../components/MainTab';
 
 const HomePage = () => {
   return (

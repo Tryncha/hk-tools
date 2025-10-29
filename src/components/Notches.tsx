@@ -1,11 +1,6 @@
 import Image from 'next/image';
 
-interface NotchesOnProps {
-  quantity: number;
-  size: number;
-}
-
-export const NotchesOn = ({ quantity, size }: NotchesOnProps) => {
+export const NotchesOn = ({ quantity, size }: { quantity: number; size: number }) => {
   return Array.from({ length: quantity }, (_, i) => (
     <Image
       key={i}

@@ -2,14 +2,17 @@
 
 import { useState } from 'react';
 
-interface ButtonSliderProps {
+const ButtonSlider = ({
+  children,
+  position,
+  isSliderOpen,
+  onClick
+}: {
   children: React.ReactNode;
   position: 'left' | 'right';
   isSliderOpen: boolean;
   onClick: () => void;
-}
-
-const ButtonSlider = ({ children, position, isSliderOpen, onClick }: ButtonSliderProps) => {
+}) => {
   const leftStyles = `${isSliderOpen ? 'translate-x-[25vw]' : 'translate-x-0'} left-0 border-r`;
   const rightStyles = `${isSliderOpen ? '-translate-x-[25vw]' : '-translate-x-0'} right-0 border-l`;
 
@@ -23,12 +26,7 @@ const ButtonSlider = ({ children, position, isSliderOpen, onClick }: ButtonSlide
   );
 };
 
-interface ScreenSliderProps {
-  children: React.ReactNode;
-  position: 'left' | 'right';
-}
-
-const ScreenSlider = ({ children, position }: ScreenSliderProps) => {
+const ScreenSlider = ({ children, position }: { children: React.ReactNode; position: 'left' | 'right' }) => {
   const [isSliderOpen, setIsSliderOpen] = useState(position === 'right');
 
   const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-[25vw]'} left-0 scale-x-[-1]`;

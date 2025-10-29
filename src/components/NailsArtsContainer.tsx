@@ -3,13 +3,9 @@
 import Image from 'next/image';
 import nailArts from '@/data/nailArts.json';
 import { useLoadout, useNailArt } from '@/hooks';
-import { NailArt } from '@/app/types';
+import { NailArt } from '@/types';
 
-interface NailArtsInfoProps {
-  nailArt: NailArt;
-}
-
-const NailArtInfo = ({ nailArt }: NailArtsInfoProps) => {
+const NailArtInfo = ({ nailArt }: { nailArt: NailArt }) => {
   const { loadout } = useLoadout();
   const { nail } = loadout;
 

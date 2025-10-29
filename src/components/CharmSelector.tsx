@@ -1,12 +1,8 @@
-import type { Charm } from '@/app/types';
+import type { Charm } from '../types';
 import CharmContainer from './CharmContainer';
-import { CHARMS } from '@/data/charms';
+import { CHARMS } from '../data/charms';
 
-interface CharmListRowProps {
-  charmsToShow: Charm[];
-}
-
-const CharmListRow = ({ charmsToShow }: CharmListRowProps) => {
+const CharmListRow = ({ charmsToShow }: { charmsToShow: Charm[] }) => {
   return (
     <div className="flex odd:mr-10 even:ml-10">
       {charmsToShow.map((c) => (

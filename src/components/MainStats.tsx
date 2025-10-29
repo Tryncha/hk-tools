@@ -37,7 +37,9 @@ const MainStats = () => {
           )}
           {lifebloodMasks > 0 && (
             <span className="text-cyan-600">
-              <output className="ml-1 text-2xl">{!hasJonisBlessing ? ` + ${lifebloodMasks}` : lifebloodMasks}</output>
+              <output className="ml-1 text-2xl">
+                {!hasJonisBlessing ? ` + ${lifebloodMasks}` : isLowHealth ? 1 : lifebloodMasks}
+              </output>
               <span className="ml-1 text-sm">LIFEBLOOD</span>
             </span>
           )}

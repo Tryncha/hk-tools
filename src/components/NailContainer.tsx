@@ -1,16 +1,12 @@
 import Image from 'next/image';
 import { useLoadout } from '@/hooks';
-import { Nail } from '@/app/types';
+import { Nail } from '@/types';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import MarkdownImageInline from './MarkdownImageInline';
 import SideTooltip from './SideTooltip';
 
-interface NailTooltipProps {
-  nail: Nail;
-}
-
-const NailTooltip = ({ nail }: NailTooltipProps) => {
+const NailTooltip = ({ nail }: { nail: Nail }) => {
   const { name, description, cost, image, damage } = nail;
 
   return (
@@ -45,12 +41,7 @@ const NailTooltip = ({ nail }: NailTooltipProps) => {
   );
 };
 
-interface NailContainerProps {
-  nail: Nail;
-  isReadOnly?: boolean;
-}
-
-const NailContainer = ({ nail, isReadOnly }: NailContainerProps) => {
+const NailContainer = ({ nail, isReadOnly }: { nail: Nail; isReadOnly?: boolean }) => {
   const { loadout, setNail } = useLoadout();
 
   const [isHovering, setIsHovering] = useState(false);

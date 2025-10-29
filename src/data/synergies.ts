@@ -1,4 +1,4 @@
-import { Synergy } from '../app/types';
+import { Synergy } from '../types';
 
 export const SYNERGIES: Synergy[] = [
   {

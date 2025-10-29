@@ -1,4 +1,4 @@
-import { Charm } from '../app/types';
+import { Charm } from '../types';
 
 export const CHARMS: Charm[] = [
   {

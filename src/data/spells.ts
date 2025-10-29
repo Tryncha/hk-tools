@@ -1,4 +1,4 @@
-import { Spell } from '../app/types';
+import { Spell } from '../types';
 
 export const SPELLS: Spell[] = [
   {

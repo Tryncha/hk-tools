@@ -1,9 +1,4 @@
-interface ButtonProps {
-  children: React.ReactNode;
-  onClick: () => void;
-}
-
-const ResetButton = ({ children, onClick }: ButtonProps) => {
+const ResetButton = ({ children, onClick }: { children: React.ReactNode; onClick: () => void }) => {
   return (
     <button
       onClick={onClick}

@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import Markdown from 'react-markdown';
 
-interface MarkdownImageInlineProps {
-  children: string;
-  imageSize: number;
-}
-
-const MarkdownImageInline = ({ children, imageSize }: MarkdownImageInlineProps) => {
+const MarkdownImageInline = ({ children, imageSize }: { children: string; imageSize: number }) => {
   return (
     <Markdown
       components={{

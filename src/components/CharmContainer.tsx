@@ -1,19 +1,14 @@
 import Image from 'next/image';
-import type { Charm } from '@/app/types';
-import { useLoadout } from '@/hooks';
 import { useState } from 'react';
+import { useLoadout } from '../hooks';
 import Markdown from 'react-markdown';
 import { CHARMS } from '@/data/charms';
 import { NotchesOn } from './Notches';
 import MarkdownImageInline from './MarkdownImageInline';
 import SideTooltip from './SideTooltip';
+import type { Charm } from '../types.d';
 
-interface CharmContainerProps {
-  charm: Charm;
-  isReadOnly?: boolean;
-}
-
-const CharmContainer = ({ charm, isReadOnly }: CharmContainerProps) => {
+const CharmContainer = ({ charm, isReadOnly }: { charm: Charm; isReadOnly?: boolean }) => {
   const { loadout, setCharm } = useLoadout();
   const { charms } = loadout;
 

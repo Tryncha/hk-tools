@@ -1,16 +1,11 @@
 'use client';
 
-import { Spell } from '@/app/types';
+import { Spell } from '@/types';
 import { ChangeEvent, useId, useState } from 'react';
 import { useLoadout, useSpell } from '@/hooks';
 import SpellContainer from './SpellContainer';
 
-interface SpellInfoProps {
-  spell: Spell;
-  isSimplified: boolean;
-}
-
-const SpellInfo = ({ spell, isSimplified }: SpellInfoProps) => {
+const SpellInfo = ({ spell, isSimplified }: { spell: Spell; isSimplified: boolean }) => {
   const { name } = spell;
 
   const { label, rawValue, extendedValue } = useSpell(spell);

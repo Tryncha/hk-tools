@@ -3,7 +3,7 @@
 import { useContext } from 'react';
 import LoadoutContext from '../context/LoadoutContext';
 import { HEALTH_DATA, SOUL_DATA } from '../constants';
-import { NailArt, Spell } from '../app/types';
+import { NailArt, Spell } from '../types';
 import { calculateSpellDamage } from '../utils';
 
 export function useLoadout() {

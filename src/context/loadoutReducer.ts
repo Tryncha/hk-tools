@@ -1,4 +1,4 @@
-import { Charm, Loadout, Nail, Spell } from '@/app/types';
+import { Charm, Loadout, Nail, Spell } from '@/types';
 import { MAX_NOTCHES } from '../constants';
 import { NAILS } from '../data/nails';
 import { CHARMS } from '../data/charms';

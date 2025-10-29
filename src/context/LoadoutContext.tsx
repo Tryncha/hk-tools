@@ -1,6 +1,6 @@
 'use client';
 
-import type { Charm, Loadout, Nail, Spell } from '@/app/types';
+import type { Charm, Loadout, Nail, Spell } from '@/types';
 import { createContext, useReducer } from 'react';
 import loadoutReducer, { getDefaultLoadout } from './loadoutReducer';
 

@@ -5,12 +5,7 @@ import { SWING_SPEED } from '@/constants';
 import { calculateDPS } from '@/utils';
 import NailContainer from './NailContainer';
 
-interface OutputLabelProps {
-  label: string;
-  output: string;
-}
-
-const OutputLabel = ({ label, output }: OutputLabelProps) => {
+const OutputLabel = ({ label, output }: { label: string; output: string }) => {
   return (
     <div className="flex flex-col">
       <span className="text-base font-semibold">{label}</span>
