@@ -1,9 +1,23 @@
 import { Inter } from 'next/font/google';
 import { LoadoutProvider } from '../context/LoadoutContext';
-import './globals.css';
 import Image from 'next/image';
+import './globals.css';
+import { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Hollow Bench - Build calculation and customization for Hollow Knight',
+  description: 'Create your own builds and see calculations in real time for Hollow Knight',
+  authors: { name: 'Tryncha' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://github.com/Tryncha/hk-tools',
+    title: 'Hollow Bench - Build calculation and customization for Hollow Knight',
+    description: 'Create your own builds and see calculations in real time for Hollow Knight'
+  }
+};
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const CURRENT_VERSION = '0.0.1';
