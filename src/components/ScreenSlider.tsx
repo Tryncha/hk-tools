@@ -27,7 +27,7 @@ const ButtonSlider = ({
 };
 
 const ScreenSlider = ({ children, position }: { children: React.ReactNode; position: 'left' | 'right' }) => {
-  const [isSliderOpen, setIsSliderOpen] = useState(position === 'right');
+  const [isSliderOpen, setIsSliderOpen] = useState(true);
 
   const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-[25vw]'} left-0 scale-x-[-1]`;
   const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-[25vw]'} right-0 `;

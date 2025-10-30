@@ -225,3 +225,15 @@ export function useNailArt(nailArt: NailArt, nailLevel: number) {
       };
   }
 }
+
+export function useStats() {
+  const { loadout } = useLoadout();
+  const { nail, isLowHealth } = loadout;
+
+  const hasUnbreakableStrength = useCharmCheck('unbreakable-strength');
+  const hasFuryOfTheFallen = useCharmCheck('fury-of-the-fallen');
+
+  const nailDamage = nail.damage * (hasUnbreakableStrength ? 1.5 : 1) * (hasFuryOfTheFallen && isLowHealth ? 1.75 : 1);
+
+  return { nailDamage };
+}
