@@ -57,6 +57,7 @@ const EnemiesList = () => {
               alt={e.name}
               width={e.image.width}
               height={e.image.height}
+              className="size-13 object-contain"
             />
             <div className="flex flex-1 items-center justify-between">
               <div className="flex flex-col">
@@ -68,6 +69,7 @@ const EnemiesList = () => {
                       alt={`${e.content}-icon`}
                       width={20}
                       height={20}
+                      className="size-5 object-contain"
                     />
                   )}
                 </div>

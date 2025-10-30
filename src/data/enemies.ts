@@ -1070,13 +1070,13 @@ export const ENEMIES: Enemy[] = [
     }
   },
   {
-    id: 'dirtcaver',
-    name: 'Dirtcaver',
+    id: 'dirtcarver',
+    name: 'Dirtcarver',
     health: 20,
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/dirtcaver.png',
+      data: '/hollow-knight/enemies/dirtcarver.png',
       width: 52,
       height: 52
     }
@@ -1778,6 +1778,54 @@ export const ENEMIES: Enemy[] = [
     }
   },
   {
+    id: 'winged-zoteling',
+    name: 'Winged Zoteling',
+    health: 20,
+    type: 'normal',
+    content: 'hidden-dreams',
+    image: {
+      data: '/hollow-knight/enemies/winged-zoteling.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'hopping-zoteling',
+    name: 'Hopping Zoteling',
+    health: 20,
+    type: 'normal',
+    content: 'hidden-dreams',
+    image: {
+      data: '/hollow-knight/enemies/hopping-zoteling.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'volatile-zoteling',
+    name: 'Volatile Zoteling',
+    health: 30,
+    type: 'normal',
+    content: 'hidden-dreams',
+    image: {
+      data: '/hollow-knight/enemies/volatile-zoteling.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'white-defender',
+    name: 'White Defender',
+    health: 1600,
+    type: 'boss',
+    content: 'hidden-dreams',
+    image: {
+      data: '/hollow-knight/enemies/white-defender.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
     id: 'grimmkin-novice',
     name: 'Grimmkin Novice',
     health: 160,
@@ -1785,6 +1833,54 @@ export const ENEMIES: Enemy[] = [
     content: 'grimm-troupe',
     image: {
       data: '/hollow-knight/enemies/grimmkin-novice.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'grimmkin-master',
+    name: 'Grimmkin Master',
+    health: 240,
+    type: 'normal',
+    content: 'grimm-troupe',
+    image: {
+      data: '/hollow-knight/enemies/grimmkin-master.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'grimmkin-nightmare',
+    name: 'Grimmkin Nightmare',
+    health: 320,
+    type: 'normal',
+    content: 'grimm-troupe',
+    image: {
+      data: '/hollow-knight/enemies/grimmkin-nightmare.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'grimm',
+    name: 'Grimm',
+    health: 1000,
+    type: 'boss',
+    content: 'grimm-troupe',
+    image: {
+      data: '/hollow-knight/enemies/grimm.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'nightmare-king',
+    name: 'Nightmare King',
+    health: 1500,
+    type: 'boss',
+    content: 'grimm-troupe',
+    image: {
+      data: '/hollow-knight/enemies/nightmare-king.png',
       width: 52,
       height: 52
     }
@@ -1809,6 +1905,114 @@ export const ENEMIES: Enemy[] = [
     content: 'godmaster',
     image: {
       data: '/hollow-knight/enemies/flukemunga.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'pale-lurker',
+    name: 'Pale Lurker',
+    health: 400,
+    type: 'normal',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/pale-lurker.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'winged-nosk',
+    name: 'Winged Nosk',
+    health: 750,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/winged-nosk.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'sisters-of-battle',
+    name: 'Sisters of Battle',
+    health: 2750,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/sisters-of-battle.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'nailmaster-oro',
+    name: 'Nailmaster Oro',
+    health: 1100,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/nailmaster-oro.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'nailmaster-mato',
+    name: 'Nailmaster Mato',
+    health: 1000,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/nailmaster-mato.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'paintmaster-sheo',
+    name: 'Paintmaster Sheo',
+    health: 950,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/paintmaster-sheo.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'great-nailsage-sly',
+    name: 'Great Nailsage Sly',
+    health: 1050,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/great-nailsage-sly.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'pure-vessel',
+    name: 'Pure Vessel',
+    health: 1600,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/pure-vessel.png',
+      width: 52,
+      height: 52
+    }
+  },
+  {
+    id: 'absolute-radiance',
+    name: 'Absolute Radiance',
+    health: 2181,
+    type: 'boss',
+    content: 'godmaster',
+    image: {
+      data: '/hollow-knight/enemies/absolute-radiance.png',
       width: 52,
       height: 52
     }
