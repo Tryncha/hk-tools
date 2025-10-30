@@ -155,3 +155,16 @@ export interface Minion {
   quantity: number;
   image: Image;
 }
+
+export interface Enemy {
+  id: string;
+  name: string;
+  type: EnemyType;
+  health: number;
+  content: DLC;
+  image: Image;
+}
+
+export type EnemyType = 'normal' | 'boss' | 'dream-boss';
+
+export type DLC = 'main-game' | 'hidden-dreams' | 'grimm-troupe' | 'lifeblood' | 'godmaster';

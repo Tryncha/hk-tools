@@ -1,53 +1,39 @@
 'use client';
 
-import { useStats } from '@/hooks';
+import { useState } from 'react';
+import { ENEMIES } from '../data/enemies';
+import { useStats } from '../hooks';
+import { calculateHitsToKill, capitalizeText } from '../utils';
 import Image from 'next/image';
-
-enum DLC {
-  MAIN_GAME = 'main-game',
-  HIDDEN_DREAMS = 'hidden-dreams',
-  GRIMM_TROUPE = 'grimm-troupe',
-  LIFEBLOOD = 'lifeblood',
-  GODMASTER = 'godmaster'
-}
-
-const ENEMIES = [
-  {
-    id: 'crawlid',
-    name: 'Crawlid',
-    health: 8,
-    content: DLC.MAIN_GAME,
-    location: ['Forgotten Crossroads', 'Howling Cliffs', "King's Pass", 'Greenpath', 'Blue Lake (1)'],
-    image: {
-      data: '/hollow-knight/enemies/crawlid.png',
-      width: 60,
-      height: 60
-    }
-  }
-];
-
-function calculateHitCount(enemyId: string, nailDamage: number) {
-  const enemyToCalculate = ENEMIES.find((e) => e.id === enemyId);
-
-  if (!enemyToCalculate) throw new Error(`Enemy with id ${enemyId} not found...`);
-
-  const hitsToKill = Math.ceil(enemyToCalculate.health / nailDamage);
-
-  return hitsToKill;
-}
 
 const EnemiesList = () => {
   const { nailDamage } = useStats();
+  const [search, setSearch] = useState('');
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearch(e.target.value);
+  }
+
+  const filteredEnemies = ENEMIES.filter((e) => e.name.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <div>
-      {ENEMIES.map((e) => {
-        const hitsToKill = calculateHitCount(e.id, nailDamage);
+    <div className="pb-20">
+      <div className="w-full p-2">
+        <input
+          type="text"
+          className="w-full border border-gray-700 px-4 py-1"
+          placeholder="Search for enemies..."
+          value={search}
+          onChange={handleChange}
+        />
+      </div>
+      {filteredEnemies.map((e) => {
+        const hitsToKill = calculateHitsToKill(e.id, nailDamage);
 
         return (
           <div
             key={e.id}
-            className="flex items-center gap-4 border-b border-gray-700 p-4 hover:bg-gray-800"
+            className="flex w-full items-center gap-4 border-b border-gray-700 p-4 transition-colors hover:bg-gray-800"
           >
             <Image
               src={e.image.data}
@@ -55,27 +41,29 @@ const EnemiesList = () => {
               width={e.image.width}
               height={e.image.height}
             />
-            <div className="flex w-full justify-between">
-              <div className="flex items-center gap-2">
-                <h3 className="text-2xl font-bold">{e.name}</h3>{' '}
-                {e.content !== DLC.MAIN_GAME && (
-                  <Image
-                    src={`/hollow-knight/contents/${e.content}.png`}
-                    alt={`${e.content}-icon`}
-                    width={20}
-                    height={20}
-                  />
-                )}
-                {/* <p className="overflow-auto text-sm">{e.location.join(', ')}</p> */}
+            <div className="flex flex-1 items-center justify-between">
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-lg font-bold text-nowrap">{e.name}</h3>
+                  {e.content !== 'main-game' && (
+                    <Image
+                      src={`/hollow-knight/contents/${e.content}.png`}
+                      alt={`${e.content}-icon`}
+                      width={20}
+                      height={20}
+                    />
+                  )}
+                </div>
+                <p className="text-sm text-gray-400">{e.type !== 'normal' && capitalizeText(e.type)}</p>
               </div>
-              <div>
-                <span>
-                  <span className="text-2xl">{e.health}</span>
+              <div className="flex gap-2 text-center">
+                <span className="w-16 flex-1">
+                  <span className="text-lg">{e.health}</span>
                   <span className="ml-1 text-sm text-gray-400">HP</span>
                 </span>
-                <span className="text-2xl text-gray-400"> | </span>
-                <span>
-                  <span className="text-2xl">{hitsToKill}</span>
+                <span className="text-lg text-gray-400">|</span>
+                <span className="w-16 flex-1">
+                  <span className="text-lg">{hitsToKill}</span>
                   <span className="ml-1 text-sm text-gray-400">{hitsToKill > 1 ? 'HITS' : 'HIT'}</span>
                 </span>
               </div>

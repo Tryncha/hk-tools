@@ -1,5 +1,6 @@
 import { QUICK_SWING_SPEED, SWING_SPEED } from '@/constants';
 import { CHARMS } from '@/data/charms';
+import { ENEMIES } from '@/data/enemies';
 import { Charm } from '@/types';
 
 export function capitalizeText(text: string) {
@@ -46,4 +47,14 @@ export function calculateSpellDamage(name: string, spellComponent: number, hasSh
 
   const totalDamage = spellComponent + spellComponent * (hasShamanStone ? 1 : 0) * SHAMAN_STONE_BONUS[name];
   return Math.round(totalDamage);
+}
+
+export function calculateHitsToKill(enemyId: string, nailDamage: number) {
+  const enemyToCalculate = ENEMIES.find((e) => e.id === enemyId);
+
+  if (!enemyToCalculate) throw new Error(`Enemy with id ${enemyId} not found...`);
+
+  const hitsToKill = Math.ceil(enemyToCalculate.health / nailDamage);
+
+  return hitsToKill;
 }
