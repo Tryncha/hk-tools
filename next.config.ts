@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  basePath: '/hollow-bench',
+  basePath: '/hollow-bench/',
   output: 'export'
 };
 
