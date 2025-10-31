@@ -13,7 +13,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'gathering-swarm',
-    image: '/hollow-knight/charms/gathering-swarm.png',
+    image: 'hollow-knight/charms/gathering-swarm.png',
     name: 'Gathering Swarm',
     notchCost: 1,
     description:
