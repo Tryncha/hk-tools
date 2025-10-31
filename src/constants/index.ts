@@ -17,3 +17,6 @@ export const SOUL_DATA = {
     PER_HIT: 0
   }
 };
+
+const isProd = process.env.NODE_ENV === 'production';
+export const BASE_PATH = isProd ? '/hollow-bench' : '';
