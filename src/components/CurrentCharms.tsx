@@ -3,6 +3,7 @@ import { useLoadout } from '../hooks';
 import CharmContainer from './CharmContainer';
 import ResetButton from './ResetButton';
 import { MAX_NOTCHES } from '../constants';
+import { NotchesOff, NotchesOn, NotchesOvercharmed } from './Notches';
 
 const CurrentCharms = () => {
   const { loadout, resetCharms, resetLoadout } = useLoadout();
@@ -40,34 +41,20 @@ const CurrentCharms = () => {
         <div className="flex flex-col gap-2">
           <h3 className="text-xl font-bold">Notches</h3>
           <div className="flex">
-            {Array.from({ length: notchesOn }, (_, i) => (
-              <Image
-                key={i}
-                src="/hollow-knight/ui/notch-cost-on.png"
-                alt="Notch Cost On"
-                width={50}
-                height={50}
+            <NotchesOn
+              quantity={notchesOn}
+              size={50}
+            />
+            <NotchesOff
+              quantity={notchesOff}
+              size={50}
+            />
+            {isOvercharmed && (
+              <NotchesOvercharmed
+                quantity={notchesOvercharmed}
+                size={50}
               />
-            ))}
-            {Array.from({ length: notchesOff }, (_, i) => (
-              <Image
-                key={i}
-                src="/hollow-knight/ui/notch-cost-off.png"
-                alt="Notch Cost Off"
-                width={50}
-                height={50}
-              />
-            ))}
-            {isOvercharmed &&
-              Array.from({ length: notchesOvercharmed }, (_, i) => (
-                <Image
-                  key={i}
-                  src="/hollow-knight/ui/notch-cost-overcharmed.png"
-                  alt="Notch Cost Overcharmed"
-                  width={50}
-                  height={50}
-                />
-              ))}
+            )}
           </div>
         </div>
       </div>

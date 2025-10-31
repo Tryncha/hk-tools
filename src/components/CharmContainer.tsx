@@ -27,35 +27,35 @@ const CharmContainer = ({ charm, isReadOnly }: { charm: Charm; isReadOnly?: bool
       {isHovering && (
         <SideTooltip>
           <div className="border-y border-gray-700 bg-gray-900 p-4">
-            <div className="flex items-center justify-center">
-              <h3 className="mr-2 text-lg font-bold">{name}</h3>
+            <div className="flex justify-center gap-2">
+              <h3 className="text-lg font-bold">{name}</h3>
               <NotchesOn
                 quantity={notchCost}
-                size={30}
+                size={28}
               />
             </div>
+            <hr className="my-2 border-gray-700" />
             <span className="text-center text-sm whitespace-pre-line text-gray-400 italic">
               <Markdown>{description}</Markdown>
             </span>
-            <div>
-              <h3 className="font-bold">Effects</h3>
-              <ul className="ml-4 list-disc">
-                {effects.map((e) => (
-                  <li key={e}>
-                    <MarkdownImageInline imageSize={16}>{e}</MarkdownImageInline>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <hr className="my-2 border-gray-500" />
+            <hr className="my-2 border-gray-700" />
+            <ul className="ml-4 list-disc">
+              {effects.map((e) => (
+                <li key={e}>
+                  <MarkdownImageInline imageSize={16}>{e}</MarkdownImageInline>
+                </li>
+              ))}
+            </ul>
+            <hr className="my-2 border-gray-700" />
             <span className="text-sm">
               <MarkdownImageInline imageSize={16}>{`**Location:** ${location}`}</MarkdownImageInline>
             </span>
             {synergies && (
               <>
-                <hr className="my-2 border-gray-500" />
-                <h4 className="mb-2 font-bold">Synergies</h4>
-                <div className="flex flex-col gap-2">
+                <hr className="my-2 border-2 border-gray-700" />
+                <h4 className="text-center font-bold">Synergies</h4>
+                <hr className="my-2 border-gray-700" />
+                <div className="flex flex-col gap-0">
                   {synergies.map((s) => {
                     const synergyCharm = CHARMS.find((c) => c.id === s.charmId);
 
@@ -64,7 +64,7 @@ const CharmContainer = ({ charm, isReadOnly }: { charm: Charm; isReadOnly?: bool
                     return (
                       <div
                         key={synergyCharm.id}
-                        className="flex items-center border-l-3 border-gray-500"
+                        className="flex items-center border-y border-gray-700 py-2 first:border-t-0 first:pt-0 last:border-b-0 last:pb-0"
                       >
                         <Image
                           src={synergyCharm.image}
@@ -73,8 +73,14 @@ const CharmContainer = ({ charm, isReadOnly }: { charm: Charm; isReadOnly?: bool
                           height={48}
                           className="mx-4 size-12"
                         />
-                        <div className="flex flex-col">
-                          <h5 className="font-semibold">{synergyCharm.name}</h5>
+                        <div className="flex flex-col gap-1">
+                          <div className="flex gap-2">
+                            <h5 className="font-semibold">{synergyCharm.name}</h5>
+                            <NotchesOn
+                              quantity={synergyCharm.notchCost}
+                              size={24}
+                            />
+                          </div>
                           <span className="text-sm">{s.effect}</span>
                         </div>
                       </div>

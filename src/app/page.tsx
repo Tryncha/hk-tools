@@ -5,7 +5,7 @@ import EnemiesList from '../components/EnemiesList';
 
 const HomePage = () => {
   return (
-    <main className="mt-16 flex justify-center">
+    <main className="mt-18 flex justify-center">
       <ScreenSlider position="left">
         <EnemiesList />
       </ScreenSlider>

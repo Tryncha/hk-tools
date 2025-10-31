@@ -19,15 +19,17 @@ export const metadata: Metadata = {
   description: metaDescription,
   category: 'gaming',
   keywords: [
-    'Hollow Bench',
-    'Hollow Knight',
-    'Hollow Knight builds',
-    'Hollow Knight charm calculator',
-    'Hollow Knight damage calculator',
-    'Hollow Knight tools',
-    'Hollow Knight planner',
-    'Hollow Knight enemies',
-    'Hollow Knight build editor'
+    'hollow bench',
+    'hollow knight',
+    'hollow knight builds',
+    'hollow knight build editor',
+    'hollow knight calculator',
+    'hollow knight charm calculator',
+    'hollow knight damage calculator',
+    'hollow knight charms',
+    'hollow knight tools',
+    'hollow knight planner',
+    'hollow knight enemies'
   ],
   authors: metaAuthor,
   openGraph: {
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  width: 1920,
+  width: 'device-width',
   initialScale: 1
 };
 
@@ -63,7 +65,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <LoadoutProvider>
       <html lang="en">
         <body className={`${inter.className} bg-gray-950 text-white antialiased`}>
-          <header className="fixed top-0 left-0 z-20 flex h-16 w-full items-center justify-between gap-8 border-b border-gray-700 bg-gray-900/70 pr-4 pl-8 backdrop-blur-sm">
+          <header className="fixed top-0 left-0 z-20 flex h-18 w-full items-center justify-between gap-8 border-b border-gray-700 bg-gray-900/70 pr-4 pl-8 backdrop-blur-sm">
             <Image
               src="/banner.png"
               alt="Banner"
@@ -71,10 +73,15 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               height={64}
               className="absolute top-0 left-24 opacity-10"
             />
-            <h1 className="text-3xl font-bold">
-              HollowBench
-              {/* <span className="text-blue-400">.build .app</span> */}
-            </h1>
+            <div className="flex flex-col">
+              <h1 className="text-3xl font-bold">
+                HollowBench
+                {/* <span className="text-blue-400">.app .build</span> */}
+              </h1>
+              <span className="text-xs text-gray-300">
+                Build calculator for Hollow Knight. Look for charm synergies and damage in real time.
+              </span>
+            </div>
             <div className="flex flex-col items-end justify-center text-xs text-gray-500 italic">
               <span>
                 Find source code{' '}

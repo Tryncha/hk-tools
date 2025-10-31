@@ -54,7 +54,7 @@ const EnemiesList = () => {
         return (
           <div
             key={e.id}
-            className="flex w-full items-center gap-4 border-b border-gray-700 p-4 transition-colors hover:bg-gray-800"
+            className="flex w-full items-center gap-4 border-b border-gray-700 p-2 transition-colors hover:bg-gray-800"
           >
             <Image
               src={e.image.data}

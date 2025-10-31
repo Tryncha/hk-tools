@@ -81,12 +81,11 @@ export const CHARMS: Charm[] = [
     synergies: [
       {
         charmId: 'sharp-shadow',
-        effect:
-          'Increases the damage dealt by the shadow to 1.5 x Nail damage. Does not affect charge or cooldown time.'
+        effect: 'Increases the damage dealt by the shadow to 1.5 × Nail damage. Does not affect charge or cooldown time'
       },
       {
         charmId: 'sprintmaster',
-        effect: 'Further increases the movement speed bonus to 39%.'
+        effect: 'Further increases the movement speed bonus to 39%'
       }
     ]
   },
@@ -102,11 +101,11 @@ export const CHARMS: Charm[] = [
     synergies: [
       {
         charmId: 'dashmaster',
-        effect: 'Further increases the movement speed bonus to 39%.'
+        effect: 'Further increases the movement speed bonus to 39%'
       },
       {
         charmId: 'weaversong',
-        effect: 'Weaverlings move 50% faster.'
+        effect: 'Weaverlings move 50% faster'
       }
     ]
   },
@@ -122,11 +121,11 @@ export const CHARMS: Charm[] = [
       {
         charmId: 'weaversong',
         effect:
-          "Weaverlings now give the Knight SOUL when they damage enemies (3 SOUL per hit), and can even collect SOUL from enemies that normally wouldn't give any from Nail hits (such as the Collector or Siblings). SOUL can also be collected after death, but before the screen transition, allowing the Knight to wake up at a Bench with SOUL."
+          "Weaverlings now give the Knight SOUL when they damage enemies (3 SOUL per hit), and can even collect SOUL from enemies that normally wouldn't give any from Nail hits (such as the Collector or Siblings). SOUL can also be collected after death, but before the screen transition, allowing the Knight to wake up at a Bench with SOUL"
       },
       {
         charmId: 'grubberflys-elegy',
-        effect: 'Increases the amount of SOUL received when taking damage from 15 to 25.'
+        effect: 'Increases the amount of SOUL received when taking damage from 15 to 25'
       }
     ]
   },
@@ -142,16 +141,16 @@ export const CHARMS: Charm[] = [
     synergies: [
       {
         charmId: 'grubsong',
-        effect: 'Increases the amount of SOUL received when taking damage from 15 to 25.'
+        effect: 'Increases the amount of SOUL received when taking damage from 15 to 25'
       },
       {
         charmId: 'mark-of-pride',
-        effect: "Increases the height of the projectiles from Grubberfly's Elegy by 35%."
+        effect: "Increases the height of the projectiles from Grubberfly's Elegy by 35%"
       },
       {
         charmId: 'fury-of-the-fallen',
         effect:
-          "Fires red projectiles at one Mask, dealing ~67.5% Nail damage per projectile. Note that this works only when the Knight has only 1 Mask left (No projectiles are sent at 1 Mask if Fury of the Fallen is not equipped). While at one Mask, gaining any Lifeblood Masks negates the effect of Grubberfly's Elegy but not the effect of Fury of the Fallen."
+          "Fires red projectiles at one Mask, dealing ~67.5% Nail damage per projectile. Note that this works only when the Knight has only 1 Mask left (No projectiles are sent at 1 Mask if Fury of the Fallen is not equipped). While at one Mask, gaining any Lifeblood Masks negates the effect of Grubberfly's Elegy but not the effect of Fury of the Fallen"
       }
     ]
   },
@@ -194,7 +193,7 @@ export const CHARMS: Charm[] = [
     description:
       "Reflecting the desires of the Soul Sanctum for mastery over SOUL, it improves the bearer's ability to cast spells.\nReduces the SOUL cost of casting spells",
     location: 'Soul Sanctum, in the room before encountering Soul Master',
-    effects: ['Reduces SOUL cost of Spells to 24 from 33.']
+    effects: ['Reduces SOUL cost of Spells to 24 from 33']
   },
   {
     id: 'steady-body',
@@ -251,7 +250,7 @@ export const CHARMS: Charm[] = [
     synergies: [
       {
         charmId: 'grubberflys-elegy',
-        effect: "Increases the height of the projectiles from Grubberfly's Elegy by 35%."
+        effect: "Increases the height of the projectiles from Grubberfly's Elegy by 35%"
       }
     ]
   },
@@ -268,12 +267,12 @@ export const CHARMS: Charm[] = [
       {
         charmId: 'grubberflys-elegy',
         effect:
-          "Fires red projectiles at one Mask, dealing ~67.5% Nail damage per projectile. Note that this works only when the Knight has only 1 Mask left (No projectiles are sent at 1 Mask if Fury of the Fallen is not equipped). While at one Mask, gaining any Lifeblood Masks negates the effect of Grubberfly's Elegy but not the effect of Fury of the Fallen."
+          "Fires red projectiles at one Mask, dealing ~67.5% Nail damage per projectile. Note that this works only when the Knight has only 1 Mask left (No projectiles are sent at 1 Mask if Fury of the Fallen is not equipped). While at one Mask, gaining any Lifeblood Masks negates the effect of Grubberfly's Elegy but not the effect of Fury of the Fallen"
       },
       {
         charmId: 'glowing-womb',
         effect:
-          "Increases any spawned Hatchlings' contact damage by 5 when at 1 Mask. Already spawned Hatchlings change only when entering another room."
+          "Increases any spawned Hatchlings' contact damage by 5 when at 1 Mask. Already spawned Hatchlings change only when entering another room"
       }
     ]
   },
@@ -473,7 +472,7 @@ export const CHARMS: Charm[] = [
       'Composed of living fungal matter. Scatters spores when exposed to SOUL.\nWhen focusing SOUL, emit a spore cloud that slowly damages enemies',
     location: "Fungal Wastes, west end, near the entrance to Queen's Gardens",
     effects: [
-      'Focus releases a cloud of spores dealing ~26 damage over 4.1 seconds.[Note 1] It cannot be used again until either 4.25 seconds pass or the Knight takes damage',
+      'Focus releases a cloud of spores dealing ~26 damage over 4.1 seconds. It cannot be used again until either 4.25 seconds pass or the Knight takes damage',
       'Able to understand the dialogue of Mister Mushroom',
       "Able to read certain Lore Tablets found in Fungal Wastes and one in Kingdom's Edge"
     ],
@@ -608,7 +607,7 @@ export const CHARMS: Charm[] = [
     effects: [
       'Marks uncollected flames on the map',
       'Allows access to the Grimmkin',
-      'Summons a flying companion that does not deal damage'
+      'Summons a flying companion that deals damage'
     ]
   },
   {
