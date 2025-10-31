@@ -3,7 +3,7 @@ import { Charm } from '../types';
 export const CHARMS: Charm[] = [
   {
     id: 'wayward-compass',
-    image: '/hollow-bench/hollow-knight/charms/wayward-compass.png',
+    image: 'hollow-knight/charms/wayward-compass.png',
     name: 'Wayward Compass',
     notchCost: 1,
     description:
@@ -23,7 +23,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'stalwart-shell',
-    image: '/hollow-knight/charms/stalwart-shell.png',
+    image: 'hollow-knight/charms/stalwart-shell.png',
     name: 'Stalwart Shell',
     notchCost: 2,
     description:
@@ -36,7 +36,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'soul-catcher',
-    image: '/hollow-knight/charms/soul-catcher.png',
+    image: 'hollow-knight/charms/soul-catcher.png',
     name: 'Soul Catcher',
     notchCost: 2,
     description:
@@ -46,7 +46,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'shaman-stone',
-    image: '/hollow-knight/charms/shaman-stone.png',
+    image: 'hollow-knight/charms/shaman-stone.png',
     name: 'Shaman Stone',
     notchCost: 3,
     description:
@@ -61,7 +61,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'soul-eater',
-    image: '/hollow-knight/charms/soul-eater.png',
+    image: 'hollow-knight/charms/soul-eater.png',
     name: 'Soul Eater',
     notchCost: 4,
     description:
@@ -71,7 +71,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'dashmaster',
-    image: '/hollow-knight/charms/dashmaster.png',
+    image: 'hollow-knight/charms/dashmaster.png',
     name: 'Dashmaster',
     notchCost: 2,
     description:
@@ -91,7 +91,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'sprintmaster',
-    image: '/hollow-knight/charms/sprintmaster.png',
+    image: 'hollow-knight/charms/sprintmaster.png',
     name: 'Sprintmaster',
     notchCost: 1,
     description:
@@ -111,7 +111,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'grubsong',
-    image: '/hollow-knight/charms/grubsong.png',
+    image: 'hollow-knight/charms/grubsong.png',
     name: 'Grubsong',
     notchCost: 1,
     description: 'Contains the gratitude of freed grubs.\nGain SOUL when taking damage',
@@ -131,7 +131,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'grubberflys-elegy',
-    image: '/hollow-knight/charms/grubberflys-elegy.png',
+    image: 'hollow-knight/charms/grubberflys-elegy.png',
     name: "Grubberly's Elegy",
     notchCost: 3,
     description:
@@ -156,7 +156,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'unbreakable-heart',
-    image: '/hollow-knight/charms/unbreakable-heart.png',
+    image: 'hollow-knight/charms/unbreakable-heart.png',
     name: 'Unbreakable Heart',
     notchCost: 2,
     description: 'Increases the health of the bearer, allowing them to take more damage.\nThis charm is unbreakable',
@@ -166,7 +166,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'unbreakable-greed',
-    image: '/hollow-knight/charms/unbreakable-greed.png',
+    image: 'hollow-knight/charms/unbreakable-greed.png',
     name: 'Unbreakable Greed',
     notchCost: 2,
     description: 'Causes the bearer to find more Geo when defeating enemies.\nThis charm is unbreakable',
@@ -176,7 +176,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'unbreakable-strength',
-    image: '/hollow-knight/charms/unbreakable-strength.png',
+    image: 'hollow-knight/charms/unbreakable-strength.png',
     name: 'Unbreakable Strength',
     notchCost: 3,
     description:
@@ -187,7 +187,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'spell-twister',
-    image: '/hollow-knight/charms/spell-twister.png',
+    image: 'hollow-knight/charms/spell-twister.png',
     name: 'Spell Twister',
     notchCost: 2,
     description:
@@ -197,7 +197,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'steady-body',
-    image: '/hollow-knight/charms/steady-body.png',
+    image: 'hollow-knight/charms/steady-body.png',
     name: 'Steady Body',
     notchCost: 1,
     description:
@@ -207,7 +207,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'heavy-blow',
-    image: '/hollow-knight/charms/heavy-blow.png',
+    image: 'hollow-knight/charms/heavy-blow.png',
     name: 'Heavy Blow',
     notchCost: 2,
     description:
@@ -221,7 +221,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'quick-slash',
-    image: '/hollow-knight/charms/quick-slash.png',
+    image: 'hollow-knight/charms/quick-slash.png',
     name: 'Quick Slash',
     notchCost: 3,
     description:
@@ -231,7 +231,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'longnail',
-    image: '/hollow-knight/charms/longnail.png',
+    image: 'hollow-knight/charms/longnail.png',
     name: 'Longnail',
     notchCost: 2,
     description: "Increases the range of the bearer's nail, allowing them to strike foes from further away",
@@ -240,7 +240,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'mark-of-pride',
-    image: '/hollow-knight/charms/mark-of-pride.png',
+    image: 'hollow-knight/charms/mark-of-pride.png',
     name: 'Mark of Pride',
     notchCost: 3,
     description:
@@ -256,7 +256,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'fury-of-the-fallen',
-    image: '/hollow-knight/charms/fury-of-the-fallen.png',
+    image: 'hollow-knight/charms/fury-of-the-fallen.png',
     name: 'Fury of the Fallen',
     notchCost: 2,
     description:
@@ -278,7 +278,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'thorns-of-agony',
-    image: '/hollow-knight/charms/thorns-of-agony.png',
+    image: 'hollow-knight/charms/thorns-of-agony.png',
     name: 'Thorns of Agony',
     notchCost: 1,
     description:
@@ -288,7 +288,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'baldur-shell',
-    image: '/hollow-knight/charms/baldur-shell.png',
+    image: 'hollow-knight/charms/baldur-shell.png',
     name: 'Baldur Shell',
     notchCost: 2,
     description:
@@ -298,7 +298,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'flukenest',
-    image: '/hollow-knight/charms/flukenest.png',
+    image: 'hollow-knight/charms/flukenest.png',
     name: 'Flukenest',
     notchCost: 3,
     description:
@@ -319,7 +319,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'defenders-crest',
-    image: '/hollow-knight/charms/defenders-crest.png',
+    image: 'hollow-knight/charms/defenders-crest.png',
     name: "Defender's Crest",
     notchCost: 1,
     description:
@@ -349,7 +349,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'glowing-womb',
-    image: '/hollow-knight/charms/glowing-womb.png',
+    image: 'hollow-knight/charms/glowing-womb.png',
     name: 'Glowing Womb',
     notchCost: 2,
     description:
@@ -373,7 +373,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'quick-focus',
-    image: '/hollow-knight/charms/quick-focus.png',
+    image: 'hollow-knight/charms/quick-focus.png',
     name: 'Quick Focus',
     notchCost: 3,
     description:
@@ -389,7 +389,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'deep-focus',
-    image: '/hollow-knight/charms/deep-focus.png',
+    image: 'hollow-knight/charms/deep-focus.png',
     name: 'Deep Focus',
     notchCost: 4,
     description:
@@ -405,7 +405,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'lifeblood-heart',
-    image: '/hollow-knight/charms/lifeblood-heart.png',
+    image: 'hollow-knight/charms/lifeblood-heart.png',
     name: 'Lifeblood Heart',
     notchCost: 2,
     description:
@@ -415,7 +415,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'lifeblood-core',
-    image: '/hollow-knight/charms/lifeblood-core.png',
+    image: 'hollow-knight/charms/lifeblood-core.png',
     name: 'Lifeblood Core',
     notchCost: 3,
     description:
@@ -425,7 +425,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'jonis-blessing',
-    image: '/hollow-knight/charms/jonis-blessing.png',
+    image: 'hollow-knight/charms/jonis-blessing.png',
     name: "Joni's Blessing",
     notchCost: 4,
     description:
@@ -445,7 +445,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'hiveblood',
-    image: '/hollow-knight/charms/hiveblood.png',
+    image: 'hollow-knight/charms/hiveblood.png',
     name: 'Hiveblood',
     notchCost: 4,
     description:
@@ -465,7 +465,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'spore-shroom',
-    image: '/hollow-knight/charms/spore-shroom.png',
+    image: 'hollow-knight/charms/spore-shroom.png',
     name: 'Spore Shroom',
     notchCost: 1,
     description:
@@ -490,7 +490,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'sharp-shadow',
-    image: '/hollow-knight/charms/sharp-shadow.png',
+    image: 'hollow-knight/charms/sharp-shadow.png',
     name: 'Sharp Shadow',
     notchCost: 2,
     description:
@@ -510,7 +510,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'shape-of-unn',
-    image: '/hollow-knight/charms/shape-of-unn.png',
+    image: 'hollow-knight/charms/shape-of-unn.png',
     name: 'Shape of Unn',
     notchCost: 2,
     description:
@@ -526,7 +526,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'nailmasters-glory',
-    image: '/hollow-knight/charms/nailmasters-glory.png',
+    image: 'hollow-knight/charms/nailmasters-glory.png',
     name: "Nailmaster's Glory",
     notchCost: 1,
     description:
@@ -536,7 +536,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'weaversong',
-    image: '/hollow-knight/charms/weaversong.png',
+    image: 'hollow-knight/charms/weaversong.png',
     name: 'Weaversong',
     notchCost: 2,
     description:
@@ -560,7 +560,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'dream-wielder',
-    image: '/hollow-knight/charms/dream-wielder.png',
+    image: 'hollow-knight/charms/dream-wielder.png',
     name: 'Dream Wielder',
     notchCost: 1,
     description:
@@ -580,7 +580,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'dreamshield',
-    image: '/hollow-knight/charms/dreamshield.png',
+    image: 'hollow-knight/charms/dreamshield.png',
     name: 'Dreamshield',
     notchCost: 3,
     description:
@@ -598,7 +598,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'grimmchild',
-    image: '/hollow-knight/charms/grimmchild.png',
+    image: 'hollow-knight/charms/grimmchild.png',
     name: 'Grimmchild',
     notchCost: 2,
     description:
@@ -612,7 +612,7 @@ export const CHARMS: Charm[] = [
   },
   {
     id: 'void-heart',
-    image: '/hollow-knight/charms/void-heart.png',
+    image: 'hollow-knight/charms/void-heart.png',
     name: 'Void Heart',
     notchCost: 0,
     description:

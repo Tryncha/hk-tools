@@ -6,7 +6,7 @@ export const NotchesOn = ({ quantity, size }: { quantity: number; size: number }
       {Array.from({ length: quantity }, (_, i) => (
         <Image
           key={i}
-          src="/hollow-knight/ui/notch-on.png"
+          src="hollow-knight/ui/notch-on.png"
           alt="Notch On"
           width={size}
           height={size}
@@ -22,7 +22,7 @@ export const NotchesOff = ({ quantity, size }: { quantity: number; size: number 
       {Array.from({ length: quantity }, (_, i) => (
         <Image
           key={i}
-          src="/hollow-knight/ui/notch-off.png"
+          src="hollow-knight/ui/notch-off.png"
           alt="Notch Off"
           width={size}
           height={size}
@@ -38,7 +38,7 @@ export const NotchesOvercharmed = ({ quantity, size }: { quantity: number; size:
       {Array.from({ length: quantity }, (_, i) => (
         <Image
           key={i}
-          src="/hollow-knight/ui/notch-overcharmed.png"
+          src="hollow-knight/ui/notch-overcharmed.png"
           alt="Notch Overcharmed"
           width={size}
           height={size}

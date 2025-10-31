@@ -67,7 +67,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <body className={`${inter.className} bg-gray-950 text-white antialiased`}>
           <header className="fixed top-0 left-0 z-20 flex h-18 w-full items-center justify-between gap-8 border-b border-gray-700 bg-gray-900/70 pr-4 pl-8 backdrop-blur-sm">
             <Image
-              src="/banner.png"
+              src="banner.png"
               alt="Banner"
               width={602}
               height={64}

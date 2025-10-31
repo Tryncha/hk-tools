@@ -7,7 +7,7 @@ export const MINIONS: Minion[] = [
     damage: 9,
     quantity: 4,
     image: {
-      data: '/hollow-knight/minions/hatchling.png',
+      data: 'hollow-knight/minions/hatchling.png',
       width: 70,
       height: 59
     }
@@ -18,7 +18,7 @@ export const MINIONS: Minion[] = [
     damage: 3,
     quantity: 3,
     image: {
-      data: '/hollow-knight/minions/weaverling.png',
+      data: 'hollow-knight/minions/weaverling.png',
       width: 96,
       height: 67
     }
@@ -29,7 +29,7 @@ export const MINIONS: Minion[] = [
     damage: 11,
     quantity: 1,
     image: {
-      data: '/hollow-knight/minions/grimmchild.png',
+      data: 'hollow-knight/minions/grimmchild.png',
       width: 96 * 0.9,
       height: 107 * 0.9
     }

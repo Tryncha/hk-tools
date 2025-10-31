@@ -29,7 +29,7 @@ const CurrentCharms = () => {
             {notchesUsed < MAX_NOTCHES && (
               <div className="flex size-18 items-center justify-center">
                 <Image
-                  src="/hollow-knight/ui/notch.png"
+                  src="hollow-knight/ui/notch.png"
                   alt="Notch"
                   width={36}
                   height={36}

@@ -8,7 +8,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/crawlid.png',
+      data: 'hollow-knight/enemies/crawlid.png',
       width: 52,
       height: 52
     }
@@ -20,7 +20,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/vengefly.png',
+      data: 'hollow-knight/enemies/vengefly.png',
       width: 52,
       height: 52
     }
@@ -32,7 +32,7 @@ export const ENEMIES: Enemy[] = [
     type: 'mini-boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/vengefly-king.png',
+      data: 'hollow-knight/enemies/vengefly-king.png',
       width: 52,
       height: 52
     }
@@ -44,7 +44,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/gruzzer.png',
+      data: 'hollow-knight/enemies/gruzzer.png',
       width: 52,
       height: 52
     }
@@ -56,7 +56,7 @@ export const ENEMIES: Enemy[] = [
     type: 'mini-boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/gruz-mother.png',
+      data: 'hollow-knight/enemies/gruz-mother.png',
       width: 52,
       height: 52
     }
@@ -68,7 +68,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/tiktik.png',
+      data: 'hollow-knight/enemies/tiktik.png',
       width: 52,
       height: 52
     }
@@ -80,7 +80,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/aspid-hunter.png',
+      data: 'hollow-knight/enemies/aspid-hunter.png',
       width: 52,
       height: 52
     }
@@ -92,7 +92,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/aspid-mother.png',
+      data: 'hollow-knight/enemies/aspid-mother.png',
       width: 52,
       height: 52
     }
@@ -104,7 +104,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/aspid-hatchling.png',
+      data: 'hollow-knight/enemies/aspid-hatchling.png',
       width: 52,
       height: 52
     }
@@ -116,7 +116,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/goam.png',
+      data: 'hollow-knight/enemies/goam.png',
       width: 52,
       height: 52
     }
@@ -128,7 +128,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/wandering-husk.png',
+      data: 'hollow-knight/enemies/wandering-husk.png',
       width: 52,
       height: 52
     }
@@ -140,7 +140,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-hornhead.png',
+      data: 'hollow-knight/enemies/husk-hornhead.png',
       width: 52,
       height: 52
     }
@@ -152,7 +152,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/leaping-husk.png',
+      data: 'hollow-knight/enemies/leaping-husk.png',
       width: 52,
       height: 52
     }
@@ -164,7 +164,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-bully.png',
+      data: 'hollow-knight/enemies/husk-bully.png',
       width: 52,
       height: 52
     }
@@ -176,7 +176,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-warrior.png',
+      data: 'hollow-knight/enemies/husk-warrior.png',
       width: 52,
       height: 52
     }
@@ -188,7 +188,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-guard.png',
+      data: 'hollow-knight/enemies/husk-guard.png',
       width: 52,
       height: 52
     }
@@ -200,7 +200,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/entombed-husk.png',
+      data: 'hollow-knight/enemies/entombed-husk.png',
       width: 52,
       height: 52
     }
@@ -212,7 +212,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/false-knight.png',
+      data: 'hollow-knight/enemies/false-knight.png',
       width: 52,
       height: 52
     }
@@ -224,7 +224,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/maggot.png',
+      data: 'hollow-knight/enemies/maggot.png',
       width: 52,
       height: 52
     }
@@ -236,7 +236,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/menderbug.png',
+      data: 'hollow-knight/enemies/menderbug.png',
       width: 52,
       height: 52
     }
@@ -248,7 +248,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/lifeseed.png',
+      data: 'hollow-knight/enemies/lifeseed.png',
       width: 52,
       height: 52
     }
@@ -260,7 +260,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/baldur.png',
+      data: 'hollow-knight/enemies/baldur.png',
       width: 52,
       height: 52
     }
@@ -272,7 +272,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/elder-baldur.png',
+      data: 'hollow-knight/enemies/elder-baldur.png',
       width: 52,
       height: 52
     }
@@ -284,7 +284,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mosscreep.png',
+      data: 'hollow-knight/enemies/mosscreep.png',
       width: 52,
       height: 52
     }
@@ -296,7 +296,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mossfly.png',
+      data: 'hollow-knight/enemies/mossfly.png',
       width: 52,
       height: 52
     }
@@ -308,7 +308,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mosskin.png',
+      data: 'hollow-knight/enemies/mosskin.png',
       width: 52,
       height: 52
     }
@@ -320,7 +320,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/volatile-mosskin.png',
+      data: 'hollow-knight/enemies/volatile-mosskin.png',
       width: 52,
       height: 52
     }
@@ -332,7 +332,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/fool-eater.png',
+      data: 'hollow-knight/enemies/fool-eater.png',
       width: 52,
       height: 52
     }
@@ -344,7 +344,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/squit.png',
+      data: 'hollow-knight/enemies/squit.png',
       width: 52,
       height: 52
     }
@@ -356,7 +356,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/obble.png',
+      data: 'hollow-knight/enemies/obble.png',
       width: 52,
       height: 52
     }
@@ -368,7 +368,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/gulka.png',
+      data: 'hollow-knight/enemies/gulka.png',
       width: 52,
       height: 52
     }
@@ -380,7 +380,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/maskfly.png',
+      data: 'hollow-knight/enemies/maskfly.png',
       width: 52,
       height: 52
     }
@@ -392,7 +392,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/moss-charger.png',
+      data: 'hollow-knight/enemies/moss-charger.png',
       width: 52,
       height: 52
     }
@@ -404,7 +404,7 @@ export const ENEMIES: Enemy[] = [
     type: 'mini-boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/massive-moss-charger.png',
+      data: 'hollow-knight/enemies/massive-moss-charger.png',
       width: 52,
       height: 52
     }
@@ -416,7 +416,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/moss-knight.png',
+      data: 'hollow-knight/enemies/moss-knight.png',
       width: 52,
       height: 52
     }
@@ -428,7 +428,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mossy-vagabond.png',
+      data: 'hollow-knight/enemies/mossy-vagabond.png',
       width: 52,
       height: 52
     }
@@ -440,7 +440,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/durandoo.png',
+      data: 'hollow-knight/enemies/durandoo.png',
       width: 52,
       height: 52
     }
@@ -452,7 +452,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/duranda.png',
+      data: 'hollow-knight/enemies/duranda.png',
       width: 52,
       height: 52
     }
@@ -464,7 +464,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/aluba.png',
+      data: 'hollow-knight/enemies/aluba.png',
       width: 52,
       height: 52
     }
@@ -476,7 +476,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/charged-lumafly.png',
+      data: 'hollow-knight/enemies/charged-lumafly.png',
       width: 52,
       height: 52
     }
@@ -488,7 +488,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/uoma.png',
+      data: 'hollow-knight/enemies/uoma.png',
       width: 52,
       height: 52
     }
@@ -500,7 +500,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/ooma.png',
+      data: 'hollow-knight/enemies/ooma.png',
       width: 52,
       height: 52
     }
@@ -512,7 +512,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/uumuu.png',
+      data: 'hollow-knight/enemies/uumuu.png',
       width: 52,
       height: 52
     }
@@ -524,7 +524,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/ambloom.png',
+      data: 'hollow-knight/enemies/ambloom.png',
       width: 52,
       height: 52
     }
@@ -536,7 +536,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/fungling.png',
+      data: 'hollow-knight/enemies/fungling.png',
       width: 52,
       height: 52
     }
@@ -548,7 +548,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/fungoon.png',
+      data: 'hollow-knight/enemies/fungoon.png',
       width: 52,
       height: 52
     }
@@ -560,7 +560,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/sporg.png',
+      data: 'hollow-knight/enemies/sporg.png',
       width: 52,
       height: 52
     }
@@ -572,7 +572,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/fungified-husk.png',
+      data: 'hollow-knight/enemies/fungified-husk.png',
       width: 52,
       height: 52
     }
@@ -584,7 +584,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/shrumeling.png',
+      data: 'hollow-knight/enemies/shrumeling.png',
       width: 52,
       height: 52
     }
@@ -596,7 +596,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/shrumal-warrior.png',
+      data: 'hollow-knight/enemies/shrumal-warrior.png',
       width: 52,
       height: 52
     }
@@ -608,7 +608,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/shrumal-ogre.png',
+      data: 'hollow-knight/enemies/shrumal-ogre.png',
       width: 52,
       height: 52
     }
@@ -620,7 +620,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mantis-youth.png',
+      data: 'hollow-knight/enemies/mantis-youth.png',
       width: 52,
       height: 52
     }
@@ -632,7 +632,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mantis-warrior.png',
+      data: 'hollow-knight/enemies/mantis-warrior.png',
       width: 52,
       height: 52
     }
@@ -644,7 +644,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mantis-lords.png',
+      data: 'hollow-knight/enemies/mantis-lords.png',
       width: 52,
       height: 52
     }
@@ -656,7 +656,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-sentry.png',
+      data: 'hollow-knight/enemies/husk-sentry.png',
       width: 52,
       height: 52
     }
@@ -668,7 +668,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/heavy-sentry.png',
+      data: 'hollow-knight/enemies/heavy-sentry.png',
       width: 52,
       height: 52
     }
@@ -680,7 +680,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/winged-sentry.png',
+      data: 'hollow-knight/enemies/winged-sentry.png',
       width: 52,
       height: 52
     }
@@ -692,7 +692,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/lance-sentry.png',
+      data: 'hollow-knight/enemies/lance-sentry.png',
       width: 52,
       height: 52
     }
@@ -704,7 +704,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mistake.png',
+      data: 'hollow-knight/enemies/mistake.png',
       width: 52,
       height: 52
     }
@@ -716,7 +716,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/folly.png',
+      data: 'hollow-knight/enemies/folly.png',
       width: 52,
       height: 52
     }
@@ -728,7 +728,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/soul-twister.png',
+      data: 'hollow-knight/enemies/soul-twister.png',
       width: 52,
       height: 52
     }
@@ -740,7 +740,7 @@ export const ENEMIES: Enemy[] = [
     type: 'mini-boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/soul-warrior.png',
+      data: 'hollow-knight/enemies/soul-warrior.png',
       width: 52,
       height: 52
     }
@@ -752,7 +752,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/soul-master.png',
+      data: 'hollow-knight/enemies/soul-master.png',
       width: 52,
       height: 52
     }
@@ -764,7 +764,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-dandy.png',
+      data: 'hollow-knight/enemies/husk-dandy.png',
       width: 52,
       height: 52
     }
@@ -776,7 +776,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/cowardly-husk.png',
+      data: 'hollow-knight/enemies/cowardly-husk.png',
       width: 52,
       height: 52
     }
@@ -788,7 +788,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/gluttonous-husk.png',
+      data: 'hollow-knight/enemies/gluttonous-husk.png',
       width: 52,
       height: 52
     }
@@ -800,7 +800,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/gorgeous-husk.png',
+      data: 'hollow-knight/enemies/gorgeous-husk.png',
       width: 52,
       height: 52
     }
@@ -812,7 +812,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/great-husk-sentry.png',
+      data: 'hollow-knight/enemies/great-husk-sentry.png',
       width: 52,
       height: 52
     }
@@ -824,7 +824,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/watcher-knights.png',
+      data: 'hollow-knight/enemies/watcher-knights.png',
       width: 52,
       height: 52
     }
@@ -836,7 +836,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/the-collector.png',
+      data: 'hollow-knight/enemies/the-collector.png',
       width: 52,
       height: 52
     }
@@ -848,7 +848,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/belfly.png',
+      data: 'hollow-knight/enemies/belfly.png',
       width: 52,
       height: 52
     }
@@ -860,7 +860,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/pilflip.png',
+      data: 'hollow-knight/enemies/pilflip.png',
       width: 52,
       height: 52
     }
@@ -872,7 +872,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/hwurmp.png',
+      data: 'hollow-knight/enemies/hwurmp.png',
       width: 52,
       height: 52
     }
@@ -884,7 +884,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/bluggsac.png',
+      data: 'hollow-knight/enemies/bluggsac.png',
       width: 52,
       height: 52
     }
@@ -896,7 +896,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/dung-defender.png',
+      data: 'hollow-knight/enemies/dung-defender.png',
       width: 52,
       height: 52
     }
@@ -908,7 +908,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/flukefey.png',
+      data: 'hollow-knight/enemies/flukefey.png',
       width: 52,
       height: 52
     }
@@ -920,7 +920,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/flukemon.png',
+      data: 'hollow-knight/enemies/flukemon.png',
       width: 52,
       height: 52
     }
@@ -932,7 +932,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/flukemarm.png',
+      data: 'hollow-knight/enemies/flukemarm.png',
       width: 52,
       height: 52
     }
@@ -944,7 +944,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/shardmite.png',
+      data: 'hollow-knight/enemies/shardmite.png',
       width: 52,
       height: 52
     }
@@ -956,7 +956,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/glimback.png',
+      data: 'hollow-knight/enemies/glimback.png',
       width: 52,
       height: 52
     }
@@ -968,7 +968,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/crystal-hunter.png',
+      data: 'hollow-knight/enemies/crystal-hunter.png',
       width: 52,
       height: 52
     }
@@ -980,7 +980,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/crystal-crawler.png',
+      data: 'hollow-knight/enemies/crystal-crawler.png',
       width: 52,
       height: 52
     }
@@ -992,7 +992,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-miner.png',
+      data: 'hollow-knight/enemies/husk-miner.png',
       width: 52,
       height: 52
     }
@@ -1004,7 +1004,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/crystallised-husk.png',
+      data: 'hollow-knight/enemies/crystallised-husk.png',
       width: 52,
       height: 52
     }
@@ -1016,7 +1016,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/crystal-guardian.png',
+      data: 'hollow-knight/enemies/crystal-guardian.png',
       width: 52,
       height: 52
     }
@@ -1028,7 +1028,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/furious-vengefly.png',
+      data: 'hollow-knight/enemies/furious-vengefly.png',
       width: 52,
       height: 52
     }
@@ -1040,7 +1040,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/volatile-gruzzer.png',
+      data: 'hollow-knight/enemies/volatile-gruzzer.png',
       width: 52,
       height: 52
     }
@@ -1052,7 +1052,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/violent-husk.png',
+      data: 'hollow-knight/enemies/violent-husk.png',
       width: 52,
       height: 52
     }
@@ -1064,7 +1064,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/slobbering-husk.png',
+      data: 'hollow-knight/enemies/slobbering-husk.png',
       width: 52,
       height: 52
     }
@@ -1076,7 +1076,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/dirtcarver.png',
+      data: 'hollow-knight/enemies/dirtcarver.png',
       width: 52,
       height: 52
     }
@@ -1088,7 +1088,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/carver-hatcher.png',
+      data: 'hollow-knight/enemies/carver-hatcher.png',
       width: 52,
       height: 52
     }
@@ -1100,7 +1100,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/garpede.png',
+      data: 'hollow-knight/enemies/garpede.png',
       width: 52,
       height: 52
     }
@@ -1112,7 +1112,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/corpse-creeper.png',
+      data: 'hollow-knight/enemies/corpse-creeper.png',
       width: 52,
       height: 52
     }
@@ -1124,7 +1124,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/deepling.png',
+      data: 'hollow-knight/enemies/deepling.png',
       width: 52,
       height: 52
     }
@@ -1136,7 +1136,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/deephunter.png',
+      data: 'hollow-knight/enemies/deephunter.png',
       width: 52,
       height: 52
     }
@@ -1148,7 +1148,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/little-weaver.png',
+      data: 'hollow-knight/enemies/little-weaver.png',
       width: 52,
       height: 52
     }
@@ -1160,7 +1160,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/stalking-devout.png',
+      data: 'hollow-knight/enemies/stalking-devout.png',
       width: 52,
       height: 52
     }
@@ -1172,7 +1172,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/nosk.png',
+      data: 'hollow-knight/enemies/nosk.png',
       width: 52,
       height: 52
     }
@@ -1184,7 +1184,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/shadow-creeper.png',
+      data: 'hollow-knight/enemies/shadow-creeper.png',
       width: 52,
       height: 52
     }
@@ -1196,7 +1196,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/lesser-mawlek.png',
+      data: 'hollow-knight/enemies/lesser-mawlek.png',
       width: 52,
       height: 52
     }
@@ -1208,7 +1208,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mawlurk.png',
+      data: 'hollow-knight/enemies/mawlurk.png',
       width: 52,
       height: 52
     }
@@ -1220,7 +1220,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/brooding-mawlek.png',
+      data: 'hollow-knight/enemies/brooding-mawlek.png',
       width: 52,
       height: 52
     }
@@ -1232,7 +1232,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/lightseed.png',
+      data: 'hollow-knight/enemies/lightseed.png',
       width: 52,
       height: 52
     }
@@ -1244,7 +1244,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/infected-balloon.png',
+      data: 'hollow-knight/enemies/infected-balloon.png',
       width: 52,
       height: 52
     }
@@ -1256,7 +1256,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/broken-vessel.png',
+      data: 'hollow-knight/enemies/broken-vessel.png',
       width: 52,
       height: 52
     }
@@ -1268,7 +1268,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/boofly.png',
+      data: 'hollow-knight/enemies/boofly.png',
       width: 52,
       height: 52
     }
@@ -1280,7 +1280,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/primal-aspid.png',
+      data: 'hollow-knight/enemies/primal-aspid.png',
       width: 52,
       height: 52
     }
@@ -1292,7 +1292,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/hopper.png',
+      data: 'hollow-knight/enemies/hopper.png',
       width: 52,
       height: 52
     }
@@ -1304,7 +1304,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/great-hopper.png',
+      data: 'hollow-knight/enemies/great-hopper.png',
       width: 52,
       height: 52
     }
@@ -1316,7 +1316,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/grub-mimic.png',
+      data: 'hollow-knight/enemies/grub-mimic.png',
       width: 52,
       height: 52
     }
@@ -1328,7 +1328,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/hiveling.png',
+      data: 'hollow-knight/enemies/hiveling.png',
       width: 52,
       height: 52
     }
@@ -1340,7 +1340,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/hive-soldier.png',
+      data: 'hollow-knight/enemies/hive-soldier.png',
       width: 52,
       height: 52
     }
@@ -1352,7 +1352,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/hive-guardian.png',
+      data: 'hollow-knight/enemies/hive-guardian.png',
       width: 52,
       height: 52
     }
@@ -1364,7 +1364,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/husk-hive.png',
+      data: 'hollow-knight/enemies/husk-hive.png',
       width: 52,
       height: 52
     }
@@ -1376,7 +1376,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/spiny-husk.png',
+      data: 'hollow-knight/enemies/spiny-husk.png',
       width: 52,
       height: 52
     }
@@ -1388,7 +1388,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/loodle.png',
+      data: 'hollow-knight/enemies/loodle.png',
       width: 52,
       height: 52
     }
@@ -1400,7 +1400,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mantis-petra.png',
+      data: 'hollow-knight/enemies/mantis-petra.png',
       width: 52,
       height: 52
     }
@@ -1412,7 +1412,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/mantis-traitor.png',
+      data: 'hollow-knight/enemies/mantis-traitor.png',
       width: 52,
       height: 52
     }
@@ -1424,7 +1424,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/traitor-lord.png',
+      data: 'hollow-knight/enemies/traitor-lord.png',
       width: 52,
       height: 52
     }
@@ -1436,7 +1436,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/sharp-baldur.png',
+      data: 'hollow-knight/enemies/sharp-baldur.png',
       width: 52,
       height: 52
     }
@@ -1448,7 +1448,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/armoured-squit.png',
+      data: 'hollow-knight/enemies/armoured-squit.png',
       width: 52,
       height: 52
     }
@@ -1460,7 +1460,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/battle-obble.png',
+      data: 'hollow-knight/enemies/battle-obble.png',
       width: 52,
       height: 52
     }
@@ -1472,7 +1472,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/oblobble.png',
+      data: 'hollow-knight/enemies/oblobble.png',
       width: 52,
       height: 52
     }
@@ -1484,7 +1484,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/shielded-fool.png',
+      data: 'hollow-knight/enemies/shielded-fool.png',
       width: 52,
       height: 52
     }
@@ -1496,7 +1496,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/sturdy-fool.png',
+      data: 'hollow-knight/enemies/sturdy-fool.png',
       width: 52,
       height: 52
     }
@@ -1508,7 +1508,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/winged-fool.png',
+      data: 'hollow-knight/enemies/winged-fool.png',
       width: 52,
       height: 52
     }
@@ -1520,7 +1520,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/heavy-fool.png',
+      data: 'hollow-knight/enemies/heavy-fool.png',
       width: 52,
       height: 52
     }
@@ -1532,7 +1532,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/death-loodle.png',
+      data: 'hollow-knight/enemies/death-loodle.png',
       width: 52,
       height: 52
     }
@@ -1544,7 +1544,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/volt-twister.png',
+      data: 'hollow-knight/enemies/volt-twister.png',
       width: 52,
       height: 52
     }
@@ -1556,7 +1556,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/zote.png',
+      data: 'hollow-knight/enemies/zote.png',
       width: 52,
       height: 52
     }
@@ -1568,7 +1568,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/god-tamer.png',
+      data: 'hollow-knight/enemies/god-tamer.png',
       width: 52,
       height: 52
     }
@@ -1580,7 +1580,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/xero.png',
+      data: 'hollow-knight/enemies/xero.png',
       width: 52,
       height: 52
     }
@@ -1592,7 +1592,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/gorb.png',
+      data: 'hollow-knight/enemies/gorb.png',
       width: 52,
       height: 52
     }
@@ -1604,7 +1604,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/elder-hu.png',
+      data: 'hollow-knight/enemies/elder-hu.png',
       width: 52,
       height: 52
     }
@@ -1616,7 +1616,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/marmu.png',
+      data: 'hollow-knight/enemies/marmu.png',
       width: 52,
       height: 52
     }
@@ -1628,7 +1628,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/no-eyes.png',
+      data: 'hollow-knight/enemies/no-eyes.png',
       width: 52,
       height: 52
     }
@@ -1640,7 +1640,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/galien.png',
+      data: 'hollow-knight/enemies/galien.png',
       width: 52,
       height: 52
     }
@@ -1652,7 +1652,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/markoth.png',
+      data: 'hollow-knight/enemies/markoth.png',
       width: 52,
       height: 52
     }
@@ -1664,7 +1664,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/wingmould.png',
+      data: 'hollow-knight/enemies/wingmould.png',
       width: 52,
       height: 52
     }
@@ -1676,7 +1676,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/royal-retainer.png',
+      data: 'hollow-knight/enemies/royal-retainer.png',
       width: 52,
       height: 52
     }
@@ -1688,7 +1688,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/kingsmould.png',
+      data: 'hollow-knight/enemies/kingsmould.png',
       width: 52,
       height: 52
     }
@@ -1700,7 +1700,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/sibling.png',
+      data: 'hollow-knight/enemies/sibling.png',
       width: 52,
       height: 52
     }
@@ -1712,7 +1712,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/void-tendrils.png',
+      data: 'hollow-knight/enemies/void-tendrils.png',
       width: 52,
       height: 52
     }
@@ -1724,7 +1724,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/hornet.png',
+      data: 'hollow-knight/enemies/hornet.png',
       width: 52,
       height: 52
     }
@@ -1736,7 +1736,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/hollow-knight.png',
+      data: 'hollow-knight/enemies/hollow-knight.png',
       width: 52,
       height: 52
     }
@@ -1748,7 +1748,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/radiance.png',
+      data: 'hollow-knight/enemies/radiance.png',
       width: 52,
       height: 52
     }
@@ -1760,7 +1760,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'main-game',
     image: {
-      data: '/hollow-knight/enemies/shade.png',
+      data: 'hollow-knight/enemies/shade.png',
       width: 52,
       height: 52
     }
@@ -1772,7 +1772,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'hidden-dreams',
     image: {
-      data: '/hollow-knight/enemies/grey-prince-zote.png',
+      data: 'hollow-knight/enemies/grey-prince-zote.png',
       width: 52,
       height: 52
     }
@@ -1784,7 +1784,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'hidden-dreams',
     image: {
-      data: '/hollow-knight/enemies/winged-zoteling.png',
+      data: 'hollow-knight/enemies/winged-zoteling.png',
       width: 52,
       height: 52
     }
@@ -1796,7 +1796,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'hidden-dreams',
     image: {
-      data: '/hollow-knight/enemies/hopping-zoteling.png',
+      data: 'hollow-knight/enemies/hopping-zoteling.png',
       width: 52,
       height: 52
     }
@@ -1808,7 +1808,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'hidden-dreams',
     image: {
-      data: '/hollow-knight/enemies/volatile-zoteling.png',
+      data: 'hollow-knight/enemies/volatile-zoteling.png',
       width: 52,
       height: 52
     }
@@ -1820,7 +1820,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'hidden-dreams',
     image: {
-      data: '/hollow-knight/enemies/white-defender.png',
+      data: 'hollow-knight/enemies/white-defender.png',
       width: 52,
       height: 52
     }
@@ -1832,7 +1832,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'grimm-troupe',
     image: {
-      data: '/hollow-knight/enemies/grimmkin-novice.png',
+      data: 'hollow-knight/enemies/grimmkin-novice.png',
       width: 52,
       height: 52
     }
@@ -1844,7 +1844,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'grimm-troupe',
     image: {
-      data: '/hollow-knight/enemies/grimmkin-master.png',
+      data: 'hollow-knight/enemies/grimmkin-master.png',
       width: 52,
       height: 52
     }
@@ -1856,7 +1856,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'grimm-troupe',
     image: {
-      data: '/hollow-knight/enemies/grimmkin-nightmare.png',
+      data: 'hollow-knight/enemies/grimmkin-nightmare.png',
       width: 52,
       height: 52
     }
@@ -1868,7 +1868,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'grimm-troupe',
     image: {
-      data: '/hollow-knight/enemies/grimm.png',
+      data: 'hollow-knight/enemies/grimm.png',
       width: 52,
       height: 52
     }
@@ -1880,7 +1880,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'grimm-troupe',
     image: {
-      data: '/hollow-knight/enemies/nightmare-king.png',
+      data: 'hollow-knight/enemies/nightmare-king.png',
       width: 52,
       height: 52
     }
@@ -1892,7 +1892,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'lifeblood',
     image: {
-      data: '/hollow-knight/enemies/hive-knight.png',
+      data: 'hollow-knight/enemies/hive-knight.png',
       width: 52,
       height: 52
     }
@@ -1904,7 +1904,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/flukemunga.png',
+      data: 'hollow-knight/enemies/flukemunga.png',
       width: 52,
       height: 52
     }
@@ -1916,7 +1916,7 @@ export const ENEMIES: Enemy[] = [
     type: 'normal',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/pale-lurker.png',
+      data: 'hollow-knight/enemies/pale-lurker.png',
       width: 52,
       height: 52
     }
@@ -1928,7 +1928,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/winged-nosk.png',
+      data: 'hollow-knight/enemies/winged-nosk.png',
       width: 52,
       height: 52
     }
@@ -1940,7 +1940,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/sisters-of-battle.png',
+      data: 'hollow-knight/enemies/sisters-of-battle.png',
       width: 52,
       height: 52
     }
@@ -1952,7 +1952,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/nailmaster-oro.png',
+      data: 'hollow-knight/enemies/nailmaster-oro.png',
       width: 52,
       height: 52
     }
@@ -1964,7 +1964,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/nailmaster-mato.png',
+      data: 'hollow-knight/enemies/nailmaster-mato.png',
       width: 52,
       height: 52
     }
@@ -1976,7 +1976,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/paintmaster-sheo.png',
+      data: 'hollow-knight/enemies/paintmaster-sheo.png',
       width: 52,
       height: 52
     }
@@ -1988,7 +1988,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/great-nailsage-sly.png',
+      data: 'hollow-knight/enemies/great-nailsage-sly.png',
       width: 52,
       height: 52
     }
@@ -2000,7 +2000,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/pure-vessel.png',
+      data: 'hollow-knight/enemies/pure-vessel.png',
       width: 52,
       height: 52
     }
@@ -2012,7 +2012,7 @@ export const ENEMIES: Enemy[] = [
     type: 'boss',
     content: 'godmaster',
     image: {
-      data: '/hollow-knight/enemies/absolute-radiance.png',
+      data: 'hollow-knight/enemies/absolute-radiance.png',
       width: 52,
       height: 52
     }
