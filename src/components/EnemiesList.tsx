@@ -69,7 +69,7 @@ const EnemiesList = () => {
                   <h3 className="text-lg font-bold text-nowrap">{e.name}</h3>
                   {e.content !== 'main-game' && (
                     <Image
-                      src={`/hollow-knight/contents/${e.content}.png`}
+                      src={`hollow-knight/contents/${e.content}.png`}
                       alt={`${e.content}-icon`}
                       width={20}
                       height={20}

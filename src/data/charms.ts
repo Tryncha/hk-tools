@@ -8,7 +8,7 @@ export const CHARMS: Charm[] = [
     notchCost: 1,
     description:
       'Whispers its location to the bearer whenever a map is open, allowing wanderers to pinpoint their current location',
-    location: 'Sold by Iselda in Dirthmouth for ![Geo](/hollow-knight/ui/geo.png) 200, after encountering Cornifer',
+    location: 'Sold by Iselda in Dirthmouth for ![Geo](hollow-knight/ui/geo.png) 200, after encountering Cornifer',
     effects: ["Shows Knight's location on map"]
   },
   {
@@ -18,8 +18,8 @@ export const CHARMS: Charm[] = [
     notchCost: 1,
     description:
       "A swarm will follow the bearer and gather up any loose Geo.\nUseful for those who can't bear to leave anything behind, no matter how insignificant",
-    location: 'Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 300',
-    effects: ['Collects dropped ![Geo](/hollow-knight/ui/geo.png) Geo']
+    location: 'Sold by Sly in Dirtmouth for ![Geo](hollow-knight/ui/geo.png) 300',
+    effects: ['Collects dropped ![Geo](hollow-knight/ui/geo.png) Geo']
   },
   {
     id: 'stalwart-shell',
@@ -28,7 +28,7 @@ export const CHARMS: Charm[] = [
     notchCost: 2,
     description:
       'Builds resilience. When recovering from damage, the bearer will remain invulnerable for longer.\nMakes it easier to escape from dangerous situations',
-    location: 'Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 200',
+    location: 'Sold by Sly in Dirtmouth for ![Geo](hollow-knight/ui/geo.png) 200',
     effects: [
       'Increases invincibility duration after being hit by ~35%',
       'Reduces hit recoil (no input time) after being hit by 60%'
@@ -51,7 +51,7 @@ export const CHARMS: Charm[] = [
     notchCost: 3,
     description:
       'Said to contain the knowledge of past generations of shaman.\nIncreases the power of spells, dealing more damage to foes',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 220',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](hollow-knight/ui/geo.png) 220',
     effects: [
       'Increases **Vengeful Spirit** and **Shade Soul** damage by 33%',
       'Increases **Desolate Dive** damage by 51% and **Descending Dark** damage by 47%',
@@ -96,7 +96,7 @@ export const CHARMS: Charm[] = [
     notchCost: 1,
     description:
       "Bears the likeness of a strange bug known only as 'The Sprintmaster'.\nIncreases the running speed of the bearer, allowing them to avoid danger or overtake rivals",
-    location: "Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 400. Requires Shopkeeper's Key",
+    location: "Sold by Sly in Dirtmouth for ![Geo](hollow-knight/ui/geo.png) 400. Requires Shopkeeper's Key",
     effects: ['Increases run speed by ~20%'],
     synergies: [
       {
@@ -161,7 +161,7 @@ export const CHARMS: Charm[] = [
     notchCost: 2,
     description: 'Increases the health of the bearer, allowing them to take more damage.\nThis charm is unbreakable',
     location:
-      "Sold by Leg Eater in Fungal Wastes for ![Geo](/hollow-knight/ui/geo.png) 350 (![Geo](/hollow-knight/ui/geo.png) 280 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 12000",
+      "Sold by Leg Eater in Fungal Wastes for ![Geo](hollow-knight/ui/geo.png) 350 (![Geo](hollow-knight/ui/geo.png) 280 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](hollow-knight/ui/geo.png) 12000",
     effects: ['Adds two Masks of health']
   },
   {
@@ -171,7 +171,7 @@ export const CHARMS: Charm[] = [
     notchCost: 2,
     description: 'Causes the bearer to find more Geo when defeating enemies.\nThis charm is unbreakable',
     location:
-      "Sold by Leg Eater in Fungal Wastes for ![Geo](/hollow-knight/ui/geo.png) 250 (![Geo](/hollow-knight/ui/geo.png) 200 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 9000",
+      "Sold by Leg Eater in Fungal Wastes for ![Geo](hollow-knight/ui/geo.png) 250 (![Geo](hollow-knight/ui/geo.png) 200 if Defender\'s Crest is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](hollow-knight/ui/geo.png) 9000",
     effects: ['Enemies drop 20-100% more Geo']
   },
   {
@@ -182,7 +182,7 @@ export const CHARMS: Charm[] = [
     description:
       'Strengthens the bearer, increasing the damage they deal to enemies with their nail.\nThis charm is unbreakable',
     location:
-      "Sold by Leg Eater in Fungal Wastes for ![Geo](/hollow-knight/ui/geo.png) 600 (![Geo](/hollow-knight/ui/geo.png) 480 if Defender\'s Cerst is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 15000",
+      "Sold by Leg Eater in Fungal Wastes for ![Geo](hollow-knight/ui/geo.png) 600 (![Geo](hollow-knight/ui/geo.png) 480 if Defender\'s Cerst is equipped). Can be upgraded by Divine in Dirtmouth for ![Geo](hollow-knight/ui/geo.png) 15000",
     effects: ['Increases Nail damage by 50%']
   },
   {
@@ -202,7 +202,7 @@ export const CHARMS: Charm[] = [
     notchCost: 1,
     description:
       'Keeps its bearer from recoiling backwards when they strike an enemy with a nail.\nAllows one to stay steady and keep attacking',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 120',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](hollow-knight/ui/geo.png) 120',
     effects: ['Removes all knockback/recoil from hitting enemies']
   },
   {
@@ -212,7 +212,7 @@ export const CHARMS: Charm[] = [
     notchCost: 2,
     description:
       "Formed from the nails of fallen warriors.\nIncreases the force of the bearer's nail, causing enemies to recoil further when hit",
-    location: "Sold by Sly in Dirtmouth for ![Geo](/hollow-knight/ui/geo.png) 350. Requires Shopkeeper's Key",
+    location: "Sold by Sly in Dirtmouth for ![Geo](hollow-knight/ui/geo.png) 350. Requires Shopkeeper's Key",
     effects: [
       'Increases Nail attack knockback by 75%',
       'Increases Great Slash knockback by 33%',
@@ -235,7 +235,7 @@ export const CHARMS: Charm[] = [
     name: 'Longnail',
     notchCost: 2,
     description: "Increases the range of the bearer's nail, allowing them to strike foes from further away",
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 300',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](hollow-knight/ui/geo.png) 300',
     effects: ['Increases Nail range by 15%']
   },
   {
@@ -378,7 +378,7 @@ export const CHARMS: Charm[] = [
     notchCost: 3,
     description:
       'A charm containing a crystal lens.\nIncreases the speed of focusing SOUL, allowing the bearer to heal damage faster',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 800',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](hollow-knight/ui/geo.png) 800',
     effects: ['Focus ~33% faster'],
     synergies: [
       {
@@ -410,7 +410,7 @@ export const CHARMS: Charm[] = [
     notchCost: 2,
     description:
       'Contains a living core that seeps precious lifeblood.\nWhen resting, the bearer will gain a coating of lifeblood that protects from a modest amount of damage',
-    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](/hollow-knight/ui/geo.png) 250',
+    location: 'Sold by Salubra in Forgotten Crossroads for ![Geo](hollow-knight/ui/geo.png) 250',
     effects: ['Adds 2 Lifeblood Masks when resting.']
   },
   {
