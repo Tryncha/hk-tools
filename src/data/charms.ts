@@ -3,7 +3,7 @@ import { Charm } from '../types';
 export const CHARMS: Charm[] = [
   {
     id: 'wayward-compass',
-    image: '/hollow-knight/charms/wayward-compass.png',
+    image: '/hollow-bench/hollow-knight/charms/wayward-compass.png',
     name: 'Wayward Compass',
     notchCost: 1,
     description:
