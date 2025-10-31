@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 const metaTitle = 'Hollow Bench - Build calculation and customization for Hollow Knight';
 const metaDescription = 'Create your own builds and see calculations in real time for Hollow Knight';
-const metaAuthor = { name: 'Tryncha' };
-const metaGitHubURL = 'https://github.com/Tryncha/hollow-bench';
+const metaAuthor = { name: 'Tryncha', url: 'https://github.com/Tryncha' };
+const metaRepositoryURL = 'https://github.com/Tryncha/hollow-bench';
 
 const VERSION = '0.0.1';
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: metaGitHubURL,
+    url: metaRepositoryURL,
     title: metaTitle,
     description: metaDescription
   }
@@ -36,10 +36,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <LoadoutProvider>
       <html lang="en">
         <body className={`${inter.className} bg-gray-950 text-white antialiased`}>
-          <header className="fixed top-0 left-0 z-20 flex h-16 w-full items-center justify-between gap-8 border-b border-gray-700 bg-gray-900/70 px-8 backdrop-blur-sm">
+          <header className="fixed top-0 left-0 z-20 flex h-16 w-full items-center justify-between gap-8 border-b border-gray-700 bg-gray-900/70 pr-4 pl-8 backdrop-blur-sm">
             <Image
               src="/banner.png"
-              alt="Logo"
+              alt="Banner"
               width={602}
               height={64}
               className="absolute top-0 left-24 opacity-10"
@@ -48,16 +48,42 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               HollowBench
               {/* <span className="text-blue-400">.build</span> */}
             </h1>
+            <div className="flex flex-col items-end justify-center text-xs text-gray-500 italic">
+              <span>
+                Find source code{' '}
+                <a
+                  href={metaRepositoryURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-gray-400"
+                >
+                  here
+                </a>
+                . v{VERSION}.
+              </span>
+              <span>
+                &copy;{' '}
+                <a
+                  href={metaAuthor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-gray-400"
+                >
+                  {metaAuthor.name}
+                </a>
+                , {new Date().getFullYear()}.
+              </span>
+            </div>
           </header>
           {children}
-          <footer className="absolute z-20 flex w-full justify-between border-t border-gray-700 bg-gray-900 px-2">
+          {/* <footer className="absolute z-20 flex w-full justify-between border-t border-gray-700 bg-gray-900 px-2">
             <span className="text-xs text-nowrap text-gray-500 italic">
               &copy; {metaAuthor.name}, {new Date().getFullYear()}
             </span>
             <span className="text-xs text-gray-500 italic">
               Find source code{' '}
               <a
-                href={metaGitHubURL}
+                href={metaRepositoryURL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-gray-400"
@@ -66,7 +92,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               </a>
               <span>, ver {VERSION}</span>
             </span>
-          </footer>
+          </footer> */}
         </body>
       </html>
     </LoadoutProvider>

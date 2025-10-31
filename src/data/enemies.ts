@@ -1371,7 +1371,7 @@ export const ENEMIES: Enemy[] = [
   },
   {
     id: 'spiny-husk',
-    name: 'Spiny-husk',
+    name: 'Spiny Husk',
     health: 44,
     type: 'normal',
     content: 'main-game',
