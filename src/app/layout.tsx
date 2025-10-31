@@ -6,8 +6,9 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const metaTitle = 'Hollow Bench - Build calculation and customization for Hollow Knight';
-const metaDescription = 'Create your own builds and see calculations in real time for Hollow Knight';
+const metaTitle = 'Hollow Bench - Build and charm calculator for Hollow Knight';
+const metaDescription =
+  'Plan your Hollow Knight builds, calculate charm synergies and damage, and share your setup instantly with other players.';
 const metaAuthor = { name: 'Tryncha', url: 'https://github.com/Tryncha' };
 const metaRepositoryURL = 'https://github.com/Tryncha/hollow-bench';
 
@@ -16,11 +17,37 @@ const VERSION = '0.0.1';
 export const metadata: Metadata = {
   title: metaTitle,
   description: metaDescription,
+  category: 'gaming',
+  keywords: [
+    'Hollow Bench',
+    'Hollow Knight',
+    'Hollow Knight builds',
+    'Hollow Knight charm calculator',
+    'Hollow Knight damage calculator',
+    'Hollow Knight tools',
+    'Hollow Knight planner',
+    'Hollow Knight enemies',
+    'Hollow Knight build editor'
+  ],
   authors: metaAuthor,
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: metaRepositoryURL,
+    title: metaTitle,
+    description: metaDescription,
+    siteName: 'Hollow Bench'
+    // images: [
+    //   {
+    //     url: '/og-image.png',
+    //     width: 1200,
+    //     height: 630,
+    //     alt: 'Hollow Bench - Hollow Knight Charm and Damage Calculator'
+    //   }
+    // ]
+  },
+  twitter: {
+    card: 'summary_large_image',
     title: metaTitle,
     description: metaDescription
   }
@@ -46,7 +73,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             />
             <h1 className="text-3xl font-bold">
               HollowBench
-              {/* <span className="text-blue-400">.build</span> */}
+              {/* <span className="text-blue-400">.build .app</span> */}
             </h1>
             <div className="flex flex-col items-end justify-center text-xs text-gray-500 italic">
               <span>
