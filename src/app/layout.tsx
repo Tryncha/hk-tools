@@ -2,7 +2,7 @@ import { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { LoadoutProvider } from '../context/LoadoutContext';
 import Image from 'next/image';
-import './globals.css';
+import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
