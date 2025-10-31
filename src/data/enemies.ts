@@ -1577,7 +1577,7 @@ export const ENEMIES: Enemy[] = [
     id: 'xero',
     name: 'Xero',
     health: 570, // 200, 320, 416, 500, 570
-    type: 'dream-boss',
+    type: 'boss',
     content: 'main-game',
     image: {
       data: '/hollow-knight/enemies/xero.png',
@@ -1589,7 +1589,7 @@ export const ENEMIES: Enemy[] = [
     id: 'gorb',
     name: 'Gorb',
     health: 570,
-    type: 'dream-boss',
+    type: 'boss',
     content: 'main-game',
     image: {
       data: '/hollow-knight/enemies/gorb.png',
@@ -1601,7 +1601,7 @@ export const ENEMIES: Enemy[] = [
     id: 'elder-hu',
     name: 'Elder Hu',
     health: 650,
-    type: 'dream-boss',
+    type: 'boss',
     content: 'main-game',
     image: {
       data: '/hollow-knight/enemies/elder-hu.png',
@@ -1613,7 +1613,7 @@ export const ENEMIES: Enemy[] = [
     id: 'marmu',
     name: 'Marmu',
     health: 570,
-    type: 'dream-boss',
+    type: 'boss',
     content: 'main-game',
     image: {
       data: '/hollow-knight/enemies/marmu.png',
@@ -1625,7 +1625,7 @@ export const ENEMIES: Enemy[] = [
     id: 'no-eyes',
     name: 'No Eyes',
     health: 570,
-    type: 'dream-boss',
+    type: 'boss',
     content: 'main-game',
     image: {
       data: '/hollow-knight/enemies/no-eyes.png',
@@ -1637,7 +1637,7 @@ export const ENEMIES: Enemy[] = [
     id: 'galien',
     name: 'Galien',
     health: 640,
-    type: 'dream-boss',
+    type: 'boss',
     content: 'main-game',
     image: {
       data: '/hollow-knight/enemies/galien.png',
@@ -1649,7 +1649,7 @@ export const ENEMIES: Enemy[] = [
     id: 'markoth',
     name: 'Markoth',
     health: 705,
-    type: 'dream-boss',
+    type: 'boss',
     content: 'main-game',
     image: {
       data: '/hollow-knight/enemies/markoth.png',

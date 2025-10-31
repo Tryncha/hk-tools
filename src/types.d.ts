@@ -165,6 +165,6 @@ export interface Enemy {
   image: Image;
 }
 
-export type EnemyType = 'normal' | 'boss' | 'mini-boss' | 'dream-boss';
+export type EnemyType = 'normal' | 'boss' | 'mini-boss';
 
 export type DLC = 'main-game' | 'hidden-dreams' | 'grimm-troupe' | 'lifeblood' | 'godmaster';

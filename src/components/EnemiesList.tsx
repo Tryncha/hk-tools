@@ -15,34 +15,38 @@ const EnemiesList = () => {
     setSearch(e.target.value);
   }
 
-  const filteredEnemiesByBoss = filterByBoss
-    ? ENEMIES.filter((e) => e.type === 'boss' || e.type === 'dream-boss')
-    : ENEMIES;
+  const filteredEnemiesByBoss = filterByBoss ? ENEMIES.filter((e) => e.type === 'boss') : ENEMIES;
 
   const filteredEnemiesByText = filteredEnemiesByBoss.filter((e) =>
     e.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
-    <div className="pb-20">
-      <div className="flex flex-col">
-        <div className="flex items-center gap-1 px-2 pt-2">
+    <section>
+      <div className="sticky inset-x-0 top-0 flex items-center gap-1 border-b border-gray-700 bg-gray-900 p-2">
+        <div className="flex h-8 flex-1 justify-between border border-gray-700 pl-4">
           <input
             type="text"
-            className="h-8 flex-1 border border-gray-700 px-4"
             placeholder="Search for enemies..."
             value={search}
             onChange={handleChange}
+            className="flex-1"
           />
           <button
-            onClick={() => setFilterByBoss(!filterByBoss)}
-            title={filterByBoss ? 'Show all' : 'Show only bosses'}
-            className={`${filterByBoss ? 'bg-gray-500 hover:bg-gray-500' : 'hover:bg-gray-800'} size-8 border border-gray-700 transition-colors hover:cursor-pointer active:bg-gray-600`}
+            onClick={() => setSearch('')}
+            className="mx-2 text-xl text-red-300 hover:cursor-pointer"
           >
-            B
+            ×
           </button>
-          <span className="p-1 px-2 text-right text-sm text-gray-200">{filteredEnemiesByText.length} results</span>
         </div>
+        <button
+          onClick={() => setFilterByBoss(!filterByBoss)}
+          title={filterByBoss ? 'Show all' : 'Show only bosses'}
+          className={`${filterByBoss ? 'bg-gray-500 hover:bg-gray-500' : 'hover:bg-gray-800'} size-8 border border-gray-700 transition-colors hover:cursor-pointer active:bg-gray-600`}
+        >
+          B
+        </button>
+        <span className="p-1 px-2 text-right text-sm text-gray-200">{filteredEnemiesByText.length} results</span>
       </div>
       {filteredEnemiesByText.map((e) => {
         const hitsToKill = calculateHitsToKill(e.id, nailDamage);
@@ -94,7 +98,7 @@ const EnemiesList = () => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

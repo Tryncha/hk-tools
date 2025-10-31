@@ -27,13 +27,13 @@ const ButtonSlider = ({
 };
 
 const ScreenSlider = ({ children, position }: { children: React.ReactNode; position: 'left' | 'right' }) => {
-  const [isSliderOpen, setIsSliderOpen] = useState(true);
+  const [isSliderOpen, setIsSliderOpen] = useState(false);
 
   const leftStyles = `${isSliderOpen ? 'translate-x-0' : '-translate-x-[25vw]'} left-0 scale-x-[-1]`;
   const rightStyles = `${isSliderOpen ? 'translate-x-0' : 'translate-x-[25vw]'} right-0 `;
 
   return (
-    <section className="z-10">
+    <>
       <ButtonSlider
         onClick={() => setIsSliderOpen(!isSliderOpen)}
         isSliderOpen={isSliderOpen}
@@ -42,11 +42,11 @@ const ScreenSlider = ({ children, position }: { children: React.ReactNode; posit
         {position === 'left' ? (isSliderOpen ? '<-' : '->') : isSliderOpen ? '->' : '<-'}
       </ButtonSlider>
       <div
-        className={`${position === 'left' ? leftStyles : rightStyles} fixed h-screen w-[25vw] overflow-y-auto border-l border-gray-700 bg-gray-900 transition-transform duration-800 ease-in-out`}
+        className={`${position === 'left' ? leftStyles : rightStyles} scrollbar-thumb-gray-500 scrollbar-track-gray-800 scrollbar fixed inset-y-0 mt-16 w-[25vw] overflow-y-scroll border-l border-gray-700 bg-gray-900 pb-4 transition-transform duration-800 ease-in-out`}
       >
         <div className={`${position === 'left' && 'scale-x-[-1]'}`}>{children}</div>
       </div>
-    </section>
+    </>
   );
 };
 
